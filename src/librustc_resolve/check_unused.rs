@@ -27,8 +27,9 @@ use resolve_imports::ImportDirectiveSubclass;
 use rustc::{lint, ty};
 use rustc::util::nodemap::NodeMap;
 use syntax::ast;
+use syntax::codemap::CodeMap;
 use syntax::visit::{self, Visitor};
-use syntax_pos::{Span, MultiSpan, DUMMY_SP};
+use syntax_pos::{Span, MultiSpan, DUMMY_SP, SpanSnippetError};
 
 
 struct UnusedImportCheckVisitor<'a, 'b: 'a> {
@@ -37,6 +38,8 @@ struct UnusedImportCheckVisitor<'a, 'b: 'a> {
     unused_imports: NodeMap<NodeMap<Span>>,
     base_id: ast::NodeId,
     item_span: Span,
+    trees: NodeMap<&'a ast::UseTree>,
+    item_spans: NodeMap<Span>,
 }
 
 // Deref and DerefMut impls allow treating UnusedImportCheckVisitor as Resolver.
@@ -99,6 +102,8 @@ impl<'a, 'b> Visitor<'a> for UnusedImportCheckVisitor<'a, 'b> {
         // This allows the grouping of all the lints in the same item
         if !nested {
             self.base_id = id;
+            self.trees.insert(id, &use_tree);
+            self.item_spans.insert(id, self.item_span);
         }
 
         if let ast::UseTreeKind::Nested(ref items) = use_tree.kind {
@@ -124,6 +129,60 @@ impl<'a, 'b> Visitor<'a> for UnusedImportCheckVisitor<'a, 'b> {
     }
 }
 
+fn suggest_snip(tree_id: (&ast::UseTree, ast::NodeId), unused: &NodeMap<Span>, codemap: &CodeMap)
+               -> Result<Option<String>, SpanSnippetError> {
+
+    let (tree, id) = tree_id;
+
+    Ok(if unused.contains_key(&id) {
+        None
+    } else if let ast::UseTreeKind::Nested(ref items) = tree.kind {
+        let id_to_snip = items.iter().map(
+            |&(ref tree, id)| Ok((id, suggest_snip((&tree, id), unused, codemap)?))
+        ).collect::<Result<NodeMap<_>, _>>()?;
+
+        match id_to_snip.values().filter(|opt| opt.is_some()).count() {
+
+            0 => None,
+            // Collapse {x} into x, if we caused there to be only a single item
+            1 if items.len() > 1 => Some(codemap.span_to_snippet(tree.prefix.span)?
+                                         + "::"
+                                         + &id_to_snip.values()
+                                             .filter_map(|x| x.clone()).next().unwrap()
+                                    ),
+            _ => {
+                let mut added_any = false;
+                let mut str = codemap.span_to_snippet(tree.span.until(items[0].0.span))?;
+
+                if let Some(ref snip) = id_to_snip[&items[0].1] {
+                    str += &snip;
+                    added_any = true;
+                }
+                for window in items.windows(2) {
+                    let (ref prev, _) = window[0];
+                    let (ref this, this_id) = window[1];
+                    if let Some(ref snip) = id_to_snip[&this_id] {
+                        if added_any {
+                            str += &codemap.span_to_snippet(prev.span.between(this.span))?;
+                        }
+                        str += &snip;
+                        added_any = true;
+                    }
+                }
+
+                // }, and any tailing comma or spacing before it
+                str += &codemap.span_to_snippet(
+                    tree.span.trim_start(items.last().unwrap().0.span).unwrap()
+                )?;
+
+                Some(str)
+            }
+        }
+    } else {
+        Some(codemap.span_to_snippet(tree.span)?)
+    })
+}
+
 pub fn check_crate(resolver: &mut Resolver, krate: &ast::Crate) {
     for directive in resolver.potentially_unused_imports.iter() {
         match directive.subclass {
@@ -147,12 +206,14 @@ pub fn check_crate(resolver: &mut Resolver, krate: &ast::Crate) {
         unused_imports: NodeMap(),
         base_id: ast::DUMMY_NODE_ID,
         item_span: DUMMY_SP,
+        trees: NodeMap(),
+        item_spans: NodeMap(),
     };
     visit::walk_crate(&mut visitor, krate);
 
-    for (id, spans) in &visitor.unused_imports {
-        let len = spans.len();
-        let mut spans = spans.values().map(|s| *s).collect::<Vec<Span>>();
+    for (id, spans_map) in &visitor.unused_imports {
+        let len = spans_map.len();
+        let mut spans = spans_map.values().map(|s| *s).collect::<Vec<Span>>();
         spans.sort();
         let ms = MultiSpan::from_spans(spans.clone());
         let mut span_snippets = spans.iter()
@@ -170,6 +231,26 @@ pub fn check_crate(resolver: &mut Resolver, krate: &ast::Crate) {
                           } else {
                               String::new()
                           });
-        visitor.session.buffer_lint(lint::builtin::UNUSED_IMPORTS, *id, ms, &msg);
+
+        let item_span = visitor.item_spans[&id];
+        let suggestion_snip = suggest_snip(
+            (&visitor.trees[id], *id),
+            &spans_map,
+            &visitor.session.codemap()
+        ).unwrap();
+        let diag = if let Some(tree_snip) = suggestion_snip {
+            lint::builtin::BuiltinLintDiagnostics::PartiallyUnusedImport(
+                visitor.session.codemap().span_to_snippet(
+                    item_span.until(visitor.trees[&id].span)
+                ).unwrap() + &tree_snip,
+                item_span
+            )
+        } else {
+            lint::builtin::BuiltinLintDiagnostics::UnusedImport(item_span)
+        };
+
+        visitor.session.buffer_lint_with_diagnostic(
+            lint::builtin::UNUSED_IMPORTS, *id, ms, &msg, diag
+        );
     }
 }

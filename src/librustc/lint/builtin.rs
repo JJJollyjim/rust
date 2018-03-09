@@ -332,7 +332,9 @@ impl LintPass for HardwiredLints {
 #[derive(PartialEq, RustcEncodable, RustcDecodable, Debug)]
 pub enum BuiltinLintDiagnostics {
     Normal,
-    BareTraitObject(Span, /* is_global */ bool)
+    BareTraitObject(Span, /* is_global */ bool),
+    UnusedImport(Span),
+    PartiallyUnusedImport(String, Span),
 }
 
 impl BuiltinLintDiagnostics {
@@ -346,6 +348,12 @@ impl BuiltinLintDiagnostics {
                     Err(_) => format!("dyn <type>")
                 };
                 db.span_suggestion(span, "use `dyn`", sugg);
+            },
+            BuiltinLintDiagnostics::UnusedImport(span) => {
+                db.span_suggestion(span, "this import can be removed", "".to_string());
+            },
+            BuiltinLintDiagnostics::PartiallyUnusedImport(snippet, span) => {
+                db.span_suggestion(span, "parts of this import can be removed", snippet);
             }
         }
     }

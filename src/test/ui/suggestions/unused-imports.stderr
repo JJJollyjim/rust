@@ -1,0 +1,62 @@
+error: unused import: `super::f`
+  --> $DIR/unused-imports.rs:20:9
+   |
+LL |     use super::f; //~ ERROR unused import
+   |     ----^^^^^^^^- help: this import can be removed
+   |
+note: lint level defined here
+  --> $DIR/unused-imports.rs:11:9
+   |
+LL | #![deny(unused_imports)]
+   |         ^^^^^^^^^^^^^^
+
+error: unused imports: `f`, `g`
+  --> $DIR/unused-imports.rs:24:17
+   |
+LL |     use super::{f, g, h}; //~ ERROR unused import
+   |     ------------^--^----- help: parts of this import can be removed: `use super::h`
+
+error: unused import: `f`
+  --> $DIR/unused-imports.rs:31:17
+   |
+LL |     use super::{f, g, h}; //~ ERROR unused import
+   |     ------------^-------- help: parts of this import can be removed: `use super::{g, h}`
+
+error: unused imports: `f`, `g`, `h`
+  --> $DIR/unused-imports.rs:40:17
+   |
+LL |     use super::{f, g, h}; //~ ERROR unused import
+   |     ------------^--^--^-- help: this import can be removed
+
+error: unused imports: `basic::{}`, `{}`
+  --> $DIR/unused-imports.rs:44:17
+   |
+LL |     use super::{{}, basic::{}}; //~ ERROR unused import
+   |     ------------^^--^^^^^^^^^-- help: this import can be removed
+
+error: unused imports: `BinaryHeap`, `HashMap`, `io::*`, `linked_list::*`
+  --> $DIR/unused-imports.rs:48:43
+   |
+LL |     use std::{collections::{binary_heap::{BinaryHeap}, HashMap, linked_list::*}, io::*}; //~ ERROR unused import
+   |     --------------------------------------^^^^^^^^^^---^^^^^^^--^^^^^^^^^^^^^^---^^^^^-- help: this import can be removed
+
+error: unused imports: `BinaryHeap`, `io::*`, `linked_list::*`
+  --> $DIR/unused-imports.rs:52:43
+   |
+LL |     use std::{collections::{binary_heap::{BinaryHeap}, HashMap, linked_list::*}, io::*}; //~ ERROR unused import
+   |     --------------------------------------^^^^^^^^^^------------^^^^^^^^^^^^^^---^^^^^-- help: parts of this import can be removed: `use std::collections::HashMap`
+
+error: unused import: `HashSet`
+  --> $DIR/unused-imports.rs:60:37
+   |
+LL |     use std::collections::{HashMap, HashSet, LinkedList,}; //~ ERROR unused import
+   |     --------------------------------^^^^^^^--------------- help: parts of this import can be removed: `use std::collections::{HashMap, LinkedList,}`
+
+error: unused import: `BinaryHeap`
+  --> $DIR/unused-imports.rs:71:47
+   |
+LL |     use std::{io::{prelude::*}, collections::{BinaryHeap, HashMap}}; //~ ERROR unused import
+   |     ------------------------------------------^^^^^^^^^^------------ help: parts of this import can be removed: `use std::{io::{prelude::*}, collections::HashMap}`
+
+error: aborting due to 9 previous errors
+
