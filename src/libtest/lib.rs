@@ -656,7 +656,7 @@ pub fn parse_opts(args: &[String]) -> Option<OptRes> {
 #[derive(Clone, PartialEq)]
 pub struct BenchSamples {
     ns_iter_summ: stats::Summary,
-    mb_s: usize,
+    bytes_sec: u64,
 }
 
 #[derive(Clone, PartialEq)]
@@ -796,9 +796,16 @@ pub fn fmt_bench_samples(bs: &BenchSamples) -> String {
             fmt_thousands_sep(deviation, ',')
         ))
         .unwrap();
-    if bs.mb_s != 0 {
+    if bs.bytes_sec != 0 {
+        let (rate, unit) = match bs.bytes_sec {
+            b if b >= 1_000_000_000 => (b / 1_000_000_000, "GB/s"),
+            b if b >= 1_000_000     => (b / 1_000_000, "MB/s"),
+            b if b >= 1_000         => (b / 1_000, "kB/s"),
+            b                       => (b, "B/s"),
+        };
+
         output
-            .write_fmt(format_args!(" = {} MB/s", bs.mb_s))
+            .write_fmt(format_args!(" = {} {}", rate, unit))
             .unwrap();
     }
     output
@@ -1675,11 +1682,11 @@ pub mod bench {
             //bs.bench(f) {
             Ok(Some(ns_iter_summ)) => {
                 let ns_iter = cmp::max(ns_iter_summ.median as u64, 1);
-                let mb_s = bs.bytes * 1000 / ns_iter;
+                let bytes_sec = (bs.bytes * 1_000_000_000) / ns_iter;
 
                 let bs = BenchSamples {
                     ns_iter_summ,
-                    mb_s: mb_s as usize,
+                    bytes_sec: bytes_sec,
                 };
                 TestResult::TrBench(bs)
             }
@@ -1689,7 +1696,7 @@ pub mod bench {
                 let samples: &mut [f64] = &mut [0.0_f64; 1];
                 let bs = BenchSamples {
                     ns_iter_summ: stats::Summary::new(samples),
-                    mb_s: 0,
+                    bytes_sec: 0,
                 };
                 TestResult::TrBench(bs)
             }

@@ -91,10 +91,10 @@ impl<T: Write> OutputFormatter for JsonFormatter<T> {
                 let median = bs.ns_iter_summ.median as usize;
                 let deviation = (bs.ns_iter_summ.max - bs.ns_iter_summ.min) as usize;
 
-                let mbps = if bs.mb_s == 0 {
+                let mbps = if bs.bytes_sec == 0 {
                     String::new()
                 } else {
-                    format!(r#", "mib_per_second": {}"#, bs.mb_s)
+                    format!(r#", "mib_per_second": {}"#, bs.bytes_sec/1_000_000)
                 };
 
                 let line = format!(
