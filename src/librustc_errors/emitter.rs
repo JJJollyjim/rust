@@ -234,11 +234,11 @@ pub trait Emitter {
                 let msg = if substitution.len() == 0 || sugg.style.hide_inline() {
                     // This substitution is only removal OR we explicitly don't want to show the
                     // code inline (`hide_inline`). Therefore, we don't show the substitution.
-                    format!("help: {}", sugg.msg)
+                    format!("If I were you, I would simply {}", sugg.msg)
                 } else {
                     // Show the default suggestion text with the substitution
                     format!(
-                        "help: {}{}: `{}`",
+                        "If I were you, I would simply {}{}: `{}`",
                         sugg.msg,
                         if self.source_map().map(|sm| is_case_difference(
                             &**sm,
