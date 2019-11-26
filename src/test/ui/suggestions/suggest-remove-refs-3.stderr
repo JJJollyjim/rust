@@ -6,7 +6,7 @@ LL |        for (i, n) in & & &
    |  |___________________|
    | ||
 LL | ||         & &v
-   | ||___________- help: consider removing 5 leading `&`-references
+   | ||___________- If I were you, I would simply consider removing 5 leading `&`-references
 LL | |          .iter()
 LL | |          .enumerate() {
    | |_____________________^ `&&&&&std::iter::Enumerate<std::slice::Iter<'_, {integer}>>` is not an iterator

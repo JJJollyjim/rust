@@ -2,7 +2,7 @@ warning: denote infinite loops with `loop { ... }`
   --> $DIR/block-must-not-have-result-while.rs:2:5
    |
 LL |     while true {
-   |     ^^^^^^^^^^ help: use `loop`
+   |     ^^^^^^^^^^ If I were you, I would simply use `loop`
    |
    = note: `#[warn(while_true)]` on by default
 

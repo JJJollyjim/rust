@@ -10,7 +10,7 @@ warning: unnecessary trailing semicolon
   --> $DIR/doc-before-semi.rs:5:5
    |
 LL |     ;
-   |     ^ help: remove this semicolon
+   |     ^ If I were you, I would simply remove this semicolon
    |
    = note: `#[warn(redundant_semicolon)]` on by default
 

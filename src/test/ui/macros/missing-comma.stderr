@@ -13,7 +13,7 @@ LL | macro_rules! foo {
 LL |     foo!(a b);
    |           -^ no rules expected this token in macro call
    |           |
-   |           help: missing comma here
+   |           If I were you, I would simply missing comma here
 
 error: no rules expected the token `e`
   --> $DIR/missing-comma.rs:23:21
@@ -24,7 +24,7 @@ LL | macro_rules! foo {
 LL |     foo!(a, b, c, d e);
    |                    -^ no rules expected this token in macro call
    |                    |
-   |                    help: missing comma here
+   |                    If I were you, I would simply missing comma here
 
 error: no rules expected the token `d`
   --> $DIR/missing-comma.rs:25:18
@@ -35,7 +35,7 @@ LL | macro_rules! foo {
 LL |     foo!(a, b, c d, e);
    |                 -^ no rules expected this token in macro call
    |                 |
-   |                 help: missing comma here
+   |                 If I were you, I would simply missing comma here
 
 error: no rules expected the token `d`
   --> $DIR/missing-comma.rs:27:18

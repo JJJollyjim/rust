@@ -5,7 +5,7 @@ LL |   trait Parent {
    |   ------------ required by `Parent`
 ...
 LL |   impl<A, T: Parent<Ty = A>> Parent for ParentWrapper<T> {
-   |   ^                                                     - help: consider further restricting the associated type: `where <T as Parent>::Assoc: Child<A>`
+   |   ^                                                     - If I were you, I would simply consider further restricting the associated type: `where <T as Parent>::Assoc: Child<A>`
    |  _|
    | |
 LL | |
@@ -23,7 +23,7 @@ LL |     type Assoc: Child<Self::Ty>;
    |          ----- associated type defined here
 ...
 LL | impl<A, T: Parent<Ty = A>> Parent for ParentWrapper<T> {
-   | ------------------------------------------------------- help: consider further restricting the associated type: `where <T as Parent>::Assoc: Child<A>`
+   | ------------------------------------------------------- If I were you, I would simply consider further restricting the associated type: `where <T as Parent>::Assoc: Child<A>`
    | |
    | in this `impl` item
 ...
@@ -39,7 +39,7 @@ LL | trait Parent {
    | ------------ required by `Parent`
 ...
 LL | impl<A, T: Parent<Ty = A>> Parent for ParentWrapper<T> {
-   |                                                       - help: consider further restricting the associated type: `where <T as Parent>::Assoc: Child<A>`
+   |                                                       - If I were you, I would simply consider further restricting the associated type: `where <T as Parent>::Assoc: Child<A>`
 ...
 LL |     type Assoc = ChildWrapper<T::Assoc>;
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `Child<A>` is not implemented for `<T as Parent>::Assoc`

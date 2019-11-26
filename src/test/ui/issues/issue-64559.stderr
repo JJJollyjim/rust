@@ -7,7 +7,7 @@ LL |     for _val in orig {}
    |                 ----
    |                 |
    |                 value moved here
-   |                 help: consider borrowing to avoid moving into the for loop: `&orig`
+   |                 If I were you, I would simply consider borrowing to avoid moving into the for loop: `&orig`
 LL |     let _closure = || orig;
    |                    ^^ ---- use occurs due to use in closure
    |                    |

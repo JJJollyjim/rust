@@ -2,7 +2,7 @@ warning: unnecessary parentheses around `return` value
   --> $DIR/path-lookahead.rs:8:10
    |
 LL |   return (<T as ToString>::to_string(&arg));
-   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove these parentheses
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove these parentheses
    |
 note: lint level defined here
   --> $DIR/path-lookahead.rs:3:9

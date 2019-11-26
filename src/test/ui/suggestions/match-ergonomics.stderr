@@ -5,7 +5,7 @@ LL |         [&v] => {},
    |          ^^
    |          |
    |          expected `i32`, found reference
-   |          help: you can probably remove the explicit borrow: `v`
+   |          If I were you, I would simply you can probably remove the explicit borrow: `v`
    |
    = note:   expected type `i32`
            found reference `&_`
@@ -29,7 +29,7 @@ LL |         &v => {},
    |         ^^
    |         |
    |         expected `i32`, found reference
-   |         help: you can probably remove the explicit borrow: `v`
+   |         If I were you, I would simply you can probably remove the explicit borrow: `v`
    |
    = note:   expected type `i32`
            found reference `&_`
@@ -41,7 +41,7 @@ LL |     if let [&v] = &x[..] {}
    |             ^^
    |             |
    |             expected `i32`, found reference
-   |             help: you can probably remove the explicit borrow: `v`
+   |             If I were you, I would simply you can probably remove the explicit borrow: `v`
    |
    = note:   expected type `i32`
            found reference `&_`

@@ -5,7 +5,7 @@ LL |     fn op(_: T) -> Self;
    |     -------------------- required by `Tr::op`
 ...
 LL |     fn test<U>(u: U) -> Self {
-   |                             - help: consider further restricting `Self`: `where Self: Tr<U>`
+   |                             - If I were you, I would simply consider further restricting `Self`: `where Self: Tr<U>`
 LL |         Tr::op(u)
    |         ^^^^^^ the trait `Tr<U>` is not implemented for `Self`
 
@@ -16,7 +16,7 @@ LL |     fn op(_: T) -> Self;
    |     -------------------- required by `Tr::op`
 ...
 LL |     fn test<U>(u: U) -> Self {
-   |                             - help: consider further restricting `Self`: `where Self: Tr<U>`
+   |                             - If I were you, I would simply consider further restricting `Self`: `where Self: Tr<U>`
 LL |         Tr::op(u)
    |         ^^^^^^ the trait `Tr<U>` is not implemented for `Self`
 

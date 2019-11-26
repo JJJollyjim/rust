@@ -2,7 +2,7 @@ warning: unused extern crate
   --> $DIR/no-macro-use-attr.rs:6:1
    |
 LL | extern crate test_macros;
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove it
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove it
    |
 note: lint level defined here
   --> $DIR/no-macro-use-attr.rs:4:9

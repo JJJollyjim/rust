@@ -6,7 +6,7 @@ LL | | }
    | |_- similarly named trait `A` defined here
 LL | 
 LL |   impl A for a {
-   |              ^ help: a trait with a similar name exists: `A`
+   |              ^ If I were you, I would simply a trait with a similar name exists: `A`
 
 error: aborting due to previous error
 

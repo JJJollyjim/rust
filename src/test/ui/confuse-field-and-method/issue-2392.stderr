@@ -19,7 +19,7 @@ LL | struct Obj<F> where F: FnOnce() -> u32 {
    | -------------------------------------- method `not_closure` not found for this
 ...
 LL |     o_closure.not_closure();
-   |               ^^^^^^^^^^^-- help: remove the arguments
+   |               ^^^^^^^^^^^-- If I were you, I would simply remove the arguments
    |               |
    |               field, not a method
 
@@ -86,7 +86,7 @@ LL | struct Obj<F> where F: FnOnce() -> u32 {
    | -------------------------------------- method `not_closure` not found for this
 ...
 LL |     w.wrap.not_closure();
-   |            ^^^^^^^^^^^-- help: remove the arguments
+   |            ^^^^^^^^^^^-- If I were you, I would simply remove the arguments
    |            |
    |            field, not a method
 

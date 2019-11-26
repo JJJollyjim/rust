@@ -5,7 +5,7 @@ LL | pub struct MySet<T:MyHash> {
    | -------------------------- required by `MySet`
 ...
 LL | impl<T> Foo for T {
-   |      - help: consider restricting this bound: `T: MyHash`
+   |      - If I were you, I would simply consider restricting this bound: `T: MyHash`
 LL |     type Bar = MySet<T>;
    |     ^^^^^^^^^^^^^^^^^^^^ the trait `MyHash` is not implemented for `T`
 

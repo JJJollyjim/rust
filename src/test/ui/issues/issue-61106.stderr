@@ -5,7 +5,7 @@ LL |     foo(x.clone());
    |         ^^^^^^^^^
    |         |
    |         expected `&str`, found struct `std::string::String`
-   |         help: consider borrowing here: `&x`
+   |         If I were you, I would simply consider borrowing here: `&x`
 
 error: aborting due to previous error
 

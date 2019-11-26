@@ -23,7 +23,7 @@ error[E0596]: cannot borrow `self` as mutable, as it is not declared as mutable
   --> $DIR/issue-51191.rs:11:9
    |
 LL |     fn imm(self) {
-   |            ---- help: consider changing this to be mutable: `mut self`
+   |            ---- If I were you, I would simply consider changing this to be mutable: `mut self`
 LL |         (&mut self).bar();
    |         ^^^^^^^^^^^ cannot borrow as mutable
 

@@ -4,7 +4,7 @@ error[E0573]: expected type, found const parameter `C`
 LL | struct S<const C: u8>(C);
    | ----------------------^--
    | |                     |
-   | |                     help: a struct with a similar name exists: `S`
+   | |                     If I were you, I would simply a struct with a similar name exists: `S`
    | similarly named struct `S` defined here
 
 warning: the feature `const_generics` is incomplete and may cause the compiler to crash

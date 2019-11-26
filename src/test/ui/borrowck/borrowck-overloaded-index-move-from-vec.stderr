@@ -5,7 +5,7 @@ LL |     let bad = v[0];
    |               ^^^^
    |               |
    |               move occurs because value has type `std::boxed::Box<i32>`, which does not implement the `Copy` trait
-   |               help: consider borrowing here: `&v[0]`
+   |               If I were you, I would simply consider borrowing here: `&v[0]`
 
 error: aborting due to previous error
 

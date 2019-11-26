@@ -2,7 +2,7 @@ error: `mut` must be followed by a named binding
   --> $DIR/issue-65122-mac-invoc-in-mut-patterns.rs:6:13
    |
 LL |         let mut $eval = ();
-   |             ^^^^^^^^^ help: remove the `mut` prefix: `does_not_exist!()`
+   |             ^^^^^^^^^ If I were you, I would simply remove the `mut` prefix: `does_not_exist!()`
 ...
 LL |     mac1! { does_not_exist!() }
    |     --------------------------- in this macro invocation
@@ -22,7 +22,7 @@ error: `mut` must be followed by a named binding
   --> $DIR/issue-65122-mac-invoc-in-mut-patterns.rs:13:13
    |
 LL |         let mut $eval = ();
-   |             ^^^ help: remove the `mut` prefix: `does_not_exist!()`
+   |             ^^^ If I were you, I would simply remove the `mut` prefix: `does_not_exist!()`
 ...
 LL |     mac2! { does_not_exist!() }
    |     --------------------------- in this macro invocation

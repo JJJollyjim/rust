@@ -2,7 +2,7 @@ error: functions generic over types or consts must be mangled
   --> $DIR/generic-no-mangle.rs:4:1
    |
 LL | #[no_mangle]
-   | ------------ help: remove this attribute
+   | ------------ If I were you, I would simply remove this attribute
 LL | pub fn foo<T>() {}
    | ^^^^^^^^^^^^^^^^^^
    |
@@ -16,7 +16,7 @@ error: functions generic over types or consts must be mangled
   --> $DIR/generic-no-mangle.rs:7:1
    |
 LL | #[no_mangle]
-   | ------------ help: remove this attribute
+   | ------------ If I were you, I would simply remove this attribute
 LL | pub extern fn bar<T>() {}
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 

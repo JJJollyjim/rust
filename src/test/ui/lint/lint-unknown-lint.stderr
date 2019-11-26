@@ -14,7 +14,7 @@ error: unknown lint: `dead_cod`
   --> $DIR/lint-unknown-lint.rs:5:9
    |
 LL | #![deny(dead_cod)]
-   |         ^^^^^^^^ help: did you mean: `dead_code`
+   |         ^^^^^^^^ If I were you, I would simply did you mean: `dead_code`
 
 error: aborting due to 2 previous errors
 

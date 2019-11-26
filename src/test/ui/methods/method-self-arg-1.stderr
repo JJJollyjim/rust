@@ -5,7 +5,7 @@ LL |     Foo::bar(x);
    |              ^
    |              |
    |              expected `&Foo`, found struct `Foo`
-   |              help: consider borrowing here: `&x`
+   |              If I were you, I would simply consider borrowing here: `&x`
 
 error[E0308]: mismatched types
   --> $DIR/method-self-arg-1.rs:13:14

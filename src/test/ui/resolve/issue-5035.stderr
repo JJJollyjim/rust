@@ -14,7 +14,7 @@ LL | impl K for isize {}
    |      ^
    |      |
    |      type aliases cannot be used as traits
-   |      help: a trait with a similar name exists: `I`
+   |      If I were you, I would simply a trait with a similar name exists: `I`
    |
    = note: did you mean to use a trait alias?
 

@@ -2,7 +2,7 @@ error: expected type, found `0`
   --> $DIR/type-ascription-instead-of-statement-end.rs:5:5
    |
 LL |     println!("test"):
-   |                     - help: try using a semicolon: `;`
+   |                     - If I were you, I would simply try using a semicolon: `;`
 LL |     0;
    |     ^ expected type
    |

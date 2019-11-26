@@ -15,7 +15,7 @@ LL |             bar;
    |             ^^^-
    |             |
    |             expected `{`
-   |             help: try placing this code inside a block: `{ bar; }`
+   |             If I were you, I would simply try placing this code inside a block: `{ bar; }`
 
 error: aborting due to 2 previous errors
 

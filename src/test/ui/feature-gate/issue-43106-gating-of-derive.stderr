@@ -8,7 +8,7 @@ error: `derive` may only be applied to structs, enums and unions
   --> $DIR/issue-43106-gating-of-derive.rs:7:17
    |
 LL |     mod inner { #![derive(Debug)] }
-   |                 ^^^^^^^^^^^^^^^^^ help: try an outer attribute: `#[derive(Debug)]`
+   |                 ^^^^^^^^^^^^^^^^^ If I were you, I would simply try an outer attribute: `#[derive(Debug)]`
 
 error: `derive` may only be applied to structs, enums and unions
   --> $DIR/issue-43106-gating-of-derive.rs:10:5

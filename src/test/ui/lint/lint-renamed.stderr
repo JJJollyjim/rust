@@ -2,7 +2,7 @@ warning: lint `bare_trait_object` has been renamed to `bare_trait_objects`
   --> $DIR/lint-renamed.rs:1:8
    |
 LL | #[deny(bare_trait_object)]
-   |        ^^^^^^^^^^^^^^^^^ help: use the new name: `bare_trait_objects`
+   |        ^^^^^^^^^^^^^^^^^ If I were you, I would simply use the new name: `bare_trait_objects`
    |
    = note: `#[warn(renamed_and_removed_lints)]` on by default
 
@@ -10,7 +10,7 @@ error: unused variable: `unused`
   --> $DIR/lint-renamed.rs:4:17
    |
 LL | fn main() { let unused = (); }
-   |                 ^^^^^^ help: consider prefixing with an underscore: `_unused`
+   |                 ^^^^^^ If I were you, I would simply consider prefixing with an underscore: `_unused`
    |
 note: lint level defined here
   --> $DIR/lint-renamed.rs:3:8

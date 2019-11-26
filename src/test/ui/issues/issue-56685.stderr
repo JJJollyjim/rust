@@ -29,13 +29,13 @@ error: unused variable: `a`
   --> $DIR/issue-56685.rs:27:14
    |
 LL |         F::C(a, b) => { 3 }
-   |              ^ help: consider prefixing with an underscore: `_a`
+   |              ^ If I were you, I would simply consider prefixing with an underscore: `_a`
 
 error: unused variable: `b`
   --> $DIR/issue-56685.rs:27:17
    |
 LL |         F::C(a, b) => { 3 }
-   |                 ^ help: consider prefixing with an underscore: `_b`
+   |                 ^ If I were you, I would simply consider prefixing with an underscore: `_b`
 
 error: unused variable: `x`
   --> $DIR/issue-56685.rs:32:25

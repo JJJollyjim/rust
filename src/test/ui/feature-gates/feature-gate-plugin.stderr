@@ -11,7 +11,7 @@ warning: use of deprecated attribute `plugin`: compiler plugins are deprecated. 
   --> $DIR/feature-gate-plugin.rs:3:1
    |
 LL | #![plugin(foo)]
-   | ^^^^^^^^^^^^^^^ help: may be removed in a future compiler version
+   | ^^^^^^^^^^^^^^^ If I were you, I would simply may be removed in a future compiler version
    |
    = note: `#[warn(deprecated)]` on by default
 

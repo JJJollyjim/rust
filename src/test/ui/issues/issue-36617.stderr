@@ -2,7 +2,7 @@ error: `derive` may only be applied to structs, enums and unions
   --> $DIR/issue-36617.rs:1:1
    |
 LL | #![derive(Copy)]
-   | ^^^^^^^^^^^^^^^^ help: try an outer attribute: `#[derive(Copy)]`
+   | ^^^^^^^^^^^^^^^^ If I were you, I would simply try an outer attribute: `#[derive(Copy)]`
 
 error: cannot determine resolution for the derive macro `Copy`
   --> $DIR/issue-36617.rs:1:11

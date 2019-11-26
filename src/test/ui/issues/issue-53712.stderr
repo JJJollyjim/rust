@@ -4,7 +4,7 @@ error[E0609]: no field `0` on type `[{integer}; 5]`
 LL |     arr.0;
    |     ----^
    |     |
-   |     help: instead of using tuple indexing, use array indexing: `arr[0]`
+   |     If I were you, I would simply instead of using tuple indexing, use array indexing: `arr[0]`
 
 error: aborting due to previous error
 

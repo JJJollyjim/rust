@@ -13,7 +13,7 @@ error: expected type, found keyword `true`
   --> $DIR/issue-44406.rs:8:10
    |
 LL |         bar(baz: $rest)
-   |                - help: try using a semicolon: `;`
+   |                - If I were you, I would simply try using a semicolon: `;`
 ...
 LL |     foo!(true);
    |          ^^^^ expected type

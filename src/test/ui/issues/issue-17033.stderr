@@ -5,7 +5,7 @@ LL |     (*p)(())
    |          ^^
    |          |
    |          expected `&mut ()`, found `()`
-   |          help: consider mutably borrowing here: `&mut ()`
+   |          If I were you, I would simply consider mutably borrowing here: `&mut ()`
 
 error: aborting due to previous error
 

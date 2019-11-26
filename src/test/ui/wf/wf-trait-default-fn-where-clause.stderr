@@ -5,7 +5,7 @@ LL |   trait Bar<T:Eq+?Sized> { }
    |   ---------------------- required by `Bar`
 ...
 LL |       fn bar<A>(&self) where A: Bar<Self> {
-   |       ^                                  - help: consider further restricting `Self`: `, Self: std::cmp::Eq`
+   |       ^                                  - If I were you, I would simply consider further restricting `Self`: `, Self: std::cmp::Eq`
    |  _____|
    | |
 LL | |

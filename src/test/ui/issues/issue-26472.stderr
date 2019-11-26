@@ -4,7 +4,7 @@ error[E0616]: field `len` of struct `sub::S` is private
 LL |     let v = s.len;
    |             ^^---
    |               |
-   |               help: a method `len` also exists, call it with parentheses: `len()`
+   |               If I were you, I would simply a method `len` also exists, call it with parentheses: `len()`
 
 error[E0616]: field `len` of struct `sub::S` is private
   --> $DIR/issue-26472.rs:12:5

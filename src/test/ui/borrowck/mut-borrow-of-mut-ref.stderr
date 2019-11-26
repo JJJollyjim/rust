@@ -2,7 +2,7 @@ error[E0596]: cannot borrow `b` as mutable, as it is not declared as mutable
   --> $DIR/mut-borrow-of-mut-ref.rs:8:7
    |
 LL | fn f(b: &mut i32) {
-   |      - help: consider changing this to be mutable: `mut b`
+   |      - If I were you, I would simply consider changing this to be mutable: `mut b`
 LL |     g(&mut b)
    |       ^^^^^^ cannot borrow as mutable
 

@@ -6,7 +6,7 @@ LL | fn foo<T>(x: T) {
 LL |     fn bar(f: Box<dyn FnMut(T) -> T>) { }
    |        ---                  ^ use of generic parameter from outer function
    |        |
-   |        help: try using a local generic parameter instead: `bar<T>`
+   |        If I were you, I would simply try using a local generic parameter instead: `bar<T>`
 
 error[E0401]: can't use generic parameters from outer function
   --> $DIR/type-arg-out-of-scope.rs:3:35
@@ -16,7 +16,7 @@ LL | fn foo<T>(x: T) {
 LL |     fn bar(f: Box<dyn FnMut(T) -> T>) { }
    |        ---                        ^ use of generic parameter from outer function
    |        |
-   |        help: try using a local generic parameter instead: `bar<T>`
+   |        If I were you, I would simply try using a local generic parameter instead: `bar<T>`
 
 error: aborting due to 2 previous errors
 

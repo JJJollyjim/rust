@@ -27,7 +27,7 @@ LL | fn should_return_fruit_too() -> Fruit::Apple {
    |                                 ^^^^^^^^^^^^
    |                                 |
    |                                 not a type
-   |                                 help: try using the variant's enum: `Fruit`
+   |                                 If I were you, I would simply try using the variant's enum: `Fruit`
 
 error[E0425]: cannot find function, tuple struct or tuple variant `Apple` in this scope
   --> $DIR/issue-35675.rs:15:5
@@ -47,7 +47,7 @@ LL | fn foo() -> Ok {
    |             ^^
    |             |
    |             not a type
-   |             help: try using the variant's enum: `std::result::Result`
+   |             If I were you, I would simply try using the variant's enum: `std::result::Result`
 
 error[E0412]: cannot find type `Variant3` in this scope
   --> $DIR/issue-35675.rs:24:13
@@ -67,7 +67,7 @@ LL | fn qux() -> Some {
    |             ^^^^
    |             |
    |             not a type
-   |             help: try using the variant's enum: `std::option::Option`
+   |             If I were you, I would simply try using the variant's enum: `std::option::Option`
 
 error: aborting due to 7 previous errors
 

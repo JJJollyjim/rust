@@ -10,7 +10,7 @@ error[E0432]: unresolved import `bar::Baz`
 LL | use bar::Baz as x;
    |     ^^^^^---^^^^^
    |     |    |
-   |     |    help: a similar name exists in the module: `Bar`
+   |     |    If I were you, I would simply a similar name exists in the module: `Bar`
    |     no `Baz` in `bar`
 
 error[E0432]: unresolved import `food::baz`
@@ -19,7 +19,7 @@ error[E0432]: unresolved import `food::baz`
 LL | use food::baz;
    |     ^^^^^^---
    |     |     |
-   |     |     help: a similar name exists in the module: `bag`
+   |     |     If I were you, I would simply a similar name exists in the module: `bag`
    |     no `baz` in `food`
 
 error[E0432]: unresolved import `food::beens`
@@ -29,19 +29,19 @@ LL | use food::{beens as Foo};
    |            -----^^^^^^^
    |            |
    |            no `beens` in `food`
-   |            help: a similar name exists in the module: `beans`
+   |            If I were you, I would simply a similar name exists in the module: `beans`
 
 error[E0432]: unresolved import `MyEnum`
   --> $DIR/unresolved-import.rs:38:9
    |
 LL |     use MyEnum::*;
-   |         ^^^^^^ help: a similar path exists: `self::MyEnum`
+   |         ^^^^^^ If I were you, I would simply a similar path exists: `self::MyEnum`
 
 error[E0432]: unresolved import `Enum`
   --> $DIR/unresolved-import.rs:48:9
    |
 LL |     use Enum::*;
-   |         ^^^^ help: a similar path exists: `self::Enum`
+   |         ^^^^ If I were you, I would simply a similar path exists: `self::Enum`
 
 error: aborting due to 6 previous errors
 

@@ -15,7 +15,7 @@ error: expected one of `,` or `}`, found `{`
 LL | fn p() { match s { v, E { [) {) }
    |        -       -       -^ expected one of `,` or `}`
    |        |       |       |
-   |        |       |       help: `}` may belong here
+   |        |       |       If I were you, I would simply `}` may belong here
    |        |       while parsing this struct
    |        unclosed delimiter
 

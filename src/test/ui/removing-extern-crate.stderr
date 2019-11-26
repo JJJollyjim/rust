@@ -2,7 +2,7 @@ warning: unused extern crate
   --> $DIR/removing-extern-crate.rs:8:1
    |
 LL | extern crate removing_extern_crate as foo;
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove it
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove it
    |
 note: lint level defined here
   --> $DIR/removing-extern-crate.rs:6:9
@@ -15,17 +15,17 @@ warning: unused extern crate
   --> $DIR/removing-extern-crate.rs:9:1
    |
 LL | extern crate core;
-   | ^^^^^^^^^^^^^^^^^^ help: remove it
+   | ^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove it
 
 warning: unused extern crate
   --> $DIR/removing-extern-crate.rs:12:5
    |
 LL |     extern crate removing_extern_crate as foo;
-   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove it
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove it
 
 warning: unused extern crate
   --> $DIR/removing-extern-crate.rs:13:5
    |
 LL |     extern crate core;
-   |     ^^^^^^^^^^^^^^^^^^ help: remove it
+   |     ^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove it
 

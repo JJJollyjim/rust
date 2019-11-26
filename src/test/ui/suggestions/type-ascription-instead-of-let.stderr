@@ -5,7 +5,7 @@ LL |         temp: i32 = fun(5i32);
    |         ^^^^
    |         |
    |         not found in this scope
-   |         help: maybe you meant to write an assignment here: `let temp`
+   |         If I were you, I would simply maybe you meant to write an assignment here: `let temp`
 
 error[E0425]: cannot find value `temp` in this scope
   --> $DIR/type-ascription-instead-of-let.rs:7:9

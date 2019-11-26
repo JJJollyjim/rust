@@ -4,7 +4,7 @@ error[E0641]: cannot cast to a pointer of an unknown kind
 LL |     let mut y = 0 as *const _;
    |                 ^^^^^--------
    |                      |
-   |                      help: consider giving more type information
+   |                      If I were you, I would simply consider giving more type information
    |
    = note: The type information given here is insufficient to check whether the pointer cast is valid
 

@@ -2,37 +2,37 @@ error: missing angle brackets in associated item path
   --> $DIR/bad-assoc-pat.rs:3:9
    |
 LL |         [u8]::AssocItem => {}
-   |         ^^^^^^^^^^^^^^^ help: try: `<[u8]>::AssocItem`
+   |         ^^^^^^^^^^^^^^^ If I were you, I would simply try: `<[u8]>::AssocItem`
 
 error: missing angle brackets in associated item path
   --> $DIR/bad-assoc-pat.rs:6:9
    |
 LL |         (u8, u8)::AssocItem => {}
-   |         ^^^^^^^^^^^^^^^^^^^ help: try: `<(u8, u8)>::AssocItem`
+   |         ^^^^^^^^^^^^^^^^^^^ If I were you, I would simply try: `<(u8, u8)>::AssocItem`
 
 error: missing angle brackets in associated item path
   --> $DIR/bad-assoc-pat.rs:9:9
    |
 LL |         _::AssocItem => {}
-   |         ^^^^^^^^^^^^ help: try: `<_>::AssocItem`
+   |         ^^^^^^^^^^^^ If I were you, I would simply try: `<_>::AssocItem`
 
 error: missing angle brackets in associated item path
   --> $DIR/bad-assoc-pat.rs:14:10
    |
 LL |         &(u8,)::AssocItem => {}
-   |          ^^^^^^^^^^^^^^^^ help: try: `<(u8,)>::AssocItem`
+   |          ^^^^^^^^^^^^^^^^ If I were you, I would simply try: `<(u8,)>::AssocItem`
 
 error: missing angle brackets in associated item path
   --> $DIR/bad-assoc-pat.rs:32:9
    |
 LL |         ty!()::AssocItem => {}
-   |         ^^^^^^^^^^^^^^^^ help: try: `<ty!()>::AssocItem`
+   |         ^^^^^^^^^^^^^^^^ If I were you, I would simply try: `<ty!()>::AssocItem`
 
 error: missing angle brackets in associated item path
   --> $DIR/bad-assoc-pat.rs:21:19
    |
 LL |     ($ty: ty) => ($ty::AssocItem)
-   |                   ^^^^^^^^^^^^^^ help: try: `<$ty>::AssocItem`
+   |                   ^^^^^^^^^^^^^^ If I were you, I would simply try: `<$ty>::AssocItem`
 ...
 LL |         pat!(u8) => {}
    |         -------- in this macro invocation

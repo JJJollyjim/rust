@@ -5,7 +5,7 @@ LL |     let _: &[i32] = [0];
    |            ------   ^^^
    |            |        |
    |            |        expected `&[i32]`, found array `[{integer}; 1]`
-   |            |        help: consider borrowing here: `&[0]`
+   |            |        If I were you, I would simply consider borrowing here: `&[0]`
    |            expected due to this
 
 error: aborting due to previous error

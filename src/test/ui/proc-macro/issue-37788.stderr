@@ -5,7 +5,7 @@ LL | fn main() {
    |           - expected `()` because of default return type
 LL |     // Test that constructing the `visible_parent_map` (in `cstore_impl.rs`) does not ICE.
 LL |     std::cell::Cell::new(0)
-   |     ^^^^^^^^^^^^^^^^^^^^^^^- help: try adding a semicolon: `;`
+   |     ^^^^^^^^^^^^^^^^^^^^^^^- If I were you, I would simply try adding a semicolon: `;`
    |     |
    |     expected `()`, found struct `std::cell::Cell`
    |

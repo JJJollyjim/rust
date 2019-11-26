@@ -92,7 +92,7 @@ LL |     let y = { static x: Box<isize> = box 3; x };
    |                                             ^
    |                                             |
    |                                             move occurs because `x` has type `std::boxed::Box<isize>`, which does not implement the `Copy` trait
-   |                                             help: consider borrowing here: `&x`
+   |                                             If I were you, I would simply consider borrowing here: `&x`
 
 error[E0010]: allocations are not allowed in statics
   --> $DIR/check-static-values-constraints.rs:116:38

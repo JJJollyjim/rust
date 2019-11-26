@@ -2,7 +2,7 @@ error: malformed `target_feature` attribute input
   --> $DIR/invalid-attribute.rs:16:1
    |
 LL | #[target_feature = "+sse2"]
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: must be of the form: `#[target_feature(enable = "name")]`
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply must be of the form: `#[target_feature(enable = "name")]`
 
 error: the feature named `foo` is not valid for this target
   --> $DIR/invalid-attribute.rs:18:18
@@ -14,13 +14,13 @@ error: malformed `target_feature` attribute input
   --> $DIR/invalid-attribute.rs:21:18
    |
 LL | #[target_feature(bar)]
-   |                  ^^^ help: must be of the form: `enable = ".."`
+   |                  ^^^ If I were you, I would simply must be of the form: `enable = ".."`
 
 error: malformed `target_feature` attribute input
   --> $DIR/invalid-attribute.rs:23:18
    |
 LL | #[target_feature(disable = "baz")]
-   |                  ^^^^^^^^^^^^^^^ help: must be of the form: `enable = ".."`
+   |                  ^^^^^^^^^^^^^^^ If I were you, I would simply must be of the form: `enable = ".."`
 
 error: `#[target_feature(..)]` can only be applied to `unsafe` functions
   --> $DIR/invalid-attribute.rs:27:1

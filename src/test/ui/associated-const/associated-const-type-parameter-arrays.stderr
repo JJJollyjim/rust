@@ -5,7 +5,7 @@ LL |     const Y: usize;
    |     --------------- required by `Foo::Y`
 ...
 LL | pub fn test<A: Foo, B: Foo>() {
-   |             -- help: consider further restricting this bound: `A: Foo +`
+   |             -- If I were you, I would simply consider further restricting this bound: `A: Foo +`
 LL |     let _array: [u32; <A as Foo>::Y];
    |                       ^^^^^^^^^^^^^ the trait `Foo` is not implemented for `A`
 

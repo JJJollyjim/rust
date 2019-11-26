@@ -20,7 +20,7 @@ error: argument never used
 LL |     println!("%1$*2$.*3$f", 123.456);
    |               -----------   ^^^^^^^ argument never used
    |               |
-   |               help: format specifiers use curly braces: `{0:1$.2$}`
+   |               If I were you, I would simply format specifiers use curly braces: `{0:1$.2$}`
    |
    = note: printf formatting not supported; see the documentation for `std::fmt`
 
@@ -58,7 +58,7 @@ error: named argument never used
 LL |     println!("Hi there, $NAME.", NAME="Tim");
    |                         -----         ^^^^^ named argument never used
    |                         |
-   |                         help: format specifiers use curly braces: `{NAME}`
+   |                         If I were you, I would simply format specifiers use curly braces: `{NAME}`
    |
    = note: shell formatting not supported; see the documentation for `std::fmt`
 

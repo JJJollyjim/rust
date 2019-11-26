@@ -9,7 +9,7 @@ LL | |             2
 LL | |         }
 LL | |         _ => 2
 LL | |     }
-   | |     -- help: consider using a semicolon here
+   | |     -- If I were you, I would simply consider using a semicolon here
    | |_____|
    |       expected this to be `()`
 
@@ -21,7 +21,7 @@ LL | |         4 => 1,
 LL | |         3 => 2,
 LL | |         _ => 2
 LL | |     }
-   | |     ^- help: consider using a semicolon here
+   | |     ^- If I were you, I would simply consider using a semicolon here
    | |_____|
    |       expected `()`, found integer
 

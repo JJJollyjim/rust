@@ -2,7 +2,7 @@ error[E0507]: cannot move out of `s.0` which is behind a shared reference
   --> $DIR/simple.rs:38:17
    |
 LL |     let X(_t) = *s;
-   |           --    ^^ help: consider borrowing here: `&*s`
+   |           --    ^^ If I were you, I would simply consider borrowing here: `&*s`
    |           |
    |           data moved here
    |           move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -11,7 +11,7 @@ error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:42:30
    |
 LL |     if let Either::One(_t) = *r { }
-   |                        --    ^^ help: consider borrowing here: `&*r`
+   |                        --    ^^ If I were you, I would simply consider borrowing here: `&*r`
    |                        |
    |                        data moved here
    |                        move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -20,7 +20,7 @@ error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:46:33
    |
 LL |     while let Either::One(_t) = *r { }
-   |                           --    ^^ help: consider borrowing here: `&*r`
+   |                           --    ^^ If I were you, I would simply consider borrowing here: `&*r`
    |                           |
    |                           data moved here
    |                           move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -29,7 +29,7 @@ error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:50:11
    |
 LL |     match *r {
-   |           ^^ help: consider borrowing here: `&*r`
+   |           ^^ If I were you, I would simply consider borrowing here: `&*r`
 ...
 LL |         Either::One(_t)
    |                     --
@@ -41,7 +41,7 @@ error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:57:11
    |
 LL |     match *r {
-   |           ^^ help: consider borrowing here: `&*r`
+   |           ^^ If I were you, I would simply consider borrowing here: `&*r`
 ...
 LL |         Either::One(_t) => (),
    |                     --
@@ -53,7 +53,7 @@ error[E0507]: cannot move out of `sm.0` which is behind a mutable reference
   --> $DIR/simple.rs:66:17
    |
 LL |     let X(_t) = *sm;
-   |           --    ^^^ help: consider borrowing here: `&*sm`
+   |           --    ^^^ If I were you, I would simply consider borrowing here: `&*sm`
    |           |
    |           data moved here
    |           move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -62,7 +62,7 @@ error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:70:30
    |
 LL |     if let Either::One(_t) = *rm { }
-   |                        --    ^^^ help: consider borrowing here: `&*rm`
+   |                        --    ^^^ If I were you, I would simply consider borrowing here: `&*rm`
    |                        |
    |                        data moved here
    |                        move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -71,7 +71,7 @@ error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:74:33
    |
 LL |     while let Either::One(_t) = *rm { }
-   |                           --    ^^^ help: consider borrowing here: `&*rm`
+   |                           --    ^^^ If I were you, I would simply consider borrowing here: `&*rm`
    |                           |
    |                           data moved here
    |                           move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -80,7 +80,7 @@ error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:78:11
    |
 LL |     match *rm {
-   |           ^^^ help: consider borrowing here: `&*rm`
+   |           ^^^ If I were you, I would simply consider borrowing here: `&*rm`
 ...
 LL |         Either::One(_t)
    |                     --
@@ -92,7 +92,7 @@ error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:85:11
    |
 LL |     match *rm {
-   |           ^^^ help: consider borrowing here: `&*rm`
+   |           ^^^ If I were you, I would simply consider borrowing here: `&*rm`
 ...
 LL |         Either::One(_t) => (),
    |                     --
@@ -104,7 +104,7 @@ error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:93:11
    |
 LL |     match *rm {
-   |           ^^^ help: consider borrowing here: `&*rm`
+   |           ^^^ If I were you, I would simply consider borrowing here: `&*rm`
 ...
 LL |         Either::One(_t) => (),
    |                     --
@@ -116,7 +116,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<X>`
   --> $DIR/simple.rs:102:17
    |
 LL |     let X(_t) = vs[0];
-   |           --    ^^^^^ help: consider borrowing here: `&vs[0]`
+   |           --    ^^^^^ If I were you, I would simply consider borrowing here: `&vs[0]`
    |           |
    |           data moved here
    |           move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -125,7 +125,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:106:30
    |
 LL |     if let Either::One(_t) = vr[0] { }
-   |                        --    ^^^^^ help: consider borrowing here: `&vr[0]`
+   |                        --    ^^^^^ If I were you, I would simply consider borrowing here: `&vr[0]`
    |                        |
    |                        data moved here
    |                        move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -134,7 +134,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:110:33
    |
 LL |     while let Either::One(_t) = vr[0] { }
-   |                           --    ^^^^^ help: consider borrowing here: `&vr[0]`
+   |                           --    ^^^^^ If I were you, I would simply consider borrowing here: `&vr[0]`
    |                           |
    |                           data moved here
    |                           move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -143,7 +143,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:114:11
    |
 LL |     match vr[0] {
-   |           ^^^^^ help: consider borrowing here: `&vr[0]`
+   |           ^^^^^ If I were you, I would simply consider borrowing here: `&vr[0]`
 ...
 LL |         Either::One(_t)
    |                     --
@@ -155,7 +155,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:121:11
    |
 LL |     match vr[0] {
-   |           ^^^^^ help: consider borrowing here: `&vr[0]`
+   |           ^^^^^ If I were you, I would simply consider borrowing here: `&vr[0]`
 ...
 LL |         Either::One(_t) => (),
    |                     --
@@ -167,7 +167,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<X>`
   --> $DIR/simple.rs:130:17
    |
 LL |     let X(_t) = vsm[0];
-   |           --    ^^^^^^ help: consider borrowing here: `&vsm[0]`
+   |           --    ^^^^^^ If I were you, I would simply consider borrowing here: `&vsm[0]`
    |           |
    |           data moved here
    |           move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -176,7 +176,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:134:30
    |
 LL |     if let Either::One(_t) = vrm[0] { }
-   |                        --    ^^^^^^ help: consider borrowing here: `&vrm[0]`
+   |                        --    ^^^^^^ If I were you, I would simply consider borrowing here: `&vrm[0]`
    |                        |
    |                        data moved here
    |                        move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -185,7 +185,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:138:33
    |
 LL |     while let Either::One(_t) = vrm[0] { }
-   |                           --    ^^^^^^ help: consider borrowing here: `&vrm[0]`
+   |                           --    ^^^^^^ If I were you, I would simply consider borrowing here: `&vrm[0]`
    |                           |
    |                           data moved here
    |                           move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -194,7 +194,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:142:11
    |
 LL |     match vrm[0] {
-   |           ^^^^^^ help: consider borrowing here: `&vrm[0]`
+   |           ^^^^^^ If I were you, I would simply consider borrowing here: `&vrm[0]`
 ...
 LL |         Either::One(_t)
    |                     --
@@ -206,7 +206,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:149:11
    |
 LL |     match vrm[0] {
-   |           ^^^^^^ help: consider borrowing here: `&vrm[0]`
+   |           ^^^^^^ If I were you, I would simply consider borrowing here: `&vrm[0]`
 ...
 LL |         Either::One(_t) => (),
    |                     --
@@ -218,7 +218,7 @@ error[E0507]: cannot move out of index of `std::vec::Vec<Either>`
   --> $DIR/simple.rs:157:11
    |
 LL |     match vrm[0] {
-   |           ^^^^^^ help: consider borrowing here: `&vrm[0]`
+   |           ^^^^^^ If I were you, I would simply consider borrowing here: `&vrm[0]`
 ...
 LL |         Either::One(_t) => (),
    |                     --
@@ -234,7 +234,7 @@ LL |     let &X(_t) = s;
    |         |  |
    |         |  data moved here
    |         |  move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `X(_t)`
+   |         If I were you, I would simply consider removing the `&`: `X(_t)`
 
 error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:172:31
@@ -244,7 +244,7 @@ LL |     if let &Either::One(_t) = r { }
    |            |            |
    |            |            data moved here
    |            |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |            help: consider removing the `&`: `Either::One(_t)`
+   |            If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:176:34
@@ -254,7 +254,7 @@ LL |     while let &Either::One(_t) = r { }
    |               |            |
    |               |            data moved here
    |               |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |               help: consider removing the `&`: `Either::One(_t)`
+   |               If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:180:11
@@ -267,7 +267,7 @@ LL |         &Either::One(_t)
    |         |            |
    |         |            data moved here
    |         |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:188:11
@@ -280,7 +280,7 @@ LL |         &Either::One(_t) => (),
    |         |            |
    |         |            data moved here
    |         |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `r.0` which is behind a shared reference
   --> $DIR/simple.rs:195:11
@@ -293,7 +293,7 @@ LL |         &Either::One(_t) => (),
    |         |            |
    |         |            data moved here
    |         |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `sm.0` which is behind a mutable reference
   --> $DIR/simple.rs:207:22
@@ -303,7 +303,7 @@ LL |     let &mut X(_t) = sm;
    |         |      |
    |         |      data moved here
    |         |      move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `X(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `X(_t)`
 
 error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:211:35
@@ -313,7 +313,7 @@ LL |     if let &mut Either::One(_t) = rm { }
    |            |                |
    |            |                data moved here
    |            |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |            help: consider removing the `&mut`: `Either::One(_t)`
+   |            If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:215:38
@@ -323,7 +323,7 @@ LL |     while let &mut Either::One(_t) = rm { }
    |               |                |
    |               |                data moved here
    |               |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |               help: consider removing the `&mut`: `Either::One(_t)`
+   |               If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:219:11
@@ -365,7 +365,7 @@ LL |         &mut Either::One(_t) => (),
    |         |                |
    |         |                data moved here
    |         |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:235:11
@@ -378,7 +378,7 @@ LL |         &mut Either::One(_t) => (),
    |         |                |
    |         |                data moved here
    |         |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of `rm.0` which is behind a mutable reference
   --> $DIR/simple.rs:242:11
@@ -391,7 +391,7 @@ LL |         &mut Either::One(_t) => (),
    |         |                |
    |         |                data moved here
    |         |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:258:21
@@ -486,7 +486,7 @@ LL |     let &X(_t) = &x;
    |         |  |
    |         |  data moved here
    |         |  move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `X(_t)`
+   |         If I were you, I would simply consider removing the `&`: `X(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:292:31
@@ -496,7 +496,7 @@ LL |     if let &Either::One(_t) = &e { }
    |            |            |
    |            |            data moved here
    |            |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |            help: consider removing the `&`: `Either::One(_t)`
+   |            If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:296:34
@@ -506,7 +506,7 @@ LL |     while let &Either::One(_t) = &e { }
    |               |            |
    |               |            data moved here
    |               |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |               help: consider removing the `&`: `Either::One(_t)`
+   |               If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:300:11
@@ -519,7 +519,7 @@ LL |         &Either::One(_t)
    |         |            |
    |         |            data moved here
    |         |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:308:11
@@ -532,7 +532,7 @@ LL |         &Either::One(_t) => (),
    |         |            |
    |         |            data moved here
    |         |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:315:11
@@ -545,7 +545,7 @@ LL |         &Either::One(_t) => (),
    |         |            |
    |         |            data moved here
    |         |            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:323:22
@@ -555,7 +555,7 @@ LL |     let &mut X(_t) = &mut xm;
    |         |      |
    |         |      data moved here
    |         |      move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `X(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `X(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:327:35
@@ -565,7 +565,7 @@ LL |     if let &mut Either::One(_t) = &mut em { }
    |            |                |
    |            |                data moved here
    |            |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |            help: consider removing the `&mut`: `Either::One(_t)`
+   |            If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:331:38
@@ -575,7 +575,7 @@ LL |     while let &mut Either::One(_t) = &mut em { }
    |               |                |
    |               |                data moved here
    |               |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |               help: consider removing the `&mut`: `Either::One(_t)`
+   |               If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:335:11
@@ -588,7 +588,7 @@ LL |         &mut Either::One(_t)
    |         |                |
    |         |                data moved here
    |         |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:343:11
@@ -601,7 +601,7 @@ LL |         &mut Either::One(_t) => (),
    |         |                |
    |         |                data moved here
    |         |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:350:11
@@ -614,7 +614,7 @@ LL |         &mut Either::One(_t) => (),
    |         |                |
    |         |                data moved here
    |         |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:357:11
@@ -627,7 +627,7 @@ LL |         &mut Either::One(_t) => (),
    |         |                |
    |         |                data moved here
    |         |                move occurs because `_t` has type `X`, which does not implement the `Copy` trait
-   |         help: consider removing the `&mut`: `Either::One(_t)`
+   |         If I were you, I would simply consider removing the `&mut`: `Either::One(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:202:11
@@ -637,7 +637,7 @@ LL |     fn f1(&X(_t): &X) { }
    |           |  |
    |           |  data moved here
    |           |  move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
-   |           help: consider removing the `&`: `X(_t)`
+   |           If I were you, I would simply consider removing the `&`: `X(_t)`
 
 error[E0507]: cannot move out of a mutable reference
   --> $DIR/simple.rs:249:11
@@ -647,7 +647,7 @@ LL |     fn f2(&mut X(_t): &mut X) { }
    |           |      |
    |           |      data moved here
    |           |      move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
-   |           help: consider removing the `&mut`: `X(_t)`
+   |           If I were you, I would simply consider removing the `&mut`: `X(_t)`
 
 error[E0507]: cannot move out of a shared reference
   --> $DIR/simple.rs:269:11

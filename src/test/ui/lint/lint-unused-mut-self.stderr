@@ -4,7 +4,7 @@ error: variable does not need to be mutable
 LL |     fn foo(mut self) {}
    |            ----^^^^
    |            |
-   |            help: remove this `mut`
+   |            If I were you, I would simply remove this `mut`
    |
 note: lint level defined here
   --> $DIR/lint-unused-mut-self.rs:4:9
@@ -18,7 +18,7 @@ error: variable does not need to be mutable
 LL |     fn bar(mut self: Box<Foo>) {}
    |            ----^^^^
    |            |
-   |            help: remove this `mut`
+   |            If I were you, I would simply remove this `mut`
 
 error: aborting due to 2 previous errors
 

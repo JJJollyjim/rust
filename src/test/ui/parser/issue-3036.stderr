@@ -2,7 +2,7 @@ error: expected `;`, found ``}``
   --> $DIR/issue-3036.rs:5:14
    |
 LL |     let x = 3
-   |              ^ help: add `;` here
+   |              ^ If I were you, I would simply add `;` here
 LL | }
    | - unexpected token
 

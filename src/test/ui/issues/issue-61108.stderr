@@ -7,7 +7,7 @@ LL |     for l in bad_letters {
    |              -----------
    |              |
    |              value moved here
-   |              help: consider borrowing to avoid moving into the for loop: `&bad_letters`
+   |              If I were you, I would simply consider borrowing to avoid moving into the for loop: `&bad_letters`
 ...
 LL |     bad_letters.push('s');
    |     ^^^^^^^^^^^ value borrowed here after move

@@ -5,7 +5,7 @@ LL |     f(x)
    |       ^
    |       |
    |       expected `&mut isize`, found struct `std::boxed::Box`
-   |       help: consider mutably borrowing here: `&mut x`
+   |       If I were you, I would simply consider mutably borrowing here: `&mut x`
    |
    = note: expected mutable reference `&mut isize`
                          found struct `std::boxed::Box<{integer}>`

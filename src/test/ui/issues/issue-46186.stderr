@@ -2,7 +2,7 @@ error: expected item, found `;`
   --> $DIR/issue-46186.rs:3:2
    |
 LL | };
-   |  ^ help: remove this semicolon
+   |  ^ If I were you, I would simply remove this semicolon
    |
    = help: braced struct declarations are not followed by a semicolon
 

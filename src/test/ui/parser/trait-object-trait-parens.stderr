@@ -14,7 +14,7 @@ warning: trait objects without an explicit `dyn` are deprecated
   --> $DIR/trait-object-trait-parens.rs:6:16
    |
 LL |     let _: Box<(Copy) + (?Sized) + (for<'a> Trait<'a>)>;
-   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (Copy) + (?Sized) + (for<'a> Trait<'a>)`
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply use `dyn`: `dyn (Copy) + (?Sized) + (for<'a> Trait<'a>)`
    |
    = note: `#[warn(bare_trait_objects)]` on by default
 
@@ -22,13 +22,13 @@ warning: trait objects without an explicit `dyn` are deprecated
   --> $DIR/trait-object-trait-parens.rs:9:16
    |
 LL |     let _: Box<(?Sized) + (for<'a> Trait<'a>) + (Copy)>;
-   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (?Sized) + (for<'a> Trait<'a>) + (Copy)`
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply use `dyn`: `dyn (?Sized) + (for<'a> Trait<'a>) + (Copy)`
 
 warning: trait objects without an explicit `dyn` are deprecated
   --> $DIR/trait-object-trait-parens.rs:11:16
    |
 LL |     let _: Box<(for<'a> Trait<'a>) + (Copy) + (?Sized)>;
-   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: use `dyn`: `dyn (for<'a> Trait<'a>) + (Copy) + (?Sized)`
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply use `dyn`: `dyn (for<'a> Trait<'a>) + (Copy) + (?Sized)`
 
 error[E0261]: use of undeclared lifetime name `'a`
   --> $DIR/trait-object-trait-parens.rs:11:31

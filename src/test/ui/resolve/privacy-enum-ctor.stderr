@@ -283,7 +283,7 @@ LL |         let _: Z = Z::Fn;
    |                -   ^^^^^
    |                |   |
    |                |   expected enum `m::n::Z`, found fn item
-   |                |   help: use parentheses to instantiate this tuple variant: `Z::Fn(_)`
+   |                |   If I were you, I would simply use parentheses to instantiate this tuple variant: `Z::Fn(_)`
    |                expected due to this
    |
    = note: expected enum `m::n::Z`
@@ -315,7 +315,7 @@ LL |     let _: E = m::E::Fn;
    |            -   ^^^^^^^^
    |            |   |
    |            |   expected enum `m::E`, found fn item
-   |            |   help: use parentheses to instantiate this tuple variant: `m::E::Fn(_)`
+   |            |   If I were you, I would simply use parentheses to instantiate this tuple variant: `m::E::Fn(_)`
    |            expected due to this
    |
    = note: expected enum `m::E`
@@ -347,7 +347,7 @@ LL |     let _: E = E::Fn;
    |            -   ^^^^^
    |            |   |
    |            |   expected enum `m::E`, found fn item
-   |            |   help: use parentheses to instantiate this tuple variant: `E::Fn(_)`
+   |            |   If I were you, I would simply use parentheses to instantiate this tuple variant: `E::Fn(_)`
    |            expected due to this
    |
    = note: expected enum `m::E`

@@ -4,7 +4,7 @@ error[E0277]: the size for values of type `X` cannot be known at compilation tim
 LL | impl<X: ?Sized> T2<X> for S4<X> {
    |      --         ^^^^^ doesn't have a size known at compile-time
    |      |
-   |      help: consider further restricting this bound: `X: std::marker::Sized +`
+   |      If I were you, I would simply consider further restricting this bound: `X: std::marker::Sized +`
    |
    = help: the trait `std::marker::Sized` is not implemented for `X`
    = note: to learn more, visit <https://doc.rust-lang.org/book/ch19-04-advanced-types.html#dynamically-sized-types-and-the-sized-trait>

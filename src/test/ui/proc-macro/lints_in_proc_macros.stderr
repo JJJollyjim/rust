@@ -4,7 +4,7 @@ error[E0425]: cannot find value `foobar2` in this scope
 LL |     bang_proc_macro2!();
    |     ^^^^^^^^^^^^^^^^^^^^
    |     |
-   |     help: a local variable with a similar name exists: `foobar`
+   |     If I were you, I would simply a local variable with a similar name exists: `foobar`
    |     in this macro invocation
 
 error: aborting due to previous error

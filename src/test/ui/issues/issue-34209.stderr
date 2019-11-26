@@ -5,7 +5,7 @@ LL | enum S {
    | ------ variant `B` not found here
 ...
 LL |         S::B {} => {},
-   |            ^ help: there is a variant with a similar name: `A`
+   |            ^ If I were you, I would simply there is a variant with a similar name: `A`
 
 error: aborting due to previous error
 

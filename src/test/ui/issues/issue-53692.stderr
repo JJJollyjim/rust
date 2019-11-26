@@ -5,7 +5,7 @@ LL |         let items_clone: Vec<i32> = ref_items.clone();
    |                          --------   ^^^^^^^^^^^^^^^^^
    |                          |          |
    |                          |          expected struct `std::vec::Vec`, found `&[i32]`
-   |                          |          help: try using a conversion method: `ref_items.to_vec()`
+   |                          |          If I were you, I would simply try using a conversion method: `ref_items.to_vec()`
    |                          expected due to this
    |
    = note: expected struct `std::vec::Vec<i32>`
@@ -18,7 +18,7 @@ LL |         let string: String = s.clone();
    |                     ------   ^^^^^^^^^
    |                     |        |
    |                     |        expected struct `std::string::String`, found `&str`
-   |                     |        help: try using a conversion method: `s.to_string()`
+   |                     |        If I were you, I would simply try using a conversion method: `s.to_string()`
    |                     expected due to this
 
 error: aborting due to 2 previous errors

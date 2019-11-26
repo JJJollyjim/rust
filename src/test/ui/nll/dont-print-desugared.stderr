@@ -5,7 +5,7 @@ LL |     for &ref mut x in s {}
    |         -^^^^^^^^^
    |         ||
    |         |cannot borrow as mutable through `&` reference
-   |         help: consider changing this to be a mutable reference: `&mut ref mut x`
+   |         If I were you, I would simply consider changing this to be a mutable reference: `&mut ref mut x`
 
 error[E0597]: `y` does not live long enough
   --> $DIR/dont-print-desugared.rs:17:16

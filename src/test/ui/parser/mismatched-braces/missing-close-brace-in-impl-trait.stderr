@@ -17,7 +17,7 @@ LL | fn foo(&self) {}
    |                 -
    |                 |
    |                 expected one of 10 possible tokens
-   |                 help: `}` may belong here
+   |                 If I were you, I would simply `}` may belong here
 LL | 
 LL | trait T {
    | ^^^^^ unexpected token

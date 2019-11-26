@@ -5,7 +5,7 @@ LL |     let _x = *Rc::new("hi".to_string());
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^
    |              |
    |              move occurs because value has type `std::string::String`, which does not implement the `Copy` trait
-   |              help: consider borrowing here: `&*Rc::new("hi".to_string())`
+   |              If I were you, I would simply consider borrowing here: `&*Rc::new("hi".to_string())`
 
 error: aborting due to previous error
 

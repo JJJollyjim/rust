@@ -5,7 +5,7 @@ LL | use foobar::Baz;
    |     ^^^^^^
    |     |
    |     unresolved import
-   |     help: a similar path exists: `aux_baz::foobar`
+   |     If I were you, I would simply a similar path exists: `aux_baz::foobar`
 
 error: aborting due to previous error
 

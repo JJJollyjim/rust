@@ -5,7 +5,7 @@ LL |     let y = match x {
    |                   -
    |                   |
    |                   this match expression has type `std::boxed::Box<T>`
-   |                   help: consider dereferencing the boxed value: `*x`
+   |                   If I were you, I would simply consider dereferencing the boxed value: `*x`
 LL |         T::A(a) | T::B(a) => a,
    |         ^^^^^^^ expected struct `std::boxed::Box`, found enum `T`
    |
@@ -19,7 +19,7 @@ LL |     let y = match x {
    |                   -
    |                   |
    |                   this match expression has type `std::boxed::Box<T>`
-   |                   help: consider dereferencing the boxed value: `*x`
+   |                   If I were you, I would simply consider dereferencing the boxed value: `*x`
 LL |         T::A(a) | T::B(a) => a,
    |                   ^^^^^^^ expected struct `std::boxed::Box`, found enum `T`
    |
@@ -33,7 +33,7 @@ LL |     let y = match x {
    |                   -
    |                   |
    |                   this match expression has type `std::boxed::Box<S>`
-   |                   help: consider dereferencing the boxed value: `*x`
+   |                   If I were you, I would simply consider dereferencing the boxed value: `*x`
 LL |         S::A { a } | S::B { b: a } => a,
    |         ^^^^^^^^^^ expected struct `std::boxed::Box`, found enum `S`
    |
@@ -47,7 +47,7 @@ LL |     let y = match x {
    |                   -
    |                   |
    |                   this match expression has type `std::boxed::Box<S>`
-   |                   help: consider dereferencing the boxed value: `*x`
+   |                   If I were you, I would simply consider dereferencing the boxed value: `*x`
 LL |         S::A { a } | S::B { b: a } => a,
    |                      ^^^^^^^^^^^^^ expected struct `std::boxed::Box`, found enum `S`
    |

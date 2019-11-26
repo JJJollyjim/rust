@@ -9,7 +9,7 @@ LL |         &E::Bar(identifier) => f(identifier.clone())
    |         |       |
    |         |       data moved here
    |         |       move occurs because `identifier` has type `std::string::String`, which does not implement the `Copy` trait
-   |         help: consider removing the `&`: `E::Bar(identifier)`
+   |         If I were you, I would simply consider removing the `&`: `E::Bar(identifier)`
 
 error: aborting due to previous error
 

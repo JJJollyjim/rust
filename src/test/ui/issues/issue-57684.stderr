@@ -4,7 +4,7 @@ error: expected `:`, found `=`
 LL |     let _ = X { f1 = 5 };
    |                   -^
    |                   |
-   |                   help: replace equals symbol with a colon: `:`
+   |                   If I were you, I would simply replace equals symbol with a colon: `:`
 
 error: expected `:`, found `=`
   --> $DIR/issue-57684.rs:32:12
@@ -12,7 +12,7 @@ error: expected `:`, found `=`
 LL |         f1 = 5,
    |           -^
    |           |
-   |           help: replace equals symbol with a colon: `:`
+   |           If I were you, I would simply replace equals symbol with a colon: `:`
 
 error: aborting due to 2 previous errors
 

@@ -34,7 +34,7 @@ error: multiple unused formatting arguments
 LL |     println!("Some more $STUFF",
    |              ------------------
    |              |          |
-   |              |          help: format specifiers use curly braces: `{STUFF}`
+   |              |          If I were you, I would simply format specifiers use curly braces: `{STUFF}`
    |              multiple missing formatting specifiers
 LL |         "woo!",
    |         ^^^^^^ argument never used

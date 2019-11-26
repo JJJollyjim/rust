@@ -2,7 +2,7 @@ error: trait objects without an explicit `dyn` are deprecated
   --> $DIR/issue-61963.rs:20:14
    |
 LL |     bar: Box<Bar>,
-   |              ^^^ help: use `dyn`: `dyn Bar`
+   |              ^^^ If I were you, I would simply use `dyn`: `dyn Bar`
    |
 note: lint level defined here
   --> $DIR/issue-61963.rs:3:9

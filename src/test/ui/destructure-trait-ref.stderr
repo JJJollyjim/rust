@@ -23,7 +23,7 @@ LL |     let &&x = &1isize as &dyn T;
    |          ^^
    |          |
    |          expected trait `T`, found reference
-   |          help: you can probably remove the explicit borrow: `x`
+   |          If I were you, I would simply you can probably remove the explicit borrow: `x`
    |
    = note: expected trait object `dyn T`
                  found reference `&_`
@@ -35,7 +35,7 @@ LL |     let &&&x = &(&1isize as &dyn T);
    |           ^^
    |           |
    |           expected trait `T`, found reference
-   |           help: you can probably remove the explicit borrow: `x`
+   |           If I were you, I would simply you can probably remove the explicit borrow: `x`
    |
    = note: expected trait object `dyn T`
                  found reference `&_`

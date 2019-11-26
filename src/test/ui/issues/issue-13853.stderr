@@ -25,7 +25,7 @@ LL |     iterate(graph);
    |             ^^^^^
    |             |
    |             expected reference, found struct `std::vec::Vec`
-   |             help: consider borrowing here: `&graph`
+   |             If I were you, I would simply consider borrowing here: `&graph`
    |
    = note: expected reference `&_`
                  found struct `std::vec::Vec<Stuff>`

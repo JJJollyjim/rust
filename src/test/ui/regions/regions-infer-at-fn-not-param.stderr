@@ -4,7 +4,7 @@ error[E0621]: explicit lifetime required in the type of `p`
 LL | fn take1<'a>(p: Parameterized1) -> Parameterized1<'a> { p }
    |                 --------------                          ^ lifetime `'a` required
    |                 |
-   |                 help: add explicit lifetime `'a` to the type of `p`: `Parameterized1<'a>`
+   |                 If I were you, I would simply add explicit lifetime `'a` to the type of `p`: `Parameterized1<'a>`
 
 error: aborting due to previous error
 

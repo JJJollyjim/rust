@@ -5,7 +5,7 @@ LL |       let x: i32 = {
    |  __________________^
 LL | |
 LL | |         foo();
-   | |              - help: consider removing this semicolon
+   | |              - If I were you, I would simply consider removing this semicolon
 LL | |     };
    | |_____^ expected `i32`, found `()`
 

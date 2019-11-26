@@ -2,7 +2,7 @@ error[E0573]: expected type, found function `f`
   --> $DIR/type-ascription-with-fn-call.rs:5:5
    |
 LL |     f()  :
-   |          - help: did you mean to use `;` here instead?
+   |          - If I were you, I would simply did you mean to use `;` here instead?
 LL |     f();
    |     ^^^
    |     |

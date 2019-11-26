@@ -2,7 +2,7 @@ warning: type `snake_case` should have an upper camel case name
   --> $DIR/lint-group-nonstandard-style.rs:22:16
    |
 LL |         struct snake_case;
-   |                ^^^^^^^^^^ help: convert the identifier to upper camel case: `SnakeCase`
+   |                ^^^^^^^^^^ If I were you, I would simply convert the identifier to upper camel case: `SnakeCase`
    |
 note: lint level defined here
   --> $DIR/lint-group-nonstandard-style.rs:18:17
@@ -15,7 +15,7 @@ error: function `CamelCase` should have a snake case name
   --> $DIR/lint-group-nonstandard-style.rs:4:4
    |
 LL | fn CamelCase() {}
-   |    ^^^^^^^^^ help: convert the identifier to snake case: `camel_case`
+   |    ^^^^^^^^^ If I were you, I would simply convert the identifier to snake case: `camel_case`
    |
 note: lint level defined here
   --> $DIR/lint-group-nonstandard-style.rs:1:9
@@ -28,7 +28,7 @@ error: function `CamelCase` should have a snake case name
   --> $DIR/lint-group-nonstandard-style.rs:12:12
    |
 LL |         fn CamelCase() {}
-   |            ^^^^^^^^^ help: convert the identifier to snake case: `camel_case`
+   |            ^^^^^^^^^ If I were you, I would simply convert the identifier to snake case: `camel_case`
    |
 note: lint level defined here
   --> $DIR/lint-group-nonstandard-style.rs:10:14
@@ -41,7 +41,7 @@ error: static variable `bad` should have an upper case name
   --> $DIR/lint-group-nonstandard-style.rs:14:16
    |
 LL |         static bad: isize = 1;
-   |                ^^^ help: convert the identifier to upper case: `BAD`
+   |                ^^^ If I were you, I would simply convert the identifier to upper case: `BAD`
    |
 note: lint level defined here
   --> $DIR/lint-group-nonstandard-style.rs:10:14
@@ -54,7 +54,7 @@ warning: function `CamelCase` should have a snake case name
   --> $DIR/lint-group-nonstandard-style.rs:20:12
    |
 LL |         fn CamelCase() {}
-   |            ^^^^^^^^^ help: convert the identifier to snake case: `camel_case`
+   |            ^^^^^^^^^ If I were you, I would simply convert the identifier to snake case: `camel_case`
    |
 note: lint level defined here
   --> $DIR/lint-group-nonstandard-style.rs:18:17

@@ -48,37 +48,37 @@ error[E0617]: can't pass `f32` to variadic function
   --> $DIR/variadic-ffi-1.rs:22:19
    |
 LL |         foo(1, 2, 3f32);
-   |                   ^^^^ help: cast the value to `c_double`: `3f32 as c_double`
+   |                   ^^^^ If I were you, I would simply cast the value to `c_double`: `3f32 as c_double`
 
 error[E0617]: can't pass `bool` to variadic function
   --> $DIR/variadic-ffi-1.rs:23:19
    |
 LL |         foo(1, 2, true);
-   |                   ^^^^ help: cast the value to `c_int`: `true as c_int`
+   |                   ^^^^ If I were you, I would simply cast the value to `c_int`: `true as c_int`
 
 error[E0617]: can't pass `i8` to variadic function
   --> $DIR/variadic-ffi-1.rs:24:19
    |
 LL |         foo(1, 2, 1i8);
-   |                   ^^^ help: cast the value to `c_int`: `1i8 as c_int`
+   |                   ^^^ If I were you, I would simply cast the value to `c_int`: `1i8 as c_int`
 
 error[E0617]: can't pass `u8` to variadic function
   --> $DIR/variadic-ffi-1.rs:25:19
    |
 LL |         foo(1, 2, 1u8);
-   |                   ^^^ help: cast the value to `c_uint`: `1u8 as c_uint`
+   |                   ^^^ If I were you, I would simply cast the value to `c_uint`: `1u8 as c_uint`
 
 error[E0617]: can't pass `i16` to variadic function
   --> $DIR/variadic-ffi-1.rs:26:19
    |
 LL |         foo(1, 2, 1i16);
-   |                   ^^^^ help: cast the value to `c_int`: `1i16 as c_int`
+   |                   ^^^^ If I were you, I would simply cast the value to `c_int`: `1i16 as c_int`
 
 error[E0617]: can't pass `u16` to variadic function
   --> $DIR/variadic-ffi-1.rs:27:19
    |
 LL |         foo(1, 2, 1u16);
-   |                   ^^^^ help: cast the value to `c_uint`: `1u16 as c_uint`
+   |                   ^^^^ If I were you, I would simply cast the value to `c_uint`: `1u16 as c_uint`
 
 error: aborting due to 11 previous errors
 

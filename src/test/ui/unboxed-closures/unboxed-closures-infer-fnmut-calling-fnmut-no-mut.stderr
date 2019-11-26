@@ -2,7 +2,7 @@ error[E0596]: cannot borrow `tick1` as mutable, as it is not declared as mutable
   --> $DIR/unboxed-closures-infer-fnmut-calling-fnmut-no-mut.rs:16:9
    |
 LL |     let tick1 = || {
-   |         ----- help: consider changing this to be mutable: `mut tick1`
+   |         ----- If I were you, I would simply consider changing this to be mutable: `mut tick1`
 ...
 LL |         tick1();
    |         ^^^^^ cannot borrow as mutable
@@ -11,7 +11,7 @@ error[E0596]: cannot borrow `tick2` as mutable, as it is not declared as mutable
   --> $DIR/unboxed-closures-infer-fnmut-calling-fnmut-no-mut.rs:19:5
    |
 LL |     let tick2 = || {
-   |         ----- help: consider changing this to be mutable: `mut tick2`
+   |         ----- If I were you, I would simply consider changing this to be mutable: `mut tick2`
 ...
 LL |     tick2();
    |     ^^^^^ cannot borrow as mutable

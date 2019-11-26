@@ -2,7 +2,7 @@ error: unused variable: `x`
   --> $DIR/unused-closure-argument.rs:12:23
    |
 LL |         .map(|Point { x, y }| y)
-   |                       ^ help: try ignoring the field: `x: _`
+   |                       ^ If I were you, I would simply try ignoring the field: `x: _`
    |
 note: lint level defined here
   --> $DIR/unused-closure-argument.rs:1:9
@@ -14,7 +14,7 @@ error: unused variable: `x`
   --> $DIR/unused-closure-argument.rs:17:15
    |
 LL |         .map(|x| 4)
-   |               ^ help: consider prefixing with an underscore: `_x`
+   |               ^ If I were you, I would simply consider prefixing with an underscore: `_x`
 
 error: aborting due to 2 previous errors
 

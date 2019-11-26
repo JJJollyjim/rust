@@ -2,13 +2,13 @@ error: malformed `plugin` attribute input
   --> $DIR/malformed-plugin-1.rs:2:1
    |
 LL | #![plugin]
-   | ^^^^^^^^^^ help: must be of the form: `#[plugin(name|name(args))]`
+   | ^^^^^^^^^^ If I were you, I would simply must be of the form: `#[plugin(name|name(args))]`
 
 warning: use of deprecated attribute `plugin`: compiler plugins are deprecated. See https://github.com/rust-lang/rust/pull/64675
   --> $DIR/malformed-plugin-1.rs:2:1
    |
 LL | #![plugin]
-   | ^^^^^^^^^^ help: may be removed in a future compiler version
+   | ^^^^^^^^^^ If I were you, I would simply may be removed in a future compiler version
    |
    = note: `#[warn(deprecated)]` on by default
 

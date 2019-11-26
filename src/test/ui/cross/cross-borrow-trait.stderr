@@ -5,7 +5,7 @@ LL |     let _y: &dyn Trait = x;
    |             ----------   ^
    |             |            |
    |             |            expected `&dyn Trait`, found struct `std::boxed::Box`
-   |             |            help: consider borrowing here: `&x`
+   |             |            If I were you, I would simply consider borrowing here: `&x`
    |             expected due to this
    |
    = note: expected reference `&dyn Trait`

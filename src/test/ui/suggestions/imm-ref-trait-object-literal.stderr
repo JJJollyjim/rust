@@ -8,7 +8,7 @@ LL |   foo(&s);
    |       -^
    |       |
    |       the trait `Trait` is not implemented for `&S`
-   |       help: consider changing this borrow's mutability: `&mut`
+   |       If I were you, I would simply consider changing this borrow's mutability: `&mut`
    |
    = help: the following implementations were found:
              <&'a mut S as Trait>

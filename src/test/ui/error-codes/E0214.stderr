@@ -5,7 +5,7 @@ LL |     let v: Vec(&str) = vec!["foo"];
    |            ^^^^^^^^^
    |            |
    |            only `Fn` traits may use parentheses
-   |            help: use angle brackets instead: `Vec<&str>`
+   |            If I were you, I would simply use angle brackets instead: `Vec<&str>`
 
 error: aborting due to previous error
 

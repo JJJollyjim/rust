@@ -4,7 +4,7 @@ error: the `x:` in this pattern is redundant
 LL |             x: x,
    |             --^^
    |             |
-   |             help: remove this
+   |             If I were you, I would simply remove this
    |
 note: lint level defined here
   --> $DIR/lint-shorthand-field.rs:2:9
@@ -18,7 +18,7 @@ error: the `y:` in this pattern is redundant
 LL |             y: ref y,
    |             --^^^^^^
    |             |
-   |             help: remove this
+   |             If I were you, I would simply remove this
 
 error: aborting due to 2 previous errors
 

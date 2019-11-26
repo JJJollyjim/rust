@@ -2,7 +2,7 @@ warning: unused extern crate
   --> $DIR/edition-extern-crate-allowed.rs:7:1
    |
 LL | extern crate edition_extern_crate_allowed;
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: remove it
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove it
    |
 note: lint level defined here
   --> $DIR/edition-extern-crate-allowed.rs:5:9

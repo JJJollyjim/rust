@@ -4,7 +4,7 @@ error[E0308]: try expression alternatives have incompatible types
 LL |     foo()?
    |     ^^^^^-
    |     |    |
-   |     |    help: try removing this `?`
+   |     |    If I were you, I would simply try removing this `?`
    |     expected enum `std::result::Result`, found struct `A`
    |
    = note: expected enum `std::result::Result<A, B>`

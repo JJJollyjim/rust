@@ -13,13 +13,13 @@ LL |   let u: &str = if true { s[..2] } else { s };
    |                           ^^^^^^
    |                           |
    |                           expected `&str`, found `str`
-   |                           help: consider borrowing here: `&s[..2]`
+   |                           If I were you, I would simply consider borrowing here: `&s[..2]`
 
 error[E0277]: the size for values of type `str` cannot be known at compilation time
   --> $DIR/str-array-assignment.rs:7:7
    |
 LL |   let v = s[..2];
-   |       ^   ------ help: consider borrowing here: `&s[..2]`
+   |       ^   ------ If I were you, I would simply consider borrowing here: `&s[..2]`
    |       |
    |       doesn't have a size known at compile-time
    |
@@ -35,7 +35,7 @@ LL |   let w: &str = s[..2];
    |          ----   ^^^^^^
    |          |      |
    |          |      expected `&str`, found `str`
-   |          |      help: consider borrowing here: `&s[..2]`
+   |          |      If I were you, I would simply consider borrowing here: `&s[..2]`
    |          expected due to this
 
 error: aborting due to 4 previous errors

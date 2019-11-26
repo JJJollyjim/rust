@@ -13,7 +13,7 @@ LL |     B(isize, isize),
 LL |         A::D(_) => (),
    |         ^^^-
    |            |
-   |            help: a tuple variant with a similar name exists: `B`
+   |            If I were you, I would simply a tuple variant with a similar name exists: `B`
 
 error[E0023]: this pattern has 3 fields, but the corresponding tuple variant has 2 fields
   --> $DIR/pattern-error-continue.rs:17:9

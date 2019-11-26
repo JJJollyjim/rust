@@ -27,7 +27,7 @@ LL |       let _ = if true {
 LL | |         3u32;
    | |         -----
    | |         |   |
-   | |         |   help: consider removing this semicolon
+   | |         |   If I were you, I would simply consider removing this semicolon
    | |         expected because of this
 LL | |     } else {
 LL | |         4u32
@@ -46,7 +46,7 @@ LL | |     } else {
 LL | |         6u32;
    | |         ^^^^-
    | |         |   |
-   | |         |   help: consider removing this semicolon
+   | |         |   If I were you, I would simply consider removing this semicolon
    | |         expected `u32`, found `()`
 LL | |     };
    | |_____- if and else have incompatible types

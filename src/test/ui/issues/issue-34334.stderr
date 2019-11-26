@@ -16,7 +16,7 @@ error: expected one of `,` or `>`, found `=`
 LL |     let sr: Vec<(u32, _, _) = vec![];
    |         ---                 ^ expected one of `,` or `>`
    |         | |
-   |         | help: use `=` if you meant to assign
+   |         | If I were you, I would simply use `=` if you meant to assign
    |         while parsing the type for `sr`
 
 error[E0423]: expected value, found struct `Vec`

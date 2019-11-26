@@ -5,7 +5,7 @@ LL |     let x: &[u8] = "foo";
    |            -----   ^^^^^
    |            |       |
    |            |       expected slice `[u8]`, found `str`
-   |            |       help: consider adding a leading `b`: `b"foo"`
+   |            |       If I were you, I would simply consider adding a leading `b`: `b"foo"`
    |            expected due to this
    |
    = note: expected reference `&[u8]`
@@ -18,7 +18,7 @@ LL |     let y: &[u8; 4] = "baaa";
    |            --------   ^^^^^^
    |            |          |
    |            |          expected array `[u8; 4]`, found `str`
-   |            |          help: consider adding a leading `b`: `b"baaa"`
+   |            |          If I were you, I would simply consider adding a leading `b`: `b"baaa"`
    |            expected due to this
    |
    = note: expected reference `&[u8; 4]`
@@ -31,7 +31,7 @@ LL |     let z: &str = b"foo";
    |            ----   ^^^^^^
    |            |      |
    |            |      expected `str`, found array `[u8; 3]`
-   |            |      help: consider removing the leading `b`: `"foo"`
+   |            |      If I were you, I would simply consider removing the leading `b`: `"foo"`
    |            expected due to this
    |
    = note: expected reference `&str`

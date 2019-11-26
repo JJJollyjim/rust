@@ -5,7 +5,7 @@ LL |     let x = X(Y);
    |         - captured outer variable
 ...
 LL |         let X(_t) = x;
-   |               --    ^ help: consider borrowing here: `&x`
+   |               --    ^ If I were you, I would simply consider borrowing here: `&x`
    |               |
    |               data moved here
    |               move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -17,7 +17,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         if let Either::One(_t) = e { }
-   |                            --    ^ help: consider borrowing here: `&e`
+   |                            --    ^ If I were you, I would simply consider borrowing here: `&e`
    |                            |
    |                            data moved here
    |                            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -29,7 +29,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         while let Either::One(_t) = e { }
-   |                               --    ^ help: consider borrowing here: `&e`
+   |                               --    ^ If I were you, I would simply consider borrowing here: `&e`
    |                               |
    |                               data moved here
    |                               move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -41,7 +41,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         match e {
-   |               ^ help: consider borrowing here: `&e`
+   |               ^ If I were you, I would simply consider borrowing here: `&e`
 ...
 LL |             Either::One(_t)
    |                         --
@@ -56,7 +56,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         match e {
-   |               ^ help: consider borrowing here: `&e`
+   |               ^ If I were you, I would simply consider borrowing here: `&e`
 ...
 LL |             Either::One(_t) => (),
    |                         --
@@ -71,7 +71,7 @@ LL |     let x = X(Y);
    |         - captured outer variable
 ...
 LL |         let X(mut _t) = x;
-   |               ------    ^ help: consider borrowing here: `&x`
+   |               ------    ^ If I were you, I would simply consider borrowing here: `&x`
    |               |
    |               data moved here
    |               move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -83,7 +83,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         if let Either::One(mut _t) = em { }
-   |                            ------    ^^ help: consider borrowing here: `&em`
+   |                            ------    ^^ If I were you, I would simply consider borrowing here: `&em`
    |                            |
    |                            data moved here
    |                            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -95,7 +95,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         while let Either::One(mut _t) = em { }
-   |                               ------    ^^ help: consider borrowing here: `&em`
+   |                               ------    ^^ If I were you, I would simply consider borrowing here: `&em`
    |                               |
    |                               data moved here
    |                               move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -107,7 +107,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         match em {
-   |               ^^ help: consider borrowing here: `&em`
+   |               ^^ If I were you, I would simply consider borrowing here: `&em`
 ...
 LL |             Either::One(mut _t)
    |                         ------
@@ -122,7 +122,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         match em {
-   |               ^^ help: consider borrowing here: `&em`
+   |               ^^ If I were you, I would simply consider borrowing here: `&em`
 ...
 LL |             Either::One(mut _t) => (),
    |                         ------
@@ -137,7 +137,7 @@ LL |     let x = X(Y);
    |         - captured outer variable
 ...
 LL |         let X(_t) = x;
-   |               --    ^ help: consider borrowing here: `&x`
+   |               --    ^ If I were you, I would simply consider borrowing here: `&x`
    |               |
    |               data moved here
    |               move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -149,7 +149,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         if let Either::One(_t) = e { }
-   |                            --    ^ help: consider borrowing here: `&e`
+   |                            --    ^ If I were you, I would simply consider borrowing here: `&e`
    |                            |
    |                            data moved here
    |                            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -161,7 +161,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         while let Either::One(_t) = e { }
-   |                               --    ^ help: consider borrowing here: `&e`
+   |                               --    ^ If I were you, I would simply consider borrowing here: `&e`
    |                               |
    |                               data moved here
    |                               move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -173,7 +173,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         match e {
-   |               ^ help: consider borrowing here: `&e`
+   |               ^ If I were you, I would simply consider borrowing here: `&e`
 ...
 LL |             Either::One(_t)
    |                         --
@@ -188,7 +188,7 @@ LL |     let e = Either::One(X(Y));
    |         - captured outer variable
 ...
 LL |         match e {
-   |               ^ help: consider borrowing here: `&e`
+   |               ^ If I were you, I would simply consider borrowing here: `&e`
 ...
 LL |             Either::One(_t) => (),
    |                         --
@@ -203,7 +203,7 @@ LL |     let x = X(Y);
    |         - captured outer variable
 ...
 LL |         let X(mut _t) = x;
-   |               ------    ^ help: consider borrowing here: `&x`
+   |               ------    ^ If I were you, I would simply consider borrowing here: `&x`
    |               |
    |               data moved here
    |               move occurs because `_t` has type `Y`, which does not implement the `Copy` trait
@@ -215,7 +215,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         if let Either::One(mut _t) = em { }
-   |                            ------    ^^ help: consider borrowing here: `&em`
+   |                            ------    ^^ If I were you, I would simply consider borrowing here: `&em`
    |                            |
    |                            data moved here
    |                            move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -227,7 +227,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         while let Either::One(mut _t) = em { }
-   |                               ------    ^^ help: consider borrowing here: `&em`
+   |                               ------    ^^ If I were you, I would simply consider borrowing here: `&em`
    |                               |
    |                               data moved here
    |                               move occurs because `_t` has type `X`, which does not implement the `Copy` trait
@@ -239,7 +239,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         match em {
-   |               ^^ help: consider borrowing here: `&em`
+   |               ^^ If I were you, I would simply consider borrowing here: `&em`
 ...
 LL |             Either::One(mut _t)
    |                         ------
@@ -254,7 +254,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         match em {
-   |               ^^ help: consider borrowing here: `&em`
+   |               ^^ If I were you, I would simply consider borrowing here: `&em`
 ...
 LL |             Either::One(mut _t) => (),
    |                         ------
@@ -269,7 +269,7 @@ LL |     let mut em = Either::One(X(Y));
    |         ------ captured outer variable
 ...
 LL |         match em {
-   |               ^^ help: consider borrowing here: `&em`
+   |               ^^ If I were you, I would simply consider borrowing here: `&em`
 ...
 LL |             Either::One(mut _t) => (),
    |                         ------

@@ -5,7 +5,7 @@ LL | fn test1() -> _ { Some(42) }
    |               ^
    |               |
    |               not allowed in type signatures
-   |               help: replace `_` with the correct return type: `std::option::Option<i32>`
+   |               If I were you, I would simply replace `_` with the correct return type: `std::option::Option<i32>`
 
 error[E0121]: the type placeholder `_` is not allowed within types on item signatures
   --> $DIR/typeck_type_placeholder_item_help.rs:7:14
@@ -14,7 +14,7 @@ LL | const TEST2: _ = 42u32;
    |              ^
    |              |
    |              not allowed in type signatures
-   |              help: replace `_` with the correct type: `u32`
+   |              If I were you, I would simply replace `_` with the correct type: `u32`
 
 error[E0121]: the type placeholder `_` is not allowed within types on item signatures
   --> $DIR/typeck_type_placeholder_item_help.rs:10:14
@@ -23,7 +23,7 @@ LL | const TEST3: _ = Some(42);
    |              ^
    |              |
    |              not allowed in type signatures
-   |              help: replace `_` with the correct type: `std::option::Option<i32>`
+   |              If I were you, I would simply replace `_` with the correct type: `std::option::Option<i32>`
 
 error[E0121]: the type placeholder `_` is not allowed within types on item signatures
   --> $DIR/typeck_type_placeholder_item_help.rs:14:18
@@ -32,7 +32,7 @@ LL |     const TEST4: _ = 42;
    |                  ^
    |                  |
    |                  not allowed in type signatures
-   |                  help: replace `_` with the correct type: `i32`
+   |                  If I were you, I would simply replace `_` with the correct type: `i32`
 
 error[E0121]: the type placeholder `_` is not allowed within types on item signatures
   --> $DIR/typeck_type_placeholder_item_help.rs:21:18
@@ -41,7 +41,7 @@ LL |     const TEST5: _ = 13;
    |                  ^
    |                  |
    |                  not allowed in type signatures
-   |                  help: replace `_` with the correct type: `i32`
+   |                  If I were you, I would simply replace `_` with the correct type: `i32`
 
 error: aborting due to 5 previous errors
 

@@ -5,7 +5,7 @@ LL |   struct X<F> where F: FnOnce() + 'static + Send {
    |   ---------------------------------------------- required by `X`
 ...
 LL |   fn foo<F>(blk: F) -> X<F> where F: FnOnce() + 'static {
-   |   ^                                                    - help: consider further restricting type parameter `F`: `, F: std::marker::Send`
+   |   ^                                                    - If I were you, I would simply consider further restricting type parameter `F`: `, F: std::marker::Send`
    |  _|
    | |
 LL | |

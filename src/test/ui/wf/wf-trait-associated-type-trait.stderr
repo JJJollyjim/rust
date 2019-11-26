@@ -5,7 +5,7 @@ LL | struct IsCopy<T:Copy> { x: T }
    | --------------------- required by `IsCopy`
 LL | 
 LL | trait SomeTrait {
-   |                - help: consider further restricting the associated type: `where <Self as SomeTrait>::Type1: std::marker::Copy`
+   |                - If I were you, I would simply consider further restricting the associated type: `where <Self as SomeTrait>::Type1: std::marker::Copy`
 LL |     type Type1;
 LL |     type Type2 = IsCopy<Self::Type1>;
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `std::marker::Copy` is not implemented for `<Self as SomeTrait>::Type1`

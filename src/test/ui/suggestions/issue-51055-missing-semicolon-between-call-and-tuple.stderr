@@ -5,7 +5,7 @@ LL |   fn vindictive() -> bool { true }
    |   -------------------------------- `vindictive` defined here returns `bool`
 ...
 LL |       vindictive()
-   |       -^^^^^^^^^^^- help: try adding a semicolon: `;`
+   |       -^^^^^^^^^^^- If I were you, I would simply try adding a semicolon: `;`
    |  _____|
    | |
 LL | |     (1, 2)

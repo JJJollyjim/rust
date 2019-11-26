@@ -7,7 +7,7 @@ LL |     type Assoc: Partial<Self>;
 LL | impl<T> Complete for T {
    | ----------------------
    | |    |
-   | |    help: consider restricting this bound: `T: std::marker::Copy`
+   | |    If I were you, I would simply consider restricting this bound: `T: std::marker::Copy`
    | in this `impl` item
 LL |     type Assoc = T;
    |     ^^^^^^^^^^^^^^^ the trait `std::marker::Copy` is not implemented for `T`

@@ -23,7 +23,7 @@ LL |     self
    |     ^^^^
    |     |
    |     `bar` reimported here
-   |     help: remove unnecessary import
+   |     If I were you, I would simply remove unnecessary import
    |
    = note: `bar` must be defined only once in the type namespace of this module
 

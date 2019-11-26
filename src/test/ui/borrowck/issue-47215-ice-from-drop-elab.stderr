@@ -5,7 +5,7 @@ LL |         let mut x = X;
    |                     ^
    |                     |
    |                     move occurs because `X` has type `std::sync::atomic::AtomicUsize`, which does not implement the `Copy` trait
-   |                     help: consider borrowing here: `&X`
+   |                     If I were you, I would simply consider borrowing here: `&X`
 
 error: aborting due to previous error
 

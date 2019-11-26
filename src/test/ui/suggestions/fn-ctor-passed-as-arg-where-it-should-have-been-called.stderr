@@ -11,7 +11,7 @@ LL |     bar(foo);
    |         ^^^
    |         |
    |         the trait `T` is not implemented for `fn() -> impl T {foo}`
-   |         help: use parentheses to call the function: `foo()`
+   |         If I were you, I would simply use parentheses to call the function: `foo()`
 
 error[E0277]: the trait bound `[closure@$DIR/fn-ctor-passed-as-arg-where-it-should-have-been-called.rs:18:19: 18:23]: T` is not satisfied
   --> $DIR/fn-ctor-passed-as-arg-where-it-should-have-been-called.rs:19:9
@@ -25,7 +25,7 @@ LL |     bar(closure);
    |         ^^^^^^^
    |         |
    |         the trait `T` is not implemented for `[closure@$DIR/fn-ctor-passed-as-arg-where-it-should-have-been-called.rs:18:19: 18:23]`
-   |         help: use parentheses to call the closure: `closure()`
+   |         If I were you, I would simply use parentheses to call the closure: `closure()`
 
 error: aborting due to 2 previous errors
 

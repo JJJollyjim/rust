@@ -4,7 +4,7 @@ error[E0277]: `T` cannot be sent between threads safely
 LL | impl <T: Sync+'static> Foo for T { }
    |       --               ^^^ `T` cannot be sent between threads safely
    |       |
-   |       help: consider further restricting this bound: `T: std::marker::Send +`
+   |       If I were you, I would simply consider further restricting this bound: `T: std::marker::Send +`
    |
    = help: the trait `std::marker::Send` is not implemented for `T`
 

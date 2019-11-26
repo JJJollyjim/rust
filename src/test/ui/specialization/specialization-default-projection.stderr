@@ -19,7 +19,7 @@ LL | fn monomorphic() -> () {
    |                     -- expected `()` because of return type
 ...
 LL |     generic::<()>()
-   |     ^^^^^^^^^^^^^^^- help: try adding a semicolon: `;`
+   |     ^^^^^^^^^^^^^^^- If I were you, I would simply try adding a semicolon: `;`
    |     |
    |     expected `()`, found associated type
    |

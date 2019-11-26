@@ -38,7 +38,7 @@ LL |     id_i16(a8);
    |            ^^
    |            |
    |            expected `i16`, found `i8`
-   |            help: you can convert an `i8` to `i16`: `a8.into()`
+   |            If I were you, I would simply you can convert an `i8` to `i16`: `a8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:46:12
@@ -69,7 +69,7 @@ LL |     id_i32(a8);
    |            ^^
    |            |
    |            expected `i32`, found `i8`
-   |            help: you can convert an `i8` to `i32`: `a8.into()`
+   |            If I were you, I would simply you can convert an `i8` to `i32`: `a8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:56:12
@@ -78,7 +78,7 @@ LL |     id_i32(a16);
    |            ^^^
    |            |
    |            expected `i32`, found `i16`
-   |            help: you can convert an `i16` to `i32`: `a16.into()`
+   |            If I were you, I would simply you can convert an `i16` to `i32`: `a16.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:60:12
@@ -98,7 +98,7 @@ LL |     id_i64(a8);
    |            ^^
    |            |
    |            expected `i64`, found `i8`
-   |            help: you can convert an `i8` to `i64`: `a8.into()`
+   |            If I were you, I would simply you can convert an `i8` to `i64`: `a8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:67:12
@@ -107,7 +107,7 @@ LL |     id_i64(a16);
    |            ^^^
    |            |
    |            expected `i64`, found `i16`
-   |            help: you can convert an `i16` to `i64`: `a16.into()`
+   |            If I were you, I would simply you can convert an `i16` to `i64`: `a16.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:70:12
@@ -116,7 +116,7 @@ LL |     id_i64(a32);
    |            ^^^
    |            |
    |            expected `i64`, found `i32`
-   |            help: you can convert an `i32` to `i64`: `a32.into()`
+   |            If I were you, I would simply you can convert an `i32` to `i64`: `a32.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:76:11
@@ -158,7 +158,7 @@ LL |     id_i16(c8);
    |            ^^
    |            |
    |            expected `i16`, found `i8`
-   |            help: you can convert an `i8` to `i16`: `c8.into()`
+   |            If I were you, I would simply you can convert an `i8` to `i16`: `c8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:90:12
@@ -189,7 +189,7 @@ LL |     id_i32(c8);
    |            ^^
    |            |
    |            expected `i32`, found `i8`
-   |            help: you can convert an `i8` to `i32`: `c8.into()`
+   |            If I were you, I would simply you can convert an `i8` to `i32`: `c8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:100:12
@@ -198,7 +198,7 @@ LL |     id_i32(c16);
    |            ^^^
    |            |
    |            expected `i32`, found `i16`
-   |            help: you can convert an `i16` to `i32`: `c16.into()`
+   |            If I were you, I would simply you can convert an `i16` to `i32`: `c16.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:104:12
@@ -218,7 +218,7 @@ LL |     id_i64(a8);
    |            ^^
    |            |
    |            expected `i64`, found `i8`
-   |            help: you can convert an `i8` to `i64`: `a8.into()`
+   |            If I were you, I would simply you can convert an `i8` to `i64`: `a8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:111:12
@@ -227,7 +227,7 @@ LL |     id_i64(a16);
    |            ^^^
    |            |
    |            expected `i64`, found `i16`
-   |            help: you can convert an `i16` to `i64`: `a16.into()`
+   |            If I were you, I would simply you can convert an `i16` to `i64`: `a16.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:114:12
@@ -236,7 +236,7 @@ LL |     id_i64(a32);
    |            ^^^
    |            |
    |            expected `i64`, found `i32`
-   |            help: you can convert an `i32` to `i64`: `a32.into()`
+   |            If I were you, I would simply you can convert an `i32` to `i64`: `a32.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:120:11
@@ -278,7 +278,7 @@ LL |     id_u16(b8);
    |            ^^
    |            |
    |            expected `u16`, found `u8`
-   |            help: you can convert an `u8` to `u16`: `b8.into()`
+   |            If I were you, I would simply you can convert an `u8` to `u16`: `b8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:134:12
@@ -309,7 +309,7 @@ LL |     id_u32(b8);
    |            ^^
    |            |
    |            expected `u32`, found `u8`
-   |            help: you can convert an `u8` to `u32`: `b8.into()`
+   |            If I were you, I would simply you can convert an `u8` to `u32`: `b8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:144:12
@@ -318,7 +318,7 @@ LL |     id_u32(b16);
    |            ^^^
    |            |
    |            expected `u32`, found `u16`
-   |            help: you can convert an `u16` to `u32`: `b16.into()`
+   |            If I were you, I would simply you can convert an `u16` to `u32`: `b16.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:148:12
@@ -338,7 +338,7 @@ LL |     id_u64(b8);
    |            ^^
    |            |
    |            expected `u64`, found `u8`
-   |            help: you can convert an `u8` to `u64`: `b8.into()`
+   |            If I were you, I would simply you can convert an `u8` to `u64`: `b8.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:155:12
@@ -347,7 +347,7 @@ LL |     id_u64(b16);
    |            ^^^
    |            |
    |            expected `u64`, found `u16`
-   |            help: you can convert an `u16` to `u64`: `b16.into()`
+   |            If I were you, I would simply you can convert an `u16` to `u64`: `b16.into()`
 
 error[E0308]: mismatched types
   --> $DIR/integer-literal-suffix-inference.rs:158:12
@@ -356,7 +356,7 @@ LL |     id_u64(b32);
    |            ^^^
    |            |
    |            expected `u64`, found `u32`
-   |            help: you can convert an `u32` to `u64`: `b32.into()`
+   |            If I were you, I would simply you can convert an `u32` to `u64`: `b32.into()`
 
 error: aborting due to 36 previous errors
 

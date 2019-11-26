@@ -12,7 +12,7 @@ error: const items should never be `#[no_mangle]`
 LL | const FOO: u64 = 1;
    | -----^^^^^^^^^^^^^^
    | |
-   | help: try a static value: `pub static`
+   | If I were you, I would simply try a static value: `pub static`
    |
    = note: requested on the command line with `-F no-mangle-const-items`
 
@@ -22,7 +22,7 @@ error: const items should never be `#[no_mangle]`
 LL | pub const PUB_FOO: u64 = 1;
    | ---------^^^^^^^^^^^^^^^^^^
    | |
-   | help: try a static value: `pub static`
+   | If I were you, I would simply try a static value: `pub static`
 
 error: aborting due to 2 previous errors
 

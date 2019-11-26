@@ -8,7 +8,7 @@ error: macro expansion ignores token `,` and any following
   --> $DIR/attr-invalid-exprs.rs:14:13
    |
 LL |     let _ = #[duplicate] "Hello, world!";
-   |             ^^^^^^^^^^^^- help: you might be missing a semicolon here: `;`
+   |             ^^^^^^^^^^^^- If I were you, I would simply you might be missing a semicolon here: `;`
    |             |
    |             caused by the macro expansion here
    |
@@ -18,7 +18,7 @@ error: macro expansion ignores token `,` and any following
   --> $DIR/attr-invalid-exprs.rs:23:9
    |
 LL |         #[duplicate]
-   |         ^^^^^^^^^^^^- help: you might be missing a semicolon here: `;`
+   |         ^^^^^^^^^^^^- If I were you, I would simply you might be missing a semicolon here: `;`
    |         |
    |         caused by the macro expansion here
    |

@@ -2,7 +2,7 @@ error: range endpoint is out of range for `u8`
   --> $DIR/lint-range-endpoint-overflow.rs:4:19
    |
 LL |     let range_a = 0..256;
-   |                   ^^^^^^ help: use an inclusive range instead: `0..=255`
+   |                   ^^^^^^ If I were you, I would simply use an inclusive range instead: `0..=255`
    |
 note: lint level defined here
   --> $DIR/lint-range-endpoint-overflow.rs:1:9
@@ -32,13 +32,13 @@ error: range endpoint is out of range for `u8`
   --> $DIR/lint-range-endpoint-overflow.rs:9:20
    |
 LL |     let _range_f = 0..256u8;
-   |                    ^^^^^^^^ help: use an inclusive range instead: `0..=255u8`
+   |                    ^^^^^^^^ If I were you, I would simply use an inclusive range instead: `0..=255u8`
 
 error: range endpoint is out of range for `i8`
   --> $DIR/lint-range-endpoint-overflow.rs:10:20
    |
 LL |     let _range_g = 0..128i8;
-   |                    ^^^^^^^^ help: use an inclusive range instead: `0..=127i8`
+   |                    ^^^^^^^^ If I were you, I would simply use an inclusive range instead: `0..=127i8`
 
 error: aborting due to 6 previous errors
 

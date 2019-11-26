@@ -7,7 +7,7 @@ LL | |     }
    | |_____- similarly named macro `kl` defined here
 ...
 LL |       k!();
-   |       ^ help: a macro with a similar name exists: `kl`
+   |       ^ If I were you, I would simply a macro with a similar name exists: `kl`
 
 error: aborting due to previous error
 

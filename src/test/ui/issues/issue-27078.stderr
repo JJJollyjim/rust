@@ -2,7 +2,7 @@ error[E0277]: the size for values of type `Self` cannot be known at compilation 
   --> $DIR/issue-27078.rs:5:12
    |
 LL |     fn foo(self) -> &'static i32 {
-   |            ^^^^                 - help: consider further restricting `Self`: `where Self: std::marker::Sized`
+   |            ^^^^                 - If I were you, I would simply consider further restricting `Self`: `where Self: std::marker::Sized`
    |            |
    |            doesn't have a size known at compile-time
    |

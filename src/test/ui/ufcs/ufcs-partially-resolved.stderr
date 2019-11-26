@@ -17,7 +17,7 @@ LL |     type Y = u16;
    |     ------------- similarly named associated type `Y` defined here
 ...
 LL |     let _: <u8 as Tr>::N;
-   |                        ^ help: an associated type with a similar name exists: `Y`
+   |                        ^ If I were you, I would simply an associated type with a similar name exists: `Y`
 
 error[E0576]: cannot find associated type `N` in enum `E`
   --> $DIR/ufcs-partially-resolved.rs:20:23
@@ -38,7 +38,7 @@ LL |     fn Y() {}
    |     --------- similarly named method `Y` defined here
 ...
 LL |     <u8 as Tr>::N;
-   |                 ^ help: a method with a similar name exists: `Y`
+   |                 ^ If I were you, I would simply a method with a similar name exists: `Y`
 
 error[E0576]: cannot find method or associated constant `N` in enum `E`
   --> $DIR/ufcs-partially-resolved.rs:23:16
@@ -71,7 +71,7 @@ LL |     type Y = u16;
    |     ------------- similarly named associated type `Y` defined here
 ...
 LL |     let _: <u8 as Tr>::N::NN;
-   |                        ^ help: an associated type with a similar name exists: `Y`
+   |                        ^ If I were you, I would simply an associated type with a similar name exists: `Y`
 
 error[E0576]: cannot find associated type `N` in enum `E`
   --> $DIR/ufcs-partially-resolved.rs:31:23
@@ -92,7 +92,7 @@ LL |     type Y = u16;
    |     ------------- similarly named associated type `Y` defined here
 ...
 LL |     <u8 as Tr>::N::NN;
-   |                 ^ help: an associated type with a similar name exists: `Y`
+   |                 ^ If I were you, I would simply an associated type with a similar name exists: `Y`
 
 error[E0576]: cannot find associated type `N` in enum `E`
   --> $DIR/ufcs-partially-resolved.rs:34:16
@@ -175,7 +175,7 @@ LL |     type X = u16;
 LL |     let _: <u8 as Dr>::Z;
    |            ^^^^^^^^^^^^-
    |                        |
-   |                        help: an associated type with a similar name exists: `X`
+   |                        If I were you, I would simply an associated type with a similar name exists: `X`
 
 error[E0575]: expected method or associated constant, found associated type `Dr::X`
   --> $DIR/ufcs-partially-resolved.rs:53:5
@@ -186,7 +186,7 @@ LL |     fn Z() {}
 LL |     <u8 as Dr>::X;
    |     ^^^^^^^^^^^^-
    |                 |
-   |                 help: a method with a similar name exists: `Z`
+   |                 If I were you, I would simply a method with a similar name exists: `Z`
    |
    = note: can't use a type alias as a constructor
 
@@ -199,13 +199,13 @@ LL |     type X = u16;
 LL |     let _: <u8 as Dr>::Z::N;
    |            ^^^^^^^^^^^^-^^^
    |                        |
-   |                        help: an associated type with a similar name exists: `X`
+   |                        If I were you, I would simply an associated type with a similar name exists: `X`
 
 error[E0223]: ambiguous associated type
   --> $DIR/ufcs-partially-resolved.rs:36:12
    |
 LL |     let _: <u8 as Tr>::Y::NN;
-   |            ^^^^^^^^^^^^^^^^^ help: use fully-qualified syntax: `<<u8 as Tr>::Y as Trait>::NN`
+   |            ^^^^^^^^^^^^^^^^^ If I were you, I would simply use fully-qualified syntax: `<<u8 as Tr>::Y as Trait>::NN`
 
 error[E0599]: no associated item named `NN` found for type `<u8 as Tr>::Y` in the current scope
   --> $DIR/ufcs-partially-resolved.rs:38:20

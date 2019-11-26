@@ -2,7 +2,7 @@ error[E0596]: cannot borrow `f.v` as mutable, as `f` is not declared as mutable
   --> $DIR/issue-35937.rs:7:5
    |
 LL |     let f = Foo { v: Vec::new() };
-   |         - help: consider changing this to be mutable: `mut f`
+   |         - If I were you, I would simply consider changing this to be mutable: `mut f`
 LL |     f.v.push("cat".to_string());
    |     ^^^ cannot borrow as mutable
 
@@ -10,7 +10,7 @@ error[E0594]: cannot assign to `s.x`, as `s` is not declared as mutable
   --> $DIR/issue-35937.rs:16:5
    |
 LL |     let s = S { x: 42 };
-   |         - help: consider changing this to be mutable: `mut s`
+   |         - If I were you, I would simply consider changing this to be mutable: `mut s`
 LL |     s.x += 1;
    |     ^^^^^^^^ cannot assign
 
@@ -18,7 +18,7 @@ error[E0594]: cannot assign to `s.x`, as `s` is not declared as mutable
   --> $DIR/issue-35937.rs:20:5
    |
 LL | fn bar(s: S) {
-   |        - help: consider changing this to be mutable: `mut s`
+   |        - If I were you, I would simply consider changing this to be mutable: `mut s`
 LL |     s.x += 1;
    |     ^^^^^^^^ cannot assign
 

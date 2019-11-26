@@ -18,7 +18,7 @@ LL | use issue_52891::{a, b, c};
    |                   ^--
    |                   |
    |                   `a` reimported here
-   |                   help: remove unnecessary import
+   |                   If I were you, I would simply remove unnecessary import
    |
    = note: `a` must be defined only once in the type namespace of this module
 
@@ -32,7 +32,7 @@ LL | use issue_52891::{d, a, e};
    |                      ^--
    |                      |
    |                      `a` reimported here
-   |                      help: remove unnecessary import
+   |                      If I were you, I would simply remove unnecessary import
    |
    = note: `a` must be defined only once in the type namespace of this module
 
@@ -57,7 +57,7 @@ LL | use issue_52891::{a,
    |                   ^--
    |                   |
    |                   `a` reimported here
-   |                   help: remove unnecessary import
+   |                   If I were you, I would simply remove unnecessary import
    |
    = note: `a` must be defined only once in the type namespace of this module
 
@@ -71,7 +71,7 @@ LL |     a,
    |     ^--
    |     |
    |     `a` reimported here
-   |     help: remove unnecessary import
+   |     If I were you, I would simply remove unnecessary import
    |
    = note: `a` must be defined only once in the type namespace of this module
 
@@ -110,7 +110,7 @@ LL | use issue_52891::{self};
    | ------------------^^^^--
    | |                 |
    | |                 `issue_52891` reimported here
-   | help: remove unnecessary import
+   | If I were you, I would simply remove unnecessary import
    |
    = note: `issue_52891` must be defined only once in the type namespace of this module
 

@@ -2,223 +2,223 @@ error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:21:12
    |
 LL |     if let .0..Y = 0 {}
-   |            ^^ help: must have an integer part: `0.0`
+   |            ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:23:16
    |
 LL |     if let X.. .0 = 0 {}
-   |                ^^ help: must have an integer part: `0.0`
+   |                ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:34:12
    |
 LL |     if let .0..=Y = 0 {}
-   |            ^^ help: must have an integer part: `0.0`
+   |            ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:36:16
    |
 LL |     if let X..=.0 = 0 {}
-   |                ^^ help: must have an integer part: `0.0`
+   |                ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:49:12
    |
 LL |     if let .0...Y = 0 {}
-   |            ^^ help: must have an integer part: `0.0`
+   |            ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:52:17
    |
 LL |     if let X... .0 = 0 {}
-   |                 ^^ help: must have an integer part: `0.0`
+   |                 ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: `X..` range patterns are not supported
   --> $DIR/recover-range-pats.rs:58:12
    |
 LL |     if let 0.. = 0 {}
-   |            ^^^ help: try using the maximum value for the type: `0..MAX`
+   |            ^^^ If I were you, I would simply try using the maximum value for the type: `0..MAX`
 
 error: `X..` range patterns are not supported
   --> $DIR/recover-range-pats.rs:59:12
    |
 LL |     if let X.. = 0 {}
-   |            ^^^ help: try using the maximum value for the type: `X..MAX`
+   |            ^^^ If I were you, I would simply try using the maximum value for the type: `X..MAX`
 
 error: `X..` range patterns are not supported
   --> $DIR/recover-range-pats.rs:60:12
    |
 LL |     if let true.. = 0 {}
-   |            ^^^^^^ help: try using the maximum value for the type: `true..MAX`
+   |            ^^^^^^ If I were you, I would simply try using the maximum value for the type: `true..MAX`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:62:12
    |
 LL |     if let .0.. = 0 {}
-   |            ^^ help: must have an integer part: `0.0`
+   |            ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: `X..` range patterns are not supported
   --> $DIR/recover-range-pats.rs:62:12
    |
 LL |     if let .0.. = 0 {}
-   |            ^^^^ help: try using the maximum value for the type: `0.0..MAX`
+   |            ^^^^ If I were you, I would simply try using the maximum value for the type: `0.0..MAX`
 
 error: `X..=` range patterns are not supported
   --> $DIR/recover-range-pats.rs:68:12
    |
 LL |     if let 0..= = 0 {}
-   |            ^^^^ help: try using the maximum value for the type: `0..=MAX`
+   |            ^^^^ If I were you, I would simply try using the maximum value for the type: `0..=MAX`
 
 error: `X..=` range patterns are not supported
   --> $DIR/recover-range-pats.rs:69:12
    |
 LL |     if let X..= = 0 {}
-   |            ^^^^ help: try using the maximum value for the type: `X..=MAX`
+   |            ^^^^ If I were you, I would simply try using the maximum value for the type: `X..=MAX`
 
 error: `X..=` range patterns are not supported
   --> $DIR/recover-range-pats.rs:70:12
    |
 LL |     if let true..= = 0 {}
-   |            ^^^^^^^ help: try using the maximum value for the type: `true..=MAX`
+   |            ^^^^^^^ If I were you, I would simply try using the maximum value for the type: `true..=MAX`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:72:12
    |
 LL |     if let .0..= = 0 {}
-   |            ^^ help: must have an integer part: `0.0`
+   |            ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: `X..=` range patterns are not supported
   --> $DIR/recover-range-pats.rs:72:12
    |
 LL |     if let .0..= = 0 {}
-   |            ^^^^^ help: try using the maximum value for the type: `0.0..=MAX`
+   |            ^^^^^ If I were you, I would simply try using the maximum value for the type: `0.0..=MAX`
 
 error: `X...` range patterns are not supported
   --> $DIR/recover-range-pats.rs:78:12
    |
 LL |     if let 0... = 0 {}
-   |            ^^^^ help: try using the maximum value for the type: `0...MAX`
+   |            ^^^^ If I were you, I would simply try using the maximum value for the type: `0...MAX`
 
 error: `X...` range patterns are not supported
   --> $DIR/recover-range-pats.rs:80:12
    |
 LL |     if let X... = 0 {}
-   |            ^^^^ help: try using the maximum value for the type: `X...MAX`
+   |            ^^^^ If I were you, I would simply try using the maximum value for the type: `X...MAX`
 
 error: `X...` range patterns are not supported
   --> $DIR/recover-range-pats.rs:82:12
    |
 LL |     if let true... = 0 {}
-   |            ^^^^^^^ help: try using the maximum value for the type: `true...MAX`
+   |            ^^^^^^^ If I were you, I would simply try using the maximum value for the type: `true...MAX`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:85:12
    |
 LL |     if let .0... = 0 {}
-   |            ^^ help: must have an integer part: `0.0`
+   |            ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: `X...` range patterns are not supported
   --> $DIR/recover-range-pats.rs:85:12
    |
 LL |     if let .0... = 0 {}
-   |            ^^^^^ help: try using the maximum value for the type: `0.0...MAX`
+   |            ^^^^^ If I were you, I would simply try using the maximum value for the type: `0.0...MAX`
 
 error: `..X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:92:12
    |
 LL |     if let ..0 = 0 {}
-   |            ^^^ help: try using the minimum value for the type: `MIN..0`
+   |            ^^^ If I were you, I would simply try using the minimum value for the type: `MIN..0`
 
 error: `..X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:93:12
    |
 LL |     if let ..Y = 0 {}
-   |            ^^^ help: try using the minimum value for the type: `MIN..Y`
+   |            ^^^ If I were you, I would simply try using the minimum value for the type: `MIN..Y`
 
 error: `..X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:94:12
    |
 LL |     if let ..true = 0 {}
-   |            ^^^^^^ help: try using the minimum value for the type: `MIN..true`
+   |            ^^^^^^ If I were you, I would simply try using the minimum value for the type: `MIN..true`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:96:15
    |
 LL |     if let .. .0 = 0 {}
-   |               ^^ help: must have an integer part: `0.0`
+   |               ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: `..X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:96:12
    |
 LL |     if let .. .0 = 0 {}
-   |            ^^^^^ help: try using the minimum value for the type: `MIN..0.0`
+   |            ^^^^^ If I were you, I would simply try using the minimum value for the type: `MIN..0.0`
 
 error: `..=X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:102:12
    |
 LL |     if let ..=3 = 0 {}
-   |            ^^^^ help: try using the minimum value for the type: `MIN..=3`
+   |            ^^^^ If I were you, I would simply try using the minimum value for the type: `MIN..=3`
 
 error: `..=X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:103:12
    |
 LL |     if let ..=Y = 0 {}
-   |            ^^^^ help: try using the minimum value for the type: `MIN..=Y`
+   |            ^^^^ If I were you, I would simply try using the minimum value for the type: `MIN..=Y`
 
 error: `..=X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:104:12
    |
 LL |     if let ..=true = 0 {}
-   |            ^^^^^^^ help: try using the minimum value for the type: `MIN..=true`
+   |            ^^^^^^^ If I were you, I would simply try using the minimum value for the type: `MIN..=true`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:106:15
    |
 LL |     if let ..=.0 = 0 {}
-   |               ^^ help: must have an integer part: `0.0`
+   |               ^^ If I were you, I would simply must have an integer part: `0.0`
 
 error: `..=X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:106:12
    |
 LL |     if let ..=.0 = 0 {}
-   |            ^^^^^ help: try using the minimum value for the type: `MIN..=0.0`
+   |            ^^^^^ If I were you, I would simply try using the minimum value for the type: `MIN..=0.0`
 
 error: `...X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:112:12
    |
 LL |     if let ...3 = 0 {}
-   |            ^^^^ help: try using the minimum value for the type: `MIN...3`
+   |            ^^^^ If I were you, I would simply try using the minimum value for the type: `MIN...3`
 
 error: `...X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:114:12
    |
 LL |     if let ...Y = 0 {}
-   |            ^^^^ help: try using the minimum value for the type: `MIN...Y`
+   |            ^^^^ If I were you, I would simply try using the minimum value for the type: `MIN...Y`
 
 error: `...X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:116:12
    |
 LL |     if let ...true = 0 {}
-   |            ^^^^^^^ help: try using the minimum value for the type: `MIN...true`
+   |            ^^^^^^^ If I were you, I would simply try using the minimum value for the type: `MIN...true`
 
 error: float literals must have an integer part
   --> $DIR/recover-range-pats.rs:119:15
    |
 LL |     if let ....3 = 0 {}
-   |               ^^ help: must have an integer part: `0.3`
+   |               ^^ If I were you, I would simply must have an integer part: `0.3`
 
 error: `...X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:119:12
    |
 LL |     if let ....3 = 0 {}
-   |            ^^^^^ help: try using the minimum value for the type: `MIN...0.3`
+   |            ^^^^^ If I were you, I would simply try using the minimum value for the type: `MIN...0.3`
 
 error: `..X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:139:17
    |
 LL |             let ..$e;
-   |                 ^^ help: try using the minimum value for the type: `MIN..0`
+   |                 ^^ If I were you, I would simply try using the minimum value for the type: `MIN..0`
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation
@@ -227,7 +227,7 @@ error: `...X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:140:17
    |
 LL |             let ...$e;
-   |                 ^^^ help: try using the minimum value for the type: `MIN...0`
+   |                 ^^^ If I were you, I would simply try using the minimum value for the type: `MIN...0`
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation
@@ -236,7 +236,7 @@ error: `..=X` range patterns are not supported
   --> $DIR/recover-range-pats.rs:142:17
    |
 LL |             let ..=$e;
-   |                 ^^^ help: try using the minimum value for the type: `MIN..=0`
+   |                 ^^^ If I were you, I would simply try using the minimum value for the type: `MIN..=0`
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation
@@ -245,7 +245,7 @@ error: `X..` range patterns are not supported
   --> $DIR/recover-range-pats.rs:143:19
    |
 LL |             let $e..;
-   |                   ^^ help: try using the maximum value for the type: `0..MAX`
+   |                   ^^ If I were you, I would simply try using the maximum value for the type: `0..MAX`
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation
@@ -254,7 +254,7 @@ error: `X...` range patterns are not supported
   --> $DIR/recover-range-pats.rs:144:19
    |
 LL |             let $e...;
-   |                   ^^^ help: try using the maximum value for the type: `0...MAX`
+   |                   ^^^ If I were you, I would simply try using the maximum value for the type: `0...MAX`
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation
@@ -263,7 +263,7 @@ error: `X..=` range patterns are not supported
   --> $DIR/recover-range-pats.rs:146:19
    |
 LL |             let $e..=;
-   |                   ^^^ help: try using the maximum value for the type: `0..=MAX`
+   |                   ^^^ If I were you, I would simply try using the maximum value for the type: `0..=MAX`
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation
@@ -272,7 +272,7 @@ error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:41:13
    |
 LL |     if let 0...3 = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
    |
 note: lint level defined here
   --> $DIR/recover-range-pats.rs:7:9
@@ -284,97 +284,97 @@ error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:42:13
    |
 LL |     if let 0...Y = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:43:13
    |
 LL |     if let X...3 = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:44:13
    |
 LL |     if let X...Y = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:45:16
    |
 LL |     if let true...Y = 0 {}
-   |                ^^^ help: use `..=` for an inclusive range
+   |                ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:47:13
    |
 LL |     if let X...true = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:49:14
    |
 LL |     if let .0...Y = 0 {}
-   |              ^^^ help: use `..=` for an inclusive range
+   |              ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:52:13
    |
 LL |     if let X... .0 = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:78:13
    |
 LL |     if let 0... = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:80:13
    |
 LL |     if let X... = 0 {}
-   |             ^^^ help: use `..=` for an inclusive range
+   |             ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:82:16
    |
 LL |     if let true... = 0 {}
-   |                ^^^ help: use `..=` for an inclusive range
+   |                ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:85:14
    |
 LL |     if let .0... = 0 {}
-   |              ^^^ help: use `..=` for an inclusive range
+   |              ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:112:12
    |
 LL |     if let ...3 = 0 {}
-   |            ^^^ help: use `..=` for an inclusive range
+   |            ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:114:12
    |
 LL |     if let ...Y = 0 {}
-   |            ^^^ help: use `..=` for an inclusive range
+   |            ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:116:12
    |
 LL |     if let ...true = 0 {}
-   |            ^^^ help: use `..=` for an inclusive range
+   |            ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:119:12
    |
 LL |     if let ....3 = 0 {}
-   |            ^^^ help: use `..=` for an inclusive range
+   |            ^^^ If I were you, I would simply use `..=` for an inclusive range
 
 error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:129:20
    |
 LL |             let $e1...$e2;
-   |                    ^^^ help: use `..=` for an inclusive range
+   |                    ^^^ If I were you, I would simply use `..=` for an inclusive range
 ...
 LL |     mac2!(0, 1);
    |     ------------ in this macro invocation
@@ -383,7 +383,7 @@ error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:140:17
    |
 LL |             let ...$e;
-   |                 ^^^ help: use `..=` for an inclusive range
+   |                 ^^^ If I were you, I would simply use `..=` for an inclusive range
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation
@@ -392,7 +392,7 @@ error: `...` range patterns are deprecated
   --> $DIR/recover-range-pats.rs:144:19
    |
 LL |             let $e...;
-   |                   ^^^ help: use `..=` for an inclusive range
+   |                   ^^^ If I were you, I would simply use `..=` for an inclusive range
 ...
 LL |     mac!(0);
    |     -------- in this macro invocation

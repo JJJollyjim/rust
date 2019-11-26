@@ -2,115 +2,115 @@ error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:8:13
    |
 LL |     let _ = await bar();
-   |             ^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |             ^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:12:13
    |
 LL |     let _ = await? bar();
-   |             ^^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await?`
+   |             ^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await?`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:16:13
    |
 LL |     let _ = await bar()?;
-   |             ^^^^^^^^^^^^ help: `await` is a postfix operation: `bar()?.await`
+   |             ^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar()?.await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:21:13
    |
 LL |     let _ = await { bar() };
-   |             ^^^^^^^^^^^^^^^ help: `await` is a postfix operation: `{ bar() }.await`
+   |             ^^^^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `{ bar() }.await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:25:13
    |
 LL |     let _ = await(bar());
-   |             ^^^^^^^^^^^^ help: `await` is a postfix operation: `(bar()).await`
+   |             ^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `(bar()).await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:29:13
    |
 LL |     let _ = await { bar() }?;
-   |             ^^^^^^^^^^^^^^^ help: `await` is a postfix operation: `{ bar() }.await`
+   |             ^^^^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `{ bar() }.await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:33:14
    |
 LL |     let _ = (await bar())?;
-   |              ^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |              ^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:37:24
    |
 LL |     let _ = bar().await();
-   |                        ^^ help: `await` is not a method call, remove the parentheses
+   |                        ^^ If I were you, I would simply `await` is not a method call, remove the parentheses
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:41:24
    |
 LL |     let _ = bar().await()?;
-   |                        ^^ help: `await` is not a method call, remove the parentheses
+   |                        ^^ If I were you, I would simply `await` is not a method call, remove the parentheses
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:53:13
    |
 LL |     let _ = await bar();
-   |             ^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |             ^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:58:13
    |
 LL |     let _ = await? bar();
-   |             ^^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await?`
+   |             ^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await?`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:63:13
    |
 LL |     let _ = await bar()?;
-   |             ^^^^^^^^^^^^ help: `await` is a postfix operation: `bar()?.await`
+   |             ^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar()?.await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:68:14
    |
 LL |     let _ = (await bar())?;
-   |              ^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |              ^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:73:24
    |
 LL |     let _ = bar().await();
-   |                        ^^ help: `await` is not a method call, remove the parentheses
+   |                        ^^ If I were you, I would simply `await` is not a method call, remove the parentheses
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:78:24
    |
 LL |     let _ = bar().await()?;
-   |                        ^^ help: `await` is not a method call, remove the parentheses
+   |                        ^^ If I were you, I would simply `await` is not a method call, remove the parentheses
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:106:13
    |
 LL |     let _ = await!(bar());
-   |             ^^^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |             ^^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:110:13
    |
 LL |     let _ = await!(bar())?;
-   |             ^^^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |             ^^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:115:17
    |
 LL |         let _ = await!(bar())?;
-   |                 ^^^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |                 ^^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:123:17
    |
 LL |         let _ = await!(bar())?;
-   |                 ^^^^^^^^^^^^^ help: `await` is a postfix operation: `bar().await`
+   |                 ^^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `bar().await`
 
 error: expected expression, found `=>`
   --> $DIR/incorrect-syntax-suggestions.rs:131:25
@@ -124,7 +124,7 @@ error: incorrect use of `await`
   --> $DIR/incorrect-syntax-suggestions.rs:131:11
    |
 LL |     match await { await => () }
-   |           ^^^^^^^^^^^^^^^^^^^^^ help: `await` is a postfix operation: `{ await => () }.await`
+   |           ^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply `await` is a postfix operation: `{ await => () }.await`
 
 error: expected one of `.`, `?`, `{`, or an operator, found `}`
   --> $DIR/incorrect-syntax-suggestions.rs:134:1

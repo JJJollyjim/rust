@@ -4,7 +4,7 @@ error[E0423]: expected value, found module `a`
 LL |     a.I
    |     ^--
    |     |
-   |     help: use the path separator to refer to an item: `a::I`
+   |     If I were you, I would simply use the path separator to refer to an item: `a::I`
 
 error[E0423]: expected value, found module `a`
   --> $DIR/suggest-path-instead-of-mod-dot-item.rs:22:5
@@ -12,7 +12,7 @@ error[E0423]: expected value, found module `a`
 LL |     a.g()
    |     ^--
    |     |
-   |     help: use the path separator to refer to an item: `a::g`
+   |     If I were you, I would simply use the path separator to refer to an item: `a::g`
 
 error[E0423]: expected value, found module `a`
   --> $DIR/suggest-path-instead-of-mod-dot-item.rs:27:5
@@ -20,7 +20,7 @@ error[E0423]: expected value, found module `a`
 LL |     a.b.J
    |     ^--
    |     |
-   |     help: use the path separator to refer to an item: `a::b`
+   |     If I were you, I would simply use the path separator to refer to an item: `a::b`
 
 error[E0423]: expected value, found module `a::b`
   --> $DIR/suggest-path-instead-of-mod-dot-item.rs:32:5
@@ -46,7 +46,7 @@ error[E0423]: expected value, found module `a`
 LL |     a.b.f();
    |     ^--
    |     |
-   |     help: use the path separator to refer to an item: `a::b`
+   |     If I were you, I would simply use the path separator to refer to an item: `a::b`
 
 error[E0423]: expected value, found module `a::b`
   --> $DIR/suggest-path-instead-of-mod-dot-item.rs:40:12
@@ -57,7 +57,7 @@ LL |     pub const I: i32 = 1;
 LL |     v.push(a::b);
    |            ^^^-
    |               |
-   |               help: a constant with a similar name exists: `I`
+   |               If I were you, I would simply a constant with a similar name exists: `I`
 
 error[E0423]: expected value, found module `a::b`
   --> $DIR/suggest-path-instead-of-mod-dot-item.rs:45:5
@@ -86,7 +86,7 @@ LL |     pub const I: i32 = 1;
 LL |     a::b
    |     ^^^-
    |        |
-   |        help: a constant with a similar name exists: `I`
+   |        If I were you, I would simply a constant with a similar name exists: `I`
 
 error[E0423]: expected function, found module `a::b`
   --> $DIR/suggest-path-instead-of-mod-dot-item.rs:55:5
@@ -97,7 +97,7 @@ LL |     pub const I: i32 = 1;
 LL |     a::b()
    |     ^^^-
    |        |
-   |        help: a constant with a similar name exists: `I`
+   |        If I were you, I would simply a constant with a similar name exists: `I`
 
 error: aborting due to 9 previous errors
 

@@ -7,7 +7,7 @@ LL |     &panic!()
    |     ^^^^^^^^^
    |     |
    |     expected `()`, found reference
-   |     help: consider removing the borrow: `panic!()`
+   |     If I were you, I would simply consider removing the borrow: `panic!()`
    |
    = note: expected unit type `()`
               found reference `&_`

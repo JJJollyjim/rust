@@ -4,7 +4,7 @@ error[E0277]: the trait bound `Self: Get` is not satisfied
 LL |     fn uhoh<U:Get>(&self, foo: U, bar: <Self as Get>::Value) {}
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-^^
    |     |                                                       |
-   |     |                                                       help: consider further restricting `Self`: `where Self: Get`
+   |     |                                                       If I were you, I would simply consider further restricting `Self`: `where Self: Get`
    |     the trait `Get` is not implemented for `Self`
 
 error: aborting due to previous error

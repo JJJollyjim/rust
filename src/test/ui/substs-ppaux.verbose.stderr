@@ -8,7 +8,7 @@ LL |     let x: () = <i8 as Foo<'static, 'static,  u8>>::bar::<'static, char>;
    |            --   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |            |    |
    |            |    expected `()`, found fn item
-   |            |    help: use parentheses to call this function: `<i8 as Foo<'static, 'static,  u8>>::bar::<'static, char>()`
+   |            |    If I were you, I would simply use parentheses to call this function: `<i8 as Foo<'static, 'static,  u8>>::bar::<'static, char>()`
    |            expected due to this
    |
    = note: expected unit type `()`
@@ -24,7 +24,7 @@ LL |     let x: () = <i8 as Foo<'static, 'static,  u32>>::bar::<'static, char>;
    |            --   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |            |    |
    |            |    expected `()`, found fn item
-   |            |    help: use parentheses to call this function: `<i8 as Foo<'static, 'static,  u32>>::bar::<'static, char>()`
+   |            |    If I were you, I would simply use parentheses to call this function: `<i8 as Foo<'static, 'static,  u32>>::bar::<'static, char>()`
    |            expected due to this
    |
    = note: expected unit type `()`
@@ -40,7 +40,7 @@ LL |     let x: () = <i8 as Foo<'static, 'static,  u8>>::baz;
    |            --   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |            |    |
    |            |    expected `()`, found fn item
-   |            |    help: use parentheses to call this function: `<i8 as Foo<'static, 'static,  u8>>::baz()`
+   |            |    If I were you, I would simply use parentheses to call this function: `<i8 as Foo<'static, 'static,  u8>>::baz()`
    |            expected due to this
    |
    = note: expected unit type `()`
@@ -56,7 +56,7 @@ LL |     let x: () = foo::<'static>;
    |            --   ^^^^^^^^^^^^^^
    |            |    |
    |            |    expected `()`, found fn item
-   |            |    help: use parentheses to call this function: `foo::<'static>()`
+   |            |    If I were you, I would simply use parentheses to call this function: `foo::<'static>()`
    |            expected due to this
    |
    = note: expected unit type `()`

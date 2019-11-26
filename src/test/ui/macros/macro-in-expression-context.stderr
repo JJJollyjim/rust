@@ -5,7 +5,7 @@ LL |         assert_eq!("B", "B");
    |         ^^^^^^^^^
 ...
 LL |     foo!()
-   |     ------- help: you might be missing a semicolon here: `;`
+   |     ------- If I were you, I would simply you might be missing a semicolon here: `;`
    |     |
    |     caused by the macro expansion here
    |

@@ -36,7 +36,7 @@ LL |     let p = s.url; p
    |             |
    |             cannot move out of here
    |             move occurs because `s.url` has type `&mut std::string::String`, which does not implement the `Copy` trait
-   |             help: consider borrowing here: `&s.url`
+   |             If I were you, I would simply consider borrowing here: `&s.url`
 
 error: aborting due to 4 previous errors
 

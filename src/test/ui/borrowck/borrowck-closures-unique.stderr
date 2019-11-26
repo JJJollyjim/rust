@@ -44,7 +44,7 @@ error[E0594]: cannot assign to `x`, as it is not declared as mutable
   --> $DIR/borrowck-closures-unique.rs:43:38
    |
 LL | fn e(x: &'static mut isize) {
-   |      - help: consider changing this to be mutable: `mut x`
+   |      - If I were you, I would simply consider changing this to be mutable: `mut x`
 LL |     let c1 = |y: &'static mut isize| x = y;
    |                                      ^^^^^ cannot assign
 

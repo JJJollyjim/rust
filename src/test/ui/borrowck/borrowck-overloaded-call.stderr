@@ -12,7 +12,7 @@ error[E0596]: cannot borrow `s` as mutable, as it is not declared as mutable
   --> $DIR/borrowck-overloaded-call.rs:67:5
    |
 LL |     let s = SFnMut {
-   |         - help: consider changing this to be mutable: `mut s`
+   |         - If I were you, I would simply consider changing this to be mutable: `mut s`
 ...
 LL |     s(3);
    |     ^ cannot borrow as mutable

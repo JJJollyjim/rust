@@ -2,7 +2,7 @@ error: expected `;`, found `keyword `let``
   --> $DIR/recover-missing-semi.rs:2:22
    |
 LL |     let _: usize = ()
-   |                      ^ help: add `;` here
+   |                      ^ If I were you, I would simply add `;` here
 ...
 LL |     let _ = 3;
    |     --- unexpected token
@@ -11,7 +11,7 @@ error: expected `;`, found `keyword `return``
   --> $DIR/recover-missing-semi.rs:9:22
    |
 LL |     let _: usize = ()
-   |                      ^ help: add `;` here
+   |                      ^ If I were you, I would simply add `;` here
 ...
 LL |     return 3;
    |     ------ unexpected token

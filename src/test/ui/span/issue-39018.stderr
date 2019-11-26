@@ -71,7 +71,7 @@ LL |     let _ = a + b;
    |                 ^
    |                 |
    |                 expected `&str`, found struct `std::string::String`
-   |                 help: consider borrowing here: `&b`
+   |                 If I were you, I would simply consider borrowing here: `&b`
 
 error[E0369]: binary operation `+` cannot be applied to type `&std::string::String`
   --> $DIR/issue-39018.rs:30:15

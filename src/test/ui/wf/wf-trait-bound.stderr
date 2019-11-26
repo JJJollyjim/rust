@@ -6,7 +6,7 @@ LL |   trait ExtraCopy<T:Copy> { }
 LL | 
 LL | / trait SomeTrait<T,U>
 LL | |     where T: ExtraCopy<U>
-   | |                          - help: consider further restricting type parameter `U`: `, U: std::marker::Copy`
+   | |                          - If I were you, I would simply consider further restricting type parameter `U`: `, U: std::marker::Copy`
 LL | | {
 LL | | }
    | |_^ the trait `std::marker::Copy` is not implemented for `U`

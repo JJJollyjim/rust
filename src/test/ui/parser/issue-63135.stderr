@@ -11,7 +11,7 @@ error: expected field pattern, found `...`
   --> $DIR/issue-63135.rs:3:8
    |
 LL | fn i(n{...,f #
-   |        ^^^ help: to omit remaining fields, use one fewer `.`: `..`
+   |        ^^^ If I were you, I would simply to omit remaining fields, use one fewer `.`: `..`
 
 error: expected `}`, found `,`
   --> $DIR/issue-63135.rs:3:11

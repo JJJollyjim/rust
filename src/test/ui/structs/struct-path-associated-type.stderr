@@ -32,7 +32,7 @@ error[E0223]: ambiguous associated type
   --> $DIR/struct-path-associated-type.rs:32:13
    |
 LL |     let s = S::A {};
-   |             ^^^^ help: use fully-qualified syntax: `<S as Trait>::A`
+   |             ^^^^ If I were you, I would simply use fully-qualified syntax: `<S as Trait>::A`
 
 error[E0109]: type arguments are not allowed for this type
   --> $DIR/struct-path-associated-type.rs:33:20
@@ -44,13 +44,13 @@ error[E0223]: ambiguous associated type
   --> $DIR/struct-path-associated-type.rs:33:13
    |
 LL |     let z = S::A::<u8> {};
-   |             ^^^^^^^^^^ help: use fully-qualified syntax: `<S as Trait>::A`
+   |             ^^^^^^^^^^ If I were you, I would simply use fully-qualified syntax: `<S as Trait>::A`
 
 error[E0223]: ambiguous associated type
   --> $DIR/struct-path-associated-type.rs:36:9
    |
 LL |         S::A {} => {}
-   |         ^^^^ help: use fully-qualified syntax: `<S as Trait>::A`
+   |         ^^^^ If I were you, I would simply use fully-qualified syntax: `<S as Trait>::A`
 
 error: aborting due to 9 previous errors
 

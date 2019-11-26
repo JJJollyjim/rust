@@ -2,7 +2,7 @@ error[E0594]: cannot assign to `x`, as it is not declared as mutable
   --> $DIR/closure-captures.rs:7:5
    |
 LL | fn one_closure(x: i32) {
-   |                - help: consider changing this to be mutable: `mut x`
+   |                - If I were you, I would simply consider changing this to be mutable: `mut x`
 LL |     ||
 LL |     x = 1;
    |     ^^^^^ cannot assign
@@ -11,7 +11,7 @@ error[E0594]: cannot assign to `x`, as it is not declared as mutable
   --> $DIR/closure-captures.rs:9:5
    |
 LL | fn one_closure(x: i32) {
-   |                - help: consider changing this to be mutable: `mut x`
+   |                - If I were you, I would simply consider changing this to be mutable: `mut x`
 ...
 LL |     x = 1;
    |     ^^^^^ cannot assign
@@ -20,7 +20,7 @@ error[E0594]: cannot assign to `x`, as it is not declared as mutable
   --> $DIR/closure-captures.rs:15:9
    |
 LL | fn two_closures(x: i32) {
-   |                 - help: consider changing this to be mutable: `mut x`
+   |                 - If I were you, I would simply consider changing this to be mutable: `mut x`
 ...
 LL |         x = 1;
    |         ^^^^^ cannot assign
@@ -29,7 +29,7 @@ error[E0594]: cannot assign to `x`, as it is not declared as mutable
   --> $DIR/closure-captures.rs:19:9
    |
 LL | fn two_closures(x: i32) {
-   |                 - help: consider changing this to be mutable: `mut x`
+   |                 - If I were you, I would simply consider changing this to be mutable: `mut x`
 ...
 LL |         x = 1;
    |         ^^^^^ cannot assign
@@ -72,7 +72,7 @@ error[E0594]: cannot assign to `x`, as it is not declared as mutable
   --> $DIR/closure-captures.rs:39:10
    |
 LL | fn two_closures_ref(x: i32) {
-   |                     - help: consider changing this to be mutable: `mut x`
+   |                     - If I were you, I would simply consider changing this to be mutable: `mut x`
 ...
 LL |          x = 1;}
    |          ^^^^^ cannot assign
@@ -98,7 +98,7 @@ error[E0594]: cannot assign to `x`, as it is not declared as mutable
   --> $DIR/closure-captures.rs:43:5
    |
 LL | fn two_closures_ref(x: i32) {
-   |                     - help: consider changing this to be mutable: `mut x`
+   |                     - If I were you, I would simply consider changing this to be mutable: `mut x`
 ...
 LL |     x = 1;});
    |     ^^^^^ cannot assign

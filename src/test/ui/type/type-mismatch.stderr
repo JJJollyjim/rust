@@ -209,7 +209,7 @@ LL |     want::<&Foo<foo>>(f);
    |                       ^
    |                       |
    |                       expected `&Foo<foo>`, found struct `Foo`
-   |                       help: consider borrowing here: `&f`
+   |                       If I were you, I would simply consider borrowing here: `&f`
    |
    = note: expected reference `&Foo<foo>`
                  found struct `Foo<foo>`
@@ -311,7 +311,7 @@ LL |     want::<&Foo<foo, B>>(f);
    |                          ^
    |                          |
    |                          expected `&Foo<foo, B>`, found struct `Foo`
-   |                          help: consider borrowing here: `&f`
+   |                          If I were you, I would simply consider borrowing here: `&f`
    |
    = note: expected reference `&Foo<foo, B>`
                  found struct `Foo<foo, B>`

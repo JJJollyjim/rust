@@ -13,7 +13,7 @@ error[E0532]: expected unit struct, unit variant or constant, found struct varia
 LL |         XE::XEmpty3 => ()
    |         ^^^^-------
    |         |   |
-   |         |   help: a unit variant with a similar name exists: `XEmpty4`
+   |         |   If I were you, I would simply a unit variant with a similar name exists: `XEmpty4`
    |         did you mean `XE::XEmpty3 { /* fields */ }`?
 
 error: aborting due to 2 previous errors

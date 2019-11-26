@@ -8,7 +8,7 @@ LL |         if false { break; }
    |                    ^^^^^
    |                    |
    |                    expected `i32`, found `()`
-   |                    help: give it a value of the expected type: `break 42`
+   |                    If I were you, I would simply give it a value of the expected type: `break 42`
 
 error: aborting due to previous error
 

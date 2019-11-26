@@ -5,7 +5,7 @@ LL | / #[cfg(blandiloquence)]
 LL | | extern crate edition_lint_paths;
    | | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-
    | |________________________________|
-   |                                  help: remove it
+   |                                  If I were you, I would simply remove it
    |
 note: lint level defined here
   --> $DIR/issue-54400-unused-extern-crate-attr-span.rs:6:9

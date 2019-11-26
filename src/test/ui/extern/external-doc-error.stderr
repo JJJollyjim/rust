@@ -14,25 +14,25 @@ error: expected path to external documentation
   --> $DIR/external-doc-error.rs:11:7
    |
 LL | #[doc(include)]
-   |       ^^^^^^^ help: provide a file path with `=`: `include = "<path>"`
+   |       ^^^^^^^ If I were you, I would simply provide a file path with `=`: `include = "<path>"`
 
 error: expected path to external documentation
   --> $DIR/external-doc-error.rs:16:7
    |
 LL | #[doc(include("../README.md"))]
-   |       ^^^^^^^^^^^^^^^^^^^^^^^ help: provide a file path with `=`: `include = "../README.md"`
+   |       ^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply provide a file path with `=`: `include = "../README.md"`
 
 error: expected path to external documentation
   --> $DIR/external-doc-error.rs:21:7
    |
 LL | #[doc(include = 123)]
-   |       ^^^^^^^^^^^^^ help: provide a file path with `=`: `include = "<path>"`
+   |       ^^^^^^^^^^^^^ If I were you, I would simply provide a file path with `=`: `include = "<path>"`
 
 error: expected path to external documentation
   --> $DIR/external-doc-error.rs:26:7
    |
 LL | #[doc(include(123))]
-   |       ^^^^^^^^^^^^ help: provide a file path with `=`: `include = "<path>"`
+   |       ^^^^^^^^^^^^ If I were you, I would simply provide a file path with `=`: `include = "<path>"`
 
 error: aborting due to 6 previous errors
 

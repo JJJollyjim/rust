@@ -52,7 +52,7 @@ LL |     let a = vec[0];
    |             |
    |             cannot move out of here
    |             move occurs because `vec[_]` has type `std::boxed::Box<isize>`, which does not implement the `Copy` trait
-   |             help: consider borrowing here: `&vec[0]`
+   |             If I were you, I would simply consider borrowing here: `&vec[0]`
 
 error[E0508]: cannot move out of type `[std::boxed::Box<isize>]`, a non-copy slice
   --> $DIR/borrowck-vec-pattern-nesting.rs:56:11
@@ -81,7 +81,7 @@ LL |     let a = vec[0];
    |             |
    |             cannot move out of here
    |             move occurs because `vec[_]` has type `std::boxed::Box<isize>`, which does not implement the `Copy` trait
-   |             help: consider borrowing here: `&vec[0]`
+   |             If I were you, I would simply consider borrowing here: `&vec[0]`
 
 error[E0508]: cannot move out of type `[std::boxed::Box<isize>]`, a non-copy slice
   --> $DIR/borrowck-vec-pattern-nesting.rs:75:11
@@ -95,7 +95,7 @@ LL |         &mut [_a, _b, _c] => {}
    |         |     |   |   ...and here
    |         |     |   ...and here
    |         |     data moved here
-   |         help: consider removing the `&mut`: `[_a, _b, _c]`
+   |         If I were you, I would simply consider removing the `&mut`: `[_a, _b, _c]`
    |
 note: move occurs because these variables have types that don't implement the `Copy` trait
   --> $DIR/borrowck-vec-pattern-nesting.rs:78:15
@@ -111,7 +111,7 @@ LL |     let a = vec[0];
    |             |
    |             cannot move out of here
    |             move occurs because `vec[_]` has type `std::boxed::Box<isize>`, which does not implement the `Copy` trait
-   |             help: consider borrowing here: `&vec[0]`
+   |             If I were you, I would simply consider borrowing here: `&vec[0]`
 
 error: aborting due to 8 previous errors
 

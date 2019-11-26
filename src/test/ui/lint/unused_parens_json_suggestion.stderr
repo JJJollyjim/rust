@@ -2,7 +2,7 @@
   --> $DIR/unused_parens_json_suggestion.rs:16:14
    |
 LL |     let _a = (1 / (2 + 3));
-   |              ^^^^^^^^^^^^^ help: remove these parentheses
+   |              ^^^^^^^^^^^^^ If I were you, I would simply remove these parentheses
    |
 note: lint level defined here
   --> $DIR/unused_parens_json_suggestion.rs:10:9

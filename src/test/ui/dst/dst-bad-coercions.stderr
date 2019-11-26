@@ -16,7 +16,7 @@ LL |     let y: &dyn T = x;
    |            ------   ^
    |            |        |
    |            |        expected `&dyn T`, found *-ptr
-   |            |        help: consider borrowing here: `&x`
+   |            |        If I were you, I would simply consider borrowing here: `&x`
    |            expected due to this
    |
    = note: expected reference `&dyn T`
@@ -40,7 +40,7 @@ LL |     let y: &dyn T = x;
    |            ------   ^
    |            |        |
    |            |        expected `&dyn T`, found *-ptr
-   |            |        help: consider borrowing here: `&x`
+   |            |        If I were you, I would simply consider borrowing here: `&x`
    |            expected due to this
    |
    = note: expected reference `&dyn T`

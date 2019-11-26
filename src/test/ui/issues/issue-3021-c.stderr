@@ -7,7 +7,7 @@ LL | fn siphash<T>() {
 LL |         fn g(&self, x: T) -> T;
    |            -           ^ use of generic parameter from outer function
    |            |
-   |            help: try using a local generic parameter instead: `g<T>`
+   |            If I were you, I would simply try using a local generic parameter instead: `g<T>`
 
 error[E0401]: can't use generic parameters from outer function
   --> $DIR/issue-3021-c.rs:4:30
@@ -18,7 +18,7 @@ LL | fn siphash<T>() {
 LL |         fn g(&self, x: T) -> T;
    |            -                 ^ use of generic parameter from outer function
    |            |
-   |            help: try using a local generic parameter instead: `g<T>`
+   |            If I were you, I would simply try using a local generic parameter instead: `g<T>`
 
 error: aborting due to 2 previous errors
 

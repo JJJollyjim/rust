@@ -17,7 +17,7 @@ LL | use prelude::*;
    |     ^^^^^^^
    |     |
    |     unresolved import
-   |     help: a similar path exists: `std::prelude`
+   |     If I were you, I would simply a similar path exists: `std::prelude`
 
 error[E0432]: unresolved import `env`
   --> $DIR/issue-55897.rs:4:9

@@ -7,7 +7,7 @@ LL | struct Bar<T:Eq+?Sized> { value: Box<T> }
 LL |     fn bar(&self) -> &Bar<Self>;
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^-
    |     |                          |
-   |     |                          help: consider further restricting `Self`: `where Self: std::cmp::Eq`
+   |     |                          If I were you, I would simply consider further restricting `Self`: `where Self: std::cmp::Eq`
    |     the trait `std::cmp::Eq` is not implemented for `Self`
 
 error: aborting due to previous error

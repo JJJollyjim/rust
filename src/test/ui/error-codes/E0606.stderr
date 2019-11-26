@@ -5,7 +5,7 @@ LL |     &0u8 as u8;
    |     ----^^^^^^
    |     |
    |     cannot cast `&u8` as `u8`
-   |     help: dereference the expression: `*&0u8`
+   |     If I were you, I would simply dereference the expression: `*&0u8`
 
 error: aborting due to previous error
 

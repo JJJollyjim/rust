@@ -5,7 +5,7 @@ LL |         guts,
    |         ^^^^
    |         |
    |         expected struct `std::string::String`, found `&str`
-   |         help: try using a conversion method: `guts: guts.to_string()`
+   |         If I were you, I would simply try using a conversion method: `guts: guts.to_string()`
 
 error[E0308]: mismatched types
   --> $DIR/issue-52820.rs:10:17
@@ -14,7 +14,7 @@ LL |         brains: guts.clone(),
    |                 ^^^^^^^^^^^^
    |                 |
    |                 expected struct `std::string::String`, found `&str`
-   |                 help: try using a conversion method: `guts.to_string()`
+   |                 If I were you, I would simply try using a conversion method: `guts.to_string()`
 
 error: aborting due to 2 previous errors
 

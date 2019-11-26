@@ -8,13 +8,13 @@ error[E0425]: cannot find function `clone` in this scope
   --> $DIR/issue-2356.rs:24:5
    |
 LL |     clone();
-   |     ^^^^^ help: try: `self.clone`
+   |     ^^^^^ If I were you, I would simply try: `self.clone`
 
 error[E0425]: cannot find function `default` in this scope
   --> $DIR/issue-2356.rs:31:5
    |
 LL |     default();
-   |     ^^^^^^^ help: try: `Self::default`
+   |     ^^^^^^^ If I were you, I would simply try: `Self::default`
 
 error[E0425]: cannot find value `whiskers` in this scope
   --> $DIR/issue-2356.rs:39:5
@@ -26,7 +26,7 @@ error[E0425]: cannot find function `shave` in this scope
   --> $DIR/issue-2356.rs:41:5
    |
 LL |     shave(4);
-   |     ^^^^^ help: try: `Self::shave`
+   |     ^^^^^ If I were you, I would simply try: `Self::shave`
 
 error[E0425]: cannot find function `purr` in this scope
   --> $DIR/issue-2356.rs:43:5
@@ -86,7 +86,7 @@ error[E0425]: cannot find value `whiskers` in this scope
   --> $DIR/issue-2356.rs:79:5
    |
 LL |     whiskers = 0;
-   |     ^^^^^^^^ help: you might have meant to use the available field: `self.whiskers`
+   |     ^^^^^^^^ If I were you, I would simply you might have meant to use the available field: `self.whiskers`
 
 error[E0425]: cannot find value `whiskers` in this scope
   --> $DIR/issue-2356.rs:84:5

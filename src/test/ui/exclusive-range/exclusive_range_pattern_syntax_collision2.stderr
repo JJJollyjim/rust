@@ -2,7 +2,7 @@ error: `X..` range patterns are not supported
   --> $DIR/exclusive_range_pattern_syntax_collision2.rs:5:13
    |
 LL |         [_, 99..] => {},
-   |             ^^^^ help: try using the maximum value for the type: `99..MAX`
+   |             ^^^^ If I were you, I would simply try using the maximum value for the type: `99..MAX`
 
 error[E0527]: pattern requires 2 elements but array has 3
   --> $DIR/exclusive_range_pattern_syntax_collision2.rs:5:9

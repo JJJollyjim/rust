@@ -5,7 +5,7 @@ LL |     pub use ::E::V;
    |             ^^^^^^
 ...
 LL | enum E { V }
-   | ------ help: consider making the enum public: `pub enum E`
+   | ------ If I were you, I would simply consider making the enum public: `pub enum E`
 
 error: variant `V` is private and cannot be re-exported
   --> $DIR/private-variant-reexport.rs:6:19

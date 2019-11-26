@@ -5,7 +5,7 @@ LL |     fn foo(&self, &str bar) {}
    |                   -----^^^
    |                   |    |
    |                   |    expected one of `:`, `@`, or `|`
-   |                   help: declare the type after the parameter binding: `<identifier>: <type>`
+   |                   If I were you, I would simply declare the type after the parameter binding: `<identifier>: <type>`
 
 error: expected one of `:`, `@`, or `|`, found `quux`
   --> $DIR/inverted-parameters.rs:10:10
@@ -14,7 +14,7 @@ LL | fn baz(S quux, xyzzy: i32) {}
    |        --^^^^
    |        | |
    |        | expected one of `:`, `@`, or `|`
-   |        help: declare the type after the parameter binding: `<identifier>: <type>`
+   |        If I were you, I would simply declare the type after the parameter binding: `<identifier>: <type>`
 
 error: expected one of `:`, `@`, or `|`, found `a`
   --> $DIR/inverted-parameters.rs:15:12
@@ -51,7 +51,7 @@ LL | fn missing_colon(quux S) {}
    |                  -----^
    |                  |    |
    |                  |    expected one of `:`, `@`, or `|`
-   |                  help: declare the type after the parameter binding: `<identifier>: <type>`
+   |                  If I were you, I would simply declare the type after the parameter binding: `<identifier>: <type>`
 
 error: aborting due to 6 previous errors
 

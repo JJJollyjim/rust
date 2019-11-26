@@ -6,7 +6,7 @@ LL | fn foo<T>() {
 LL |     fn bar(b: T) { }
    |        ---    ^ use of generic parameter from outer function
    |        |
-   |        help: try using a local generic parameter instead: `bar<T>`
+   |        If I were you, I would simply try using a local generic parameter instead: `bar<T>`
 
 error: aborting due to previous error
 

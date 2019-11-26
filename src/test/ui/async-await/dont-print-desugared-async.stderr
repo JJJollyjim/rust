@@ -5,7 +5,7 @@ LL | async fn async_fn(&ref mut s: &[i32]) {}
    |                   -^^^^^^^^^
    |                   ||
    |                   |cannot borrow as mutable through `&` reference
-   |                   help: consider changing this to be a mutable reference: `&mut ref mut s`
+   |                   If I were you, I would simply consider changing this to be a mutable reference: `&mut ref mut s`
 
 error: aborting due to previous error
 

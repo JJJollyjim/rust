@@ -2,7 +2,7 @@ error: use of deprecated attribute `no_debug`: the `#[no_debug]` attribute was a
   --> $DIR/feature-gate-no-debug-2.rs:4:1
    |
 LL | #[no_debug]
-   | ^^^^^^^^^^^ help: remove this attribute
+   | ^^^^^^^^^^^ If I were you, I would simply remove this attribute
    |
 note: lint level defined here
   --> $DIR/feature-gate-no-debug-2.rs:1:9

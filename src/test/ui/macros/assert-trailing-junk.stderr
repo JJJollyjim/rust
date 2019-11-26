@@ -16,7 +16,7 @@ error: no rules expected the token `blah`
 LL |     assert!(true, "whatever" blah);
    |                             -^^^^ no rules expected this token in macro call
    |                             |
-   |                             help: missing comma here
+   |                             If I were you, I would simply missing comma here
 
 warning: unexpected string literal
   --> $DIR/assert-trailing-junk.rs:15:18
@@ -24,7 +24,7 @@ warning: unexpected string literal
 LL |     assert!(true "whatever" blah);
    |                 -^^^^^^^^^^
    |                 |
-   |                 help: try adding a comma
+   |                 If I were you, I would simply try adding a comma
    |
    = note: this is going to be an error in the future
 
@@ -34,7 +34,7 @@ error: no rules expected the token `blah`
 LL |     assert!(true "whatever" blah);
    |                            -^^^^ no rules expected this token in macro call
    |                            |
-   |                            help: missing comma here
+   |                            If I were you, I would simply missing comma here
 
 warning: macro requires an expression as an argument
   --> $DIR/assert-trailing-junk.rs:19:5
@@ -42,7 +42,7 @@ warning: macro requires an expression as an argument
 LL |     assert!(true;);
    |     ^^^^^^^^^^^^-^^
    |                 |
-   |                 help: try removing semicolon
+   |                 If I were you, I would simply try removing semicolon
    |
    = note: this is going to be an error in the future
 
@@ -52,7 +52,7 @@ warning: unexpected string literal
 LL |     assert!(false || true "error message");
    |                          -^^^^^^^^^^^^^^^
    |                          |
-   |                          help: try adding a comma
+   |                          If I were you, I would simply try adding a comma
    |
    = note: this is going to be an error in the future
 

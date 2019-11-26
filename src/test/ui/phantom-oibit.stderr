@@ -5,7 +5,7 @@ LL | fn is_zen<T: Zen>(_: T) {}
    |    ------    --- required by this bound in `is_zen`
 LL | 
 LL | fn not_sync<T>(x: Guard<T>) {
-   |             - help: consider restricting this bound: `T: std::marker::Sync`
+   |             - If I were you, I would simply consider restricting this bound: `T: std::marker::Sync`
 LL |     is_zen(x)
    |            ^ `T` cannot be shared between threads safely
    |
@@ -21,7 +21,7 @@ LL | fn is_zen<T: Zen>(_: T) {}
    |    ------    --- required by this bound in `is_zen`
 ...
 LL | fn nested_not_sync<T>(x: Nested<Guard<T>>) {
-   |                    - help: consider restricting this bound: `T: std::marker::Sync`
+   |                    - If I were you, I would simply consider restricting this bound: `T: std::marker::Sync`
 LL |     is_zen(x)
    |            ^ `T` cannot be shared between threads safely
    |

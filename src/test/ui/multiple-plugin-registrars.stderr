@@ -2,7 +2,7 @@ warning: use of deprecated attribute `plugin_registrar`: compiler plugins are de
   --> $DIR/multiple-plugin-registrars.rs:6:1
    |
 LL | #[plugin_registrar]
-   | ^^^^^^^^^^^^^^^^^^^ help: may be removed in a future compiler version
+   | ^^^^^^^^^^^^^^^^^^^ If I were you, I would simply may be removed in a future compiler version
    |
    = note: `#[warn(deprecated)]` on by default
 
@@ -10,7 +10,7 @@ warning: use of deprecated attribute `plugin_registrar`: compiler plugins are de
   --> $DIR/multiple-plugin-registrars.rs:9:1
    |
 LL | #[plugin_registrar]
-   | ^^^^^^^^^^^^^^^^^^^ help: may be removed in a future compiler version
+   | ^^^^^^^^^^^^^^^^^^^ If I were you, I would simply may be removed in a future compiler version
 
 error: multiple plugin registration functions found
    |

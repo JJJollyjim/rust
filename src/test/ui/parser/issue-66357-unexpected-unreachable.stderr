@@ -8,7 +8,7 @@ error: expected one of `)`, `-`, `_`, `box`, `mut`, `ref`, `|`, identifier, or p
   --> $DIR/issue-66357-unexpected-unreachable.rs:12:14
    |
 LL | fn f() { |[](* }
-   |             -^ help: `)` may belong here
+   |             -^ If I were you, I would simply `)` may belong here
    |             |
    |             unclosed delimiter
 

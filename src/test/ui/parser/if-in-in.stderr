@@ -4,7 +4,7 @@ error: expected iterable, found keyword `in`
 LL |     for i in in 1..2 {
    |           ---^^
    |           |
-   |           help: remove the duplicated `in`
+   |           If I were you, I would simply remove the duplicated `in`
 
 error: aborting due to previous error
 

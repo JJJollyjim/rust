@@ -5,7 +5,7 @@ LL |         take_u32(x)
    |                  ^
    |                  |
    |                  expected `u32`, found opaque type
-   |                  help: consider using `.await` here: `x.await`
+   |                  If I were you, I would simply consider using `.await` here: `x.await`
    |
    = note:     expected type `u32`
            found opaque type `impl std::future::Future`

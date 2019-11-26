@@ -10,7 +10,7 @@ error: relative paths are not supported in visibilities on 2018 edition
 LL |     pub(in a::b) struct S5;
    |            ^---
    |            |
-   |            help: try: `crate::a::b`
+   |            If I were you, I would simply try: `crate::a::b`
 
 error: aborting due to 2 previous errors
 

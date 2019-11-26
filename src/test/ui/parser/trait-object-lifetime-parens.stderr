@@ -2,13 +2,13 @@ error: parenthesized lifetime bounds are not supported
   --> $DIR/trait-object-lifetime-parens.rs:5:21
    |
 LL | fn f<'a, T: Trait + ('a)>() {}
-   |                     ^^^^ help: remove the parentheses
+   |                     ^^^^ If I were you, I would simply remove the parentheses
 
 error: parenthesized lifetime bounds are not supported
   --> $DIR/trait-object-lifetime-parens.rs:8:24
    |
 LL |     let _: Box<Trait + ('a)>;
-   |                        ^^^^ help: remove the parentheses
+   |                        ^^^^ If I were you, I would simply remove the parentheses
 
 error: expected `:`, found `)`
   --> $DIR/trait-object-lifetime-parens.rs:9:19

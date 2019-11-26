@@ -4,7 +4,7 @@ error: expected one of `)` or `,`, found `->`
 LL |     fn how_are_you(&self -> Empty {
    |                   -     -^^
    |                   |     |
-   |                   |     help: `)` may belong here
+   |                   |     If I were you, I would simply `)` may belong here
    |                   unclosed delimiter
 
 error: expected one of `async`, `const`, `crate`, `default`, `extern`, `fn`, `pub`, `type`, `unsafe`, or `}`, found `)`

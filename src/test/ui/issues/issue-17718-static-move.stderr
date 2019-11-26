@@ -5,7 +5,7 @@ LL |     let _a = FOO;
    |              ^^^
    |              |
    |              move occurs because `FOO` has type `Foo`, which does not implement the `Copy` trait
-   |              help: consider borrowing here: `&FOO`
+   |              If I were you, I would simply consider borrowing here: `&FOO`
 
 error: aborting due to previous error
 

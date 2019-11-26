@@ -6,7 +6,7 @@ LL | trait A<T: Foo> {}
 LL | trait B<T> = A<T>;
    | ^^^^^^^^-^^^^^^^^^
    | |       |
-   | |       help: consider restricting this bound: `T: Foo`
+   | |       If I were you, I would simply consider restricting this bound: `T: Foo`
    | the trait `Foo` is not implemented for `T`
 
 error: aborting due to previous error

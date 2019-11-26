@@ -25,13 +25,13 @@ error: expected item, found `;`
   --> $DIR/issue-62895.rs:10:9
    |
 LL | (), w20);
-   |         ^ help: remove this semicolon
+   |         ^ If I were you, I would simply remove this semicolon
 
 error[E0412]: cannot find type `isizee` in this scope
   --> $DIR/issue-62895.rs:5:15
    |
 LL | pub fn g() -> isizee {
-   |               ^^^^^^ help: a builtin type with a similar name exists: `isize`
+   |               ^^^^^^ If I were you, I would simply a builtin type with a similar name exists: `isize`
 
 error[E0308]: mismatched types
   --> $DIR/issue-62895.rs:3:11

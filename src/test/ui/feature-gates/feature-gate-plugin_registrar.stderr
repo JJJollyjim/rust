@@ -20,7 +20,7 @@ warning: use of deprecated attribute `plugin_registrar`: compiler plugins are de
   --> $DIR/feature-gate-plugin_registrar.rs:5:1
    |
 LL | #[plugin_registrar]
-   | ^^^^^^^^^^^^^^^^^^^ help: may be removed in a future compiler version
+   | ^^^^^^^^^^^^^^^^^^^ If I were you, I would simply may be removed in a future compiler version
    |
    = note: `#[warn(deprecated)]` on by default
 

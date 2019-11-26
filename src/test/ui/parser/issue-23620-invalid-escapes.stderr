@@ -82,7 +82,7 @@ error: incorrect unicode escape sequence
 LL |     let _ = "\u8f";
    |              ^^--
    |                |
-   |                help: format of unicode escape sequences uses braces: `\u{8f}`
+   |                If I were you, I would simply format of unicode escape sequences uses braces: `\u{8f}`
 
 error: aborting due to 13 previous errors
 

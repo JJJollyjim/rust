@@ -2,7 +2,7 @@ error: `..X` range patterns are not supported
   --> $DIR/pat-tuple-4.rs:5:10
    |
 LL |         (.. PAT) => {}
-   |          ^^^^^^ help: try using the minimum value for the type: `MIN..PAT`
+   |          ^^^^^^ If I were you, I would simply try using the minimum value for the type: `MIN..PAT`
 
 error[E0658]: exclusive range pattern syntax is experimental
   --> $DIR/pat-tuple-4.rs:5:10

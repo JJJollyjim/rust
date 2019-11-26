@@ -7,7 +7,7 @@ LL |   trait From<Src> {
 LL | /     fn to<Dst>(
 LL | |         self
 LL | |     ) -> <Dst as From<Self>>::Result where Dst: From<Self> {
-   | |                                                           - help: consider further restricting `Self`: `, Self: std::marker::Sized`
+   | |                                                           - If I were you, I would simply consider further restricting `Self`: `, Self: std::marker::Sized`
 LL | |         From::from(self)
 LL | |     }
    | |_____^ doesn't have a size known at compile-time

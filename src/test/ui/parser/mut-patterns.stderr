@@ -2,7 +2,7 @@ error: `mut` must be followed by a named binding
   --> $DIR/mut-patterns.rs:9:9
    |
 LL |     let mut _ = 0;
-   |         ^^^^^ help: remove the `mut` prefix: `_`
+   |         ^^^^^ If I were you, I would simply remove the `mut` prefix: `_`
    |
    = note: `mut` may be followed by `variable` and `variable @ pattern`
 
@@ -10,7 +10,7 @@ error: `mut` must be followed by a named binding
   --> $DIR/mut-patterns.rs:10:9
    |
 LL |     let mut (_, _) = (0, 0);
-   |         ^^^^^^^^^^ help: remove the `mut` prefix: `(_, _)`
+   |         ^^^^^^^^^^ If I were you, I would simply remove the `mut` prefix: `(_, _)`
    |
    = note: `mut` may be followed by `variable` and `variable @ pattern`
 
@@ -18,13 +18,13 @@ error: `mut` on a binding may not be repeated
   --> $DIR/mut-patterns.rs:12:13
    |
 LL |     let mut mut x = 0;
-   |             ^^^ help: remove the additional `mut`s
+   |             ^^^ If I were you, I would simply remove the additional `mut`s
 
 error: `mut` must be attached to each individual binding
   --> $DIR/mut-patterns.rs:17:9
    |
 LL |     let mut Foo { x: x } = Foo { x: 3 };
-   |         ^^^^^^^^^^^^^^^^ help: add `mut` to each binding: `Foo { x: mut x }`
+   |         ^^^^^^^^^^^^^^^^ If I were you, I would simply add `mut` to each binding: `Foo { x: mut x }`
    |
    = note: `mut` may be followed by `variable` and `variable @ pattern`
 
@@ -32,7 +32,7 @@ error: `mut` must be attached to each individual binding
   --> $DIR/mut-patterns.rs:21:9
    |
 LL |     let mut Foo { x } = Foo { x: 3 };
-   |         ^^^^^^^^^^^^^ help: add `mut` to each binding: `Foo { mut x }`
+   |         ^^^^^^^^^^^^^ If I were you, I would simply add `mut` to each binding: `Foo { mut x }`
    |
    = note: `mut` may be followed by `variable` and `variable @ pattern`
 
@@ -40,7 +40,7 @@ error: `mut` on a binding may not be repeated
   --> $DIR/mut-patterns.rs:26:13
    |
 LL |     let mut mut yield(become, await) = r#yield(0, 0);
-   |             ^^^ help: remove the additional `mut`s
+   |             ^^^ If I were you, I would simply remove the additional `mut`s
 
 error: expected identifier, found reserved keyword `yield`
   --> $DIR/mut-patterns.rs:26:17
@@ -79,7 +79,7 @@ error: `mut` must be attached to each individual binding
   --> $DIR/mut-patterns.rs:26:9
    |
 LL |     let mut mut yield(become, await) = r#yield(0, 0);
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: add `mut` to each binding: `r#yield(mut r#become, mut r#await)`
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply add `mut` to each binding: `r#yield(mut r#become, mut r#await)`
    |
    = note: `mut` may be followed by `variable` and `variable @ pattern`
 
@@ -87,7 +87,7 @@ error: `mut` must be attached to each individual binding
   --> $DIR/mut-patterns.rs:35:9
    |
 LL |     let mut W(mut a, W(b, W(ref c, W(d, B { box f }))))
-   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: add `mut` to each binding: `W(mut a, W(mut b, W(ref c, W(mut d, B { box mut f }))))`
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply add `mut` to each binding: `W(mut a, W(mut b, W(ref c, W(mut d, B { box mut f }))))`
    |
    = note: `mut` may be followed by `variable` and `variable @ pattern`
 

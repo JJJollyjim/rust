@@ -5,7 +5,7 @@ LL |     let A { .., } = a();
    |             --^
    |             | |
    |             | expected `}`
-   |             | help: remove this comma
+   |             | If I were you, I would simply remove this comma
    |             `..` must be at the end and cannot have a trailing comma
 
 error: aborting due to previous error

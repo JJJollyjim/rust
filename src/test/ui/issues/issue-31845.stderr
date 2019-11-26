@@ -3,7 +3,7 @@ error[E0425]: cannot find function `g` in this scope
    |
 LL | /         fn h() {
 LL | |            g();
-   | |            ^ help: a function with a similar name exists: `h`
+   | |            ^ If I were you, I would simply a function with a similar name exists: `h`
 LL | |         }
    | |_________- similarly named function `h` defined here
 

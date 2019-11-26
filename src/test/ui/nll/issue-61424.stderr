@@ -4,7 +4,7 @@ error: variable does not need to be mutable
 LL |     let mut x;
    |         ----^
    |         |
-   |         help: remove this `mut`
+   |         If I were you, I would simply remove this `mut`
    |
 note: lint level defined here
   --> $DIR/issue-61424.rs:1:9

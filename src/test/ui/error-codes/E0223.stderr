@@ -2,7 +2,7 @@ error[E0223]: ambiguous associated type
   --> $DIR/E0223.rs:4:14
    |
 LL |     let foo: MyTrait::X;
-   |              ^^^^^^^^^^ help: use fully-qualified syntax: `<Type as MyTrait>::X`
+   |              ^^^^^^^^^^ If I were you, I would simply use fully-qualified syntax: `<Type as MyTrait>::X`
 
 error: aborting due to previous error
 

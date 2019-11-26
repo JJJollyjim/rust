@@ -5,7 +5,7 @@ LL |   trait ExtraCopy<T:Copy> { }
    |   ----------------------- required by `ExtraCopy`
 ...
 LL |   impl<T,U> Foo<T,U> where T: ExtraCopy<U>
-   |   ^                                       - help: consider further restricting type parameter `U`: `, U: std::marker::Copy`
+   |   ^                                       - If I were you, I would simply consider further restricting type parameter `U`: `, U: std::marker::Copy`
    |  _|
    | |
 LL | | {

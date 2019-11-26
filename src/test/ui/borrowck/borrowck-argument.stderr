@@ -2,7 +2,7 @@ error[E0596]: cannot borrow `arg` as mutable, as it is not declared as mutable
   --> $DIR/borrowck-argument.rs:10:5
    |
 LL | fn func(arg: S) {
-   |         --- help: consider changing this to be mutable: `mut arg`
+   |         --- If I were you, I would simply consider changing this to be mutable: `mut arg`
 LL |     arg.mutate();
    |     ^^^ cannot borrow as mutable
 
@@ -10,7 +10,7 @@ error[E0596]: cannot borrow `arg` as mutable, as it is not declared as mutable
   --> $DIR/borrowck-argument.rs:15:9
    |
 LL |     fn method(&self, arg: S) {
-   |                      --- help: consider changing this to be mutable: `mut arg`
+   |                      --- If I were you, I would simply consider changing this to be mutable: `mut arg`
 LL |         arg.mutate();
    |         ^^^ cannot borrow as mutable
 
@@ -18,7 +18,7 @@ error[E0596]: cannot borrow `arg` as mutable, as it is not declared as mutable
   --> $DIR/borrowck-argument.rs:21:9
    |
 LL |     fn default(&self, arg: S) {
-   |                       --- help: consider changing this to be mutable: `mut arg`
+   |                       --- If I were you, I would simply consider changing this to be mutable: `mut arg`
 LL |         arg.mutate();
    |         ^^^ cannot borrow as mutable
 
@@ -28,7 +28,7 @@ error[E0596]: cannot borrow `arg` as mutable, as it is not declared as mutable
 LL |     (|arg: S| { arg.mutate() })(s);
    |       ---       ^^^ cannot borrow as mutable
    |       |
-   |       help: consider changing this to be mutable: `mut arg`
+   |       If I were you, I would simply consider changing this to be mutable: `mut arg`
 
 error: aborting due to 4 previous errors
 

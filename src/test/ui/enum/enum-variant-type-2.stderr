@@ -5,7 +5,7 @@ LL | fn foo(x: Foo::Bar) {}
    |           ^^^^^^^^
    |           |
    |           not a type
-   |           help: try using the variant's enum: `Foo`
+   |           If I were you, I would simply try using the variant's enum: `Foo`
 
 error: aborting due to previous error
 

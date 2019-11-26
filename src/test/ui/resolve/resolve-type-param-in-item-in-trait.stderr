@@ -38,7 +38,7 @@ LL |     fn outer(&self) {
 LL |         fn foo<B>(a: A) { }
    |            ------    ^ use of generic parameter from outer function
    |            |
-   |            help: try using a local generic parameter instead: `foo<B, A>`
+   |            If I were you, I would simply try using a local generic parameter instead: `foo<B, A>`
 
 error: aborting due to 4 previous errors
 

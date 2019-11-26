@@ -7,7 +7,7 @@ LL | pub struct Foo<T: Bound>(T);
 LL | impl<T> Trait2 for Foo<T> {}
    |      -  ^^^^^^ the trait `Bound` is not implemented for `T`
    |      |
-   |      help: consider restricting this bound: `T: Bound`
+   |      If I were you, I would simply consider restricting this bound: `T: Bound`
 
 error: aborting due to previous error
 

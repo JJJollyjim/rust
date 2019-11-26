@@ -2,7 +2,7 @@ error: unused extern crate
   --> $DIR/extern-crate-used.rs:18:1
    |
 LL | extern crate core;
-   | ^^^^^^^^^^^^^^^^^^ help: remove it
+   | ^^^^^^^^^^^^^^^^^^ If I were you, I would simply remove it
    |
 note: lint level defined here
   --> $DIR/extern-crate-used.rs:6:9

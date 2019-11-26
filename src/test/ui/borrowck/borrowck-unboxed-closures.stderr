@@ -12,7 +12,7 @@ error[E0596]: cannot borrow `f` as mutable, as it is not declared as mutable
   --> $DIR/borrowck-unboxed-closures.rs:7:5
    |
 LL | fn b<F:FnMut(isize, isize) -> isize>(f: F) {
-   |                                      - help: consider changing this to be mutable: `mut f`
+   |                                      - If I were you, I would simply consider changing this to be mutable: `mut f`
 LL |     f(1, 2);
    |     ^ cannot borrow as mutable
 

@@ -2,7 +2,7 @@ error[E0507]: cannot move out of `hellothere.x.0` which is behind a shared refer
   --> $DIR/moves-based-on-type-block-bad.rs:22:19
    |
 LL |             match hellothere.x {
-   |                   ^^^^^^^^^^^^ help: consider borrowing here: `&hellothere.x`
+   |                   ^^^^^^^^^^^^ If I were you, I would simply consider borrowing here: `&hellothere.x`
 LL |                 box E::Foo(_) => {}
 LL |                 box E::Bar(x) => println!("{}", x.to_string()),
    |                            -

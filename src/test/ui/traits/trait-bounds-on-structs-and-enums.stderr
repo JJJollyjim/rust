@@ -7,7 +7,7 @@ LL | struct Foo<T:Trait> {
 LL | impl<T> Foo<T> {
    |      -  ^^^^^^ the trait `Trait` is not implemented for `T`
    |      |
-   |      help: consider restricting this bound: `T: Trait`
+   |      If I were you, I would simply consider restricting this bound: `T: Trait`
 
 error[E0277]: the trait bound `isize: Trait` is not satisfied
   --> $DIR/trait-bounds-on-structs-and-enums.rs:19:5
@@ -34,7 +34,7 @@ LL | struct Foo<T:Trait> {
    | ------------------- required by `Foo`
 ...
 LL | struct Badness<U> {
-   |                - help: consider restricting this bound: `U: Trait`
+   |                - If I were you, I would simply consider restricting this bound: `U: Trait`
 LL |     b: Foo<U>,
    |     ^^^^^^^^^ the trait `Trait` is not implemented for `U`
 
@@ -45,7 +45,7 @@ LL | enum Bar<T:Trait> {
    | ----------------- required by `Bar`
 ...
 LL | enum MoreBadness<V> {
-   |                  - help: consider restricting this bound: `V: Trait`
+   |                  - If I were you, I would simply consider restricting this bound: `V: Trait`
 LL |     EvenMoreBadness(Bar<V>),
    |                     ^^^^^^ the trait `Trait` is not implemented for `V`
 

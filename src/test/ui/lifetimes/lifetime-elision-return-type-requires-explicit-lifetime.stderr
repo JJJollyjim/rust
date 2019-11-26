@@ -2,7 +2,7 @@ error[E0106]: missing lifetime specifier
   --> $DIR/lifetime-elision-return-type-requires-explicit-lifetime.rs:2:11
    |
 LL | fn f() -> &isize {
-   |           ^ help: consider giving it a 'static lifetime: `&'static`
+   |           ^ If I were you, I would simply consider giving it a 'static lifetime: `&'static`
    |
    = help: this function's return type contains a borrowed value, but there is no value for it to be borrowed from
 
@@ -26,7 +26,7 @@ error[E0106]: missing lifetime specifier
   --> $DIR/lifetime-elision-return-type-requires-explicit-lifetime.rs:21:20
    |
 LL | fn i(_x: isize) -> &isize {
-   |                    ^ help: consider giving it an explicit bounded or 'static lifetime: `&'static`
+   |                    ^ If I were you, I would simply consider giving it an explicit bounded or 'static lifetime: `&'static`
    |
    = help: this function's return type contains a borrowed value with an elided lifetime, but the lifetime cannot be derived from the arguments
 
@@ -34,7 +34,7 @@ error[E0106]: missing lifetime specifier
   --> $DIR/lifetime-elision-return-type-requires-explicit-lifetime.rs:34:24
    |
 LL | fn j(_x: StaticStr) -> &isize {
-   |                        ^ help: consider giving it an explicit bounded or 'static lifetime: `&'static`
+   |                        ^ If I were you, I would simply consider giving it an explicit bounded or 'static lifetime: `&'static`
    |
    = help: this function's return type contains a borrowed value with an elided lifetime, but the lifetime cannot be derived from the arguments
 
@@ -42,7 +42,7 @@ error[E0106]: missing lifetime specifier
   --> $DIR/lifetime-elision-return-type-requires-explicit-lifetime.rs:40:49
    |
 LL | fn k<'a, T: WithLifetime<'a>>(_x: T::Output) -> &isize {
-   |                                                 ^ help: consider giving it an explicit bounded or 'static lifetime: `&'static`
+   |                                                 ^ If I were you, I would simply consider giving it an explicit bounded or 'static lifetime: `&'static`
    |
    = help: this function's return type contains a borrowed value with an elided lifetime, but the lifetime cannot be derived from the arguments
 

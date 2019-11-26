@@ -7,7 +7,7 @@ LL |     take_range(0..1);
    |                ^^^^
    |                |
    |                expected reference, found struct `core::ops::Range`
-   |                help: consider borrowing here: `&(0..1)`
+   |                If I were you, I would simply consider borrowing here: `&(0..1)`
    |
    = note: expected reference `&_`
                  found struct `core::ops::Range<{integer}>`
@@ -19,7 +19,7 @@ LL |     take_range(1..);
    |                ^^^
    |                |
    |                expected reference, found struct `core::ops::RangeFrom`
-   |                help: consider borrowing here: `&(1..)`
+   |                If I were you, I would simply consider borrowing here: `&(1..)`
    |
    = note: expected reference `&_`
                  found struct `core::ops::RangeFrom<{integer}>`
@@ -31,7 +31,7 @@ LL |     take_range(..);
    |                ^^
    |                |
    |                expected reference, found struct `core::ops::RangeFull`
-   |                help: consider borrowing here: `&(..)`
+   |                If I were you, I would simply consider borrowing here: `&(..)`
    |
    = note: expected reference `&_`
                  found struct `core::ops::RangeFull`
@@ -43,7 +43,7 @@ LL |     take_range(0..=1);
    |                ^^^^^
    |                |
    |                expected reference, found struct `core::ops::RangeInclusive`
-   |                help: consider borrowing here: `&(0..=1)`
+   |                If I were you, I would simply consider borrowing here: `&(0..=1)`
    |
    = note: expected reference `&_`
                  found struct `core::ops::RangeInclusive<{integer}>`
@@ -55,7 +55,7 @@ LL |     take_range(..5);
    |                ^^^
    |                |
    |                expected reference, found struct `core::ops::RangeTo`
-   |                help: consider borrowing here: `&(..5)`
+   |                If I were you, I would simply consider borrowing here: `&(..5)`
    |
    = note: expected reference `&_`
                  found struct `core::ops::RangeTo<{integer}>`
@@ -67,7 +67,7 @@ LL |     take_range(..=42);
    |                ^^^^^
    |                |
    |                expected reference, found struct `core::ops::RangeToInclusive`
-   |                help: consider borrowing here: `&(..=42)`
+   |                If I were you, I would simply consider borrowing here: `&(..=42)`
    |
    = note: expected reference `&_`
                  found struct `core::ops::RangeToInclusive<{integer}>`

@@ -5,7 +5,7 @@ LL |     let e = f.v[0];
    |             ^^^^^^
    |             |
    |             move occurs because value has type `std::string::String`, which does not implement the `Copy` trait
-   |             help: consider borrowing here: `&f.v[0]`
+   |             If I were you, I would simply consider borrowing here: `&f.v[0]`
 
 error: aborting due to previous error
 

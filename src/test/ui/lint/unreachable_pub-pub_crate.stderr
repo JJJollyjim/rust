@@ -4,7 +4,7 @@ warning: unreachable `pub` item
 LL |     pub use std::fmt;
    |     ---^^^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
 note: lint level defined here
   --> $DIR/unreachable_pub-pub_crate.rs:10:9
@@ -19,7 +19,7 @@ warning: unreachable `pub` item
 LL |     pub use std::env::{Args}; // braced-use has different item spans than unbraced
    |     ---                ^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -29,7 +29,7 @@ warning: unreachable `pub` item
 LL |     pub struct Hydrogen {
    |     ---^^^^^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -39,7 +39,7 @@ warning: unreachable `pub` field
 LL |         pub neutrons: usize,
    |         ---^^^^^^^^^^^^^^^^
    |         |
-   |         help: consider restricting its visibility: `pub(crate)`
+   |         If I were you, I would simply consider restricting its visibility: `pub(crate)`
 
 warning: unreachable `pub` item
   --> $DIR/unreachable_pub-pub_crate.rs:26:9
@@ -47,7 +47,7 @@ warning: unreachable `pub` item
 LL |         pub fn count_neutrons(&self) -> usize { self.neutrons }
    |         ---^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |         |
-   |         help: consider restricting its visibility: `pub(crate)`
+   |         If I were you, I would simply consider restricting its visibility: `pub(crate)`
 
 warning: unreachable `pub` item
   --> $DIR/unreachable_pub-pub_crate.rs:30:5
@@ -55,7 +55,7 @@ warning: unreachable `pub` item
 LL |     pub enum Helium {}
    |     ---^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -65,7 +65,7 @@ warning: unreachable `pub` item
 LL |     pub union Lithium { c1: usize, c2: u8 }
    |     ---^^^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -75,7 +75,7 @@ warning: unreachable `pub` item
 LL |     pub fn beryllium() {}
    |     ---^^^^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -85,7 +85,7 @@ warning: unreachable `pub` item
 LL |     pub trait Boron {}
    |     ---^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -95,7 +95,7 @@ warning: unreachable `pub` item
 LL |     pub const CARBON: usize = 1;
    |     ---^^^^^^^^^^^^^^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -105,7 +105,7 @@ warning: unreachable `pub` item
 LL |     pub static NITROGEN: usize = 2;
    |     ---^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -115,7 +115,7 @@ warning: unreachable `pub` item
 LL |     pub type Oxygen = bool;
    |     ---^^^^^^^^^^^^^^^^^^^^
    |     |
-   |     help: consider restricting its visibility: `pub(crate)`
+   |     If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 
@@ -128,7 +128,7 @@ LL |         ($visibility: vis, $name: ident) => { $visibility struct $name {} }
 LL |     define_empty_struct_with_visibility!(pub, Fluorine);
    |     ----------------------------------------------------
    |     |                                    |
-   |     |                                    help: consider restricting its visibility: `pub(crate)`
+   |     |                                    If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |     in this macro invocation
    |
    = help: or consider exporting it for use by other crates
@@ -139,7 +139,7 @@ warning: unreachable `pub` item
 LL |         pub fn catalyze() -> bool;
    |         ---^^^^^^^^^^^^^^^^^^^^^^^
    |         |
-   |         help: consider restricting its visibility: `pub(crate)`
+   |         If I were you, I would simply consider restricting its visibility: `pub(crate)`
    |
    = help: or consider exporting it for use by other crates
 

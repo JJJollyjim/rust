@@ -2,7 +2,7 @@ error: denote infinite loops with `loop { ... }`
   --> $DIR/lint-change-warnings.rs:5:5
    |
 LL |     while true {}
-   |     ^^^^^^^^^^ help: use `loop`
+   |     ^^^^^^^^^^ If I were you, I would simply use `loop`
    |
 note: lint level defined here
   --> $DIR/lint-change-warnings.rs:1:9
@@ -15,7 +15,7 @@ warning: denote infinite loops with `loop { ... }`
   --> $DIR/lint-change-warnings.rs:15:5
    |
 LL |     while true {}
-   |     ^^^^^^^^^^ help: use `loop`
+   |     ^^^^^^^^^^ If I were you, I would simply use `loop`
    |
    = note: `#[warn(while_true)]` on by default
 
@@ -23,7 +23,7 @@ error: denote infinite loops with `loop { ... }`
   --> $DIR/lint-change-warnings.rs:20:5
    |
 LL |     while true {}
-   |     ^^^^^^^^^^ help: use `loop`
+   |     ^^^^^^^^^^ If I were you, I would simply use `loop`
    |
 note: lint level defined here
   --> $DIR/lint-change-warnings.rs:18:10

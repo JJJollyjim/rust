@@ -4,7 +4,7 @@ error: variable does not need to be mutable
 LL |     let mut x = 1;
    |         ----^
    |         |
-   |         help: remove this `mut`
+   |         If I were you, I would simply remove this `mut`
    |
 note: lint level defined here
   --> $DIR/unused-mut-warning-captured-var.rs:1:11

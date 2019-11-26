@@ -11,7 +11,7 @@ LL |     bar(foo);
    |         ^^^
    |         |
    |         the trait `std::future::Future` is not implemented for `fn() -> impl std::future::Future {foo}`
-   |         help: use parentheses to call the function: `foo()`
+   |         If I were you, I would simply use parentheses to call the function: `foo()`
 
 error[E0277]: the trait bound `[closure@$DIR/async-fn-ctor-passed-as-arg-where-it-should-have-been-called.rs:11:25: 11:36]: std::future::Future` is not satisfied
   --> $DIR/async-fn-ctor-passed-as-arg-where-it-should-have-been-called.rs:12:9
@@ -25,7 +25,7 @@ LL |     bar(async_closure);
    |         ^^^^^^^^^^^^^
    |         |
    |         the trait `std::future::Future` is not implemented for `[closure@$DIR/async-fn-ctor-passed-as-arg-where-it-should-have-been-called.rs:11:25: 11:36]`
-   |         help: use parentheses to call the closure: `async_closure()`
+   |         If I were you, I would simply use parentheses to call the closure: `async_closure()`
 
 error: aborting due to 2 previous errors
 

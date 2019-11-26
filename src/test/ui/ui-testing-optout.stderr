@@ -4,7 +4,7 @@ error[E0412]: cannot find type `B` in this scope
 4 | type A = B;
   | ---------^-
   | |        |
-  | |        help: a type alias with a similar name exists: `A`
+  | |        If I were you, I would simply a type alias with a similar name exists: `A`
   | similarly named type alias `A` defined here
 
 error[E0412]: cannot find type `D` in this scope
@@ -14,7 +14,7 @@ error[E0412]: cannot find type `D` in this scope
    | ----------- similarly named type alias `A` defined here
 ...
 10 | type C = D;
-   |          ^ help: a type alias with a similar name exists: `A`
+   |          ^ If I were you, I would simply a type alias with a similar name exists: `A`
 
 error[E0412]: cannot find type `F` in this scope
   --> $DIR/ui-testing-optout.rs:95:10
@@ -23,7 +23,7 @@ error[E0412]: cannot find type `F` in this scope
    | ----------- similarly named type alias `A` defined here
 ...
 95 | type E = F;
-   |          ^ help: a type alias with a similar name exists: `A`
+   |          ^ If I were you, I would simply a type alias with a similar name exists: `A`
 
 error: aborting due to 3 previous errors
 

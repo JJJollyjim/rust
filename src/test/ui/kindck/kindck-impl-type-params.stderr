@@ -2,7 +2,7 @@ error[E0277]: `T` cannot be sent between threads safely
   --> $DIR/kindck-impl-type-params.rs:18:13
    |
 LL | fn f<T>(val: T) {
-   |      - help: consider restricting this bound: `T: std::marker::Send`
+   |      - If I were you, I would simply consider restricting this bound: `T: std::marker::Send`
 LL |     let t: S<T> = S(marker::PhantomData);
 LL |     let a = &t as &dyn Gettable<T>;
    |             ^^ `T` cannot be sent between threads safely
@@ -15,7 +15,7 @@ error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
   --> $DIR/kindck-impl-type-params.rs:18:13
    |
 LL | fn f<T>(val: T) {
-   |      - help: consider restricting this bound: `T: std::marker::Copy`
+   |      - If I were you, I would simply consider restricting this bound: `T: std::marker::Copy`
 LL |     let t: S<T> = S(marker::PhantomData);
 LL |     let a = &t as &dyn Gettable<T>;
    |             ^^ the trait `std::marker::Copy` is not implemented for `T`
@@ -27,7 +27,7 @@ error[E0277]: `T` cannot be sent between threads safely
   --> $DIR/kindck-impl-type-params.rs:25:31
    |
 LL | fn g<T>(val: T) {
-   |      - help: consider restricting this bound: `T: std::marker::Send`
+   |      - If I were you, I would simply consider restricting this bound: `T: std::marker::Send`
 LL |     let t: S<T> = S(marker::PhantomData);
 LL |     let a: &dyn Gettable<T> = &t;
    |                               ^^ `T` cannot be sent between threads safely
@@ -40,7 +40,7 @@ error[E0277]: the trait bound `T: std::marker::Copy` is not satisfied
   --> $DIR/kindck-impl-type-params.rs:25:31
    |
 LL | fn g<T>(val: T) {
-   |      - help: consider restricting this bound: `T: std::marker::Copy`
+   |      - If I were you, I would simply consider restricting this bound: `T: std::marker::Copy`
 LL |     let t: S<T> = S(marker::PhantomData);
 LL |     let a: &dyn Gettable<T> = &t;
    |                               ^^ the trait `std::marker::Copy` is not implemented for `T`

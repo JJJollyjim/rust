@@ -11,7 +11,7 @@ LL |     for ( elem in vec ) {
    |         --------------^
    |         |
    |         opening `(`
-   |         help: remove parenthesis in `for` loop: `elem in vec`
+   |         If I were you, I would simply remove parenthesis in `for` loop: `elem in vec`
 
 error[E0308]: mismatched types
   --> $DIR/recover-for-loop-parens-around-head.rs:13:38

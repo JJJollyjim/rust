@@ -2,7 +2,7 @@ error[E0277]: the size for values of type `<Self as std::ops::Deref>::Target` ca
   --> $DIR/issue-42312.rs:4:29
    |
 LL |     fn baz(_: Self::Target) where Self: Deref {}
-   |                             ^                - help: consider further restricting the associated type: `, <Self as std::ops::Deref>::Target: std::marker::Sized`
+   |                             ^                - If I were you, I would simply consider further restricting the associated type: `, <Self as std::ops::Deref>::Target: std::marker::Sized`
    |                             |
    |                             doesn't have a size known at compile-time
    |

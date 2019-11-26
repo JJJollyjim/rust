@@ -5,7 +5,7 @@ LL |     take_range(std::ops::Range { start: 0, end: 1 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::Range`
-   |                help: consider borrowing here: `&std::ops::Range { start: 0, end: 1 }`
+   |                If I were you, I would simply consider borrowing here: `&std::ops::Range { start: 0, end: 1 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::Range<{integer}>`
@@ -17,7 +17,7 @@ LL |     take_range(::std::ops::Range { start: 0, end: 1 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::Range`
-   |                help: consider borrowing here: `&::std::ops::Range { start: 0, end: 1 }`
+   |                If I were you, I would simply consider borrowing here: `&::std::ops::Range { start: 0, end: 1 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::Range<{integer}>`
@@ -29,7 +29,7 @@ LL |     take_range(std::ops::RangeFrom { start: 1 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeFrom`
-   |                help: consider borrowing here: `&std::ops::RangeFrom { start: 1 }`
+   |                If I were you, I would simply consider borrowing here: `&std::ops::RangeFrom { start: 1 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeFrom<{integer}>`
@@ -41,7 +41,7 @@ LL |     take_range(::std::ops::RangeFrom { start: 1 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeFrom`
-   |                help: consider borrowing here: `&::std::ops::RangeFrom { start: 1 }`
+   |                If I were you, I would simply consider borrowing here: `&::std::ops::RangeFrom { start: 1 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeFrom<{integer}>`
@@ -53,7 +53,7 @@ LL |     take_range(std::ops::RangeFull {});
    |                ^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeFull`
-   |                help: consider borrowing here: `&std::ops::RangeFull {}`
+   |                If I were you, I would simply consider borrowing here: `&std::ops::RangeFull {}`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeFull`
@@ -65,7 +65,7 @@ LL |     take_range(::std::ops::RangeFull {});
    |                ^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeFull`
-   |                help: consider borrowing here: `&::std::ops::RangeFull {}`
+   |                If I were you, I would simply consider borrowing here: `&::std::ops::RangeFull {}`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeFull`
@@ -77,7 +77,7 @@ LL |     take_range(std::ops::RangeInclusive::new(0, 1));
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeInclusive`
-   |                help: consider borrowing here: `&std::ops::RangeInclusive::new(0, 1)`
+   |                If I were you, I would simply consider borrowing here: `&std::ops::RangeInclusive::new(0, 1)`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeInclusive<{integer}>`
@@ -89,7 +89,7 @@ LL |     take_range(::std::ops::RangeInclusive::new(0, 1));
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeInclusive`
-   |                help: consider borrowing here: `&::std::ops::RangeInclusive::new(0, 1)`
+   |                If I were you, I would simply consider borrowing here: `&::std::ops::RangeInclusive::new(0, 1)`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeInclusive<{integer}>`
@@ -101,7 +101,7 @@ LL |     take_range(std::ops::RangeTo { end: 5 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeTo`
-   |                help: consider borrowing here: `&std::ops::RangeTo { end: 5 }`
+   |                If I were you, I would simply consider borrowing here: `&std::ops::RangeTo { end: 5 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeTo<{integer}>`
@@ -113,7 +113,7 @@ LL |     take_range(::std::ops::RangeTo { end: 5 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeTo`
-   |                help: consider borrowing here: `&::std::ops::RangeTo { end: 5 }`
+   |                If I were you, I would simply consider borrowing here: `&::std::ops::RangeTo { end: 5 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeTo<{integer}>`
@@ -125,7 +125,7 @@ LL |     take_range(std::ops::RangeToInclusive { end: 5 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeToInclusive`
-   |                help: consider borrowing here: `&std::ops::RangeToInclusive { end: 5 }`
+   |                If I were you, I would simply consider borrowing here: `&std::ops::RangeToInclusive { end: 5 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeToInclusive<{integer}>`
@@ -137,7 +137,7 @@ LL |     take_range(::std::ops::RangeToInclusive { end: 5 });
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |                |
    |                expected reference, found struct `std::ops::RangeToInclusive`
-   |                help: consider borrowing here: `&::std::ops::RangeToInclusive { end: 5 }`
+   |                If I were you, I would simply consider borrowing here: `&::std::ops::RangeToInclusive { end: 5 }`
    |
    = note: expected reference `&_`
                  found struct `std::ops::RangeToInclusive<{integer}>`

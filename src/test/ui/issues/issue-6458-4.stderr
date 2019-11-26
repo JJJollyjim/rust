@@ -6,7 +6,7 @@ LL | fn foo(b: bool) -> Result<bool,String> {
    |    |
    |    implicitly returns `()` as its body has no tail or `return` expression
 LL |     Err("bar".to_string());
-   |                           - help: consider removing this semicolon
+   |                           - If I were you, I would simply consider removing this semicolon
    |
    = note:   expected enum `std::result::Result<bool, std::string::String>`
            found unit type `()`

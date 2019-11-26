@@ -2,7 +2,7 @@ warning: denote infinite loops with `loop { ... }`
   --> $DIR/loop-break-value.rs:24:5
    |
 LL |     'while_loop: while true {
-   |     ^^^^^^^^^^^^^^^^^^^^^^^ help: use `loop`
+   |     ^^^^^^^^^^^^^^^^^^^^^^^ If I were you, I would simply use `loop`
    |
    = note: `#[warn(while_true)]` on by default
 
@@ -149,7 +149,7 @@ LL |         break;
    |         ^^^^^
    |         |
    |         expected integer, found `()`
-   |         help: give it a value of the expected type: `break value`
+   |         If I were you, I would simply give it a value of the expected type: `break value`
 
 error: aborting due to 16 previous errors
 

@@ -26,7 +26,7 @@ warning: unused variable: `x`
   --> $DIR/never-assign-dead-code.rs:8:9
    |
 LL |     let x: ! = panic!("aah");
-   |         ^ help: consider prefixing with an underscore: `_x`
+   |         ^ If I were you, I would simply consider prefixing with an underscore: `_x`
    |
 note: lint level defined here
   --> $DIR/never-assign-dead-code.rs:5:9

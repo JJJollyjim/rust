@@ -16,7 +16,7 @@ LL |         for j in a {
    |                  ^
    |                  |
    |                  value moved here, in previous iteration of loop
-   |                  help: consider borrowing to avoid moving into the for loop: `&a`
+   |                  If I were you, I would simply consider borrowing to avoid moving into the for loop: `&a`
 
 error: aborting due to 2 previous errors
 

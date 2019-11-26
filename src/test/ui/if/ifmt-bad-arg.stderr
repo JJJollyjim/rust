@@ -200,7 +200,7 @@ error: argument never used
 LL |     format!("foo %s baz", "bar");
    |                  --       ^^^^^ argument never used
    |                  |
-   |                  help: format specifiers use curly braces: `{}`
+   |                  If I were you, I would simply format specifiers use curly braces: `{}`
    |
    = note: printf formatting not supported; see the documentation for `std::fmt`
 

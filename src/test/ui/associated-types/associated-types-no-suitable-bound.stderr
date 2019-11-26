@@ -4,7 +4,7 @@ error[E0277]: the trait bound `T: Get` is not satisfied
 LL |     fn uhoh<T>(foo: <T as Get>::Value) {}
    |     ^^^^^^^^-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |     |       |
-   |     |       help: consider restricting this bound: `T: Get`
+   |     |       If I were you, I would simply consider restricting this bound: `T: Get`
    |     the trait `Get` is not implemented for `T`
 
 error: aborting due to previous error

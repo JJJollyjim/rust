@@ -5,7 +5,7 @@ LL | fn foo(&foo: Foo) {
    |        ^^^^------
    |        |
    |        expected struct `Foo`, found reference
-   |        help: did you mean `foo`: `&Foo`
+   |        If I were you, I would simply did you mean `foo`: `&Foo`
    |
    = note: expected struct `Foo`
            found reference `&_`
@@ -17,7 +17,7 @@ LL | fn agh(&&bar: &u32) {
    |         ^^^^
    |         |
    |         expected `u32`, found reference
-   |         help: you can probably remove the explicit borrow: `bar`
+   |         If I were you, I would simply you can probably remove the explicit borrow: `bar`
    |
    = note:   expected type `u32`
            found reference `&_`
